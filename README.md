@@ -1,6 +1,9 @@
 # MingInk
 荧墨轩
 
+# 总体架构图
+![架构图](/assets/1.png "架构图")
+
 # 技术选型
 开发框架：SpringBoot、SpringCloud、OpenFeign  
 缓存：Redis分布式缓存 + 本地缓存  
