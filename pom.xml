@@ -4,14 +4,215 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.minglink</groupId>
-    <artifactId>mingInk</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.mingink</groupId>
+    <artifactId>mingink</artifactId>
+    <version>1.0.0</version>
+
+    <name>mingink</name>
+    <!-- 这里可以改成网站上线地址 -->
+    <url>https://maven.apache.org</url>
+    <description>荧墨轩</description>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <mingink.version>1.0.0</mingink.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.7.13</spring-boot.version>
+        <spring-cloud.version>2021.0.8</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
+        <java-jwt.version>3.4.0</java-jwt.version>
+        <justAuth.version>1.16.6</justAuth.version>
+        <hutool.http.version>5.7.7</hutool.http.version>
+        <mysql-connector.version>8.0.28</mysql-connector.version>
+        <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <fastjson2.verson>2.0.34</fastjson2.verson>
+        <aliyun.sdk.core.version>4.5.7</aliyun.sdk.core.version>
+        <aliyun.oss.version>1.0.0</aliyun.oss.version>
+        <alibabacloud.dysmsapi20170525.version>2.0.24</alibabacloud.dysmsapi20170525.version>
+        <aliyun.java.sdk.dysmsapi.version>2.0.0</aliyun.java.sdk.dysmsapi.version>
+        <commons.lang3.version>3.12.0</commons.lang3.version>
+        <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBoot 依赖配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <!-- type默认值是jar，声明为pom类型表示该依赖项是一个Maven项目（Project Object Model），它通常用于导入其他Maven项目的POM文件作为依赖项，而不是导入jar包或其他类型的文件。 -->
+                <scope>import</scope>
+                <!-- scope默认值为compile，声明为import范围表示该依赖项可以被导入到POM中，以便在声明其他依赖时重用。 -->
+            </dependency>
+
+            <!-- SpringCloud 微服务 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- SpringCloud-Alibaba 微服务 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- JWT -->
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${java-jwt.version}</version>
+            </dependency>
+
+            <!--JustAuth-->
+            <dependency>
+                <groupId>me.zhyd.oauth</groupId>
+                <artifactId>JustAuth</artifactId>
+                <version>${justAuth.version}</version>
+            </dependency>
+
+            <!--http请求相关-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-http</artifactId>
+                <version>${hutool.http.version}</version>
+            </dependency>
+
+            <!-- Apache Commons Lang -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+
+            <!--  fastjson2 依赖配置 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.verson}</version>
+            </dependency>
+
+            <!-- aliyun-sdk-core -->
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-core</artifactId>
+                <version>${aliyun.sdk.core.version}</version>
+            </dependency>
+
+            <!-- aliyun-oss -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>aliyun-oss-spring-boot-starter</artifactId>
+                <version>${aliyun.oss.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.aliyun</groupId>
+                        <artifactId>aliyun-java-sdk-oss</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- 阿里云短信sdk -->
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>alibabacloud-dysmsapi20170525</artifactId>
+                <version>${alibabacloud.dysmsapi20170525.version}</version>
+            </dependency>
+
+            <!-- 核心模块 -->
+<!--            <dependency>-->
+<!--                <groupId>com.mingink</groupId>-->
+<!--                <artifactId>mingink-common-core</artifactId>-->
+<!--                <version>${mingink.version}</version>-->
+<!--            </dependency>-->
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- bootstrap 启动器 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
+        <!--  lombok  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--  项目打包类型  -->
+    <packaging>pom</packaging>
+    <!--模块管理，实现pom项目之间的聚合关系，
+    聚合关系下对父项目使用mvn命令，对其它子项目产生同样的效果-->
+    <modules>
+        <module>mingink-common</module>
+    </modules>
+
+    <build>
+        <finalName>MingInk</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
