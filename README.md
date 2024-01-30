@@ -44,6 +44,7 @@ com.mingink
 |--mingink-modules        // 业务模块
 |           └──mingink-system                   // 系统服务模块【8081】
 |--pom.xml                                      // 公共依赖
+
 ```
 
 
