@@ -5,7 +5,7 @@ server:
 # Spring
 spring:
   datasource:
-    url: jdbc:mysql://223.82.75.76:3306/lovelumine?useSSL=false
+    url: jdbc:mysql://223.82.75.76:3306/mingink?useSSL=false
     username: root
     password: lovelumine
     driver-class-name: com.mysql.cj.jdbc.Driver
