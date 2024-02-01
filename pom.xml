@@ -128,12 +128,19 @@
                 <version>${alibabacloud.dysmsapi20170525.version}</version>
             </dependency>
 
+            <!-- 系统接口 -->
+            <dependency>
+                <groupId>com.mingink</groupId>
+                <artifactId>mingink-api-system</artifactId>
+                <version>${mingink.version}</version>
+            </dependency>
+
             <!-- 核心模块 -->
-<!--            <dependency>-->
-<!--                <groupId>com.mingink</groupId>-->
-<!--                <artifactId>mingink-common-core</artifactId>-->
-<!--                <version>${mingink.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.mingink</groupId>
+                <artifactId>mingink-common-core</artifactId>
+                <version>${mingink.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -156,7 +163,10 @@
     <!--模块管理，实现pom项目之间的聚合关系，
     聚合关系下对父项目使用mvn命令，对其它子项目产生同样的效果-->
     <modules>
+        <module>mingink-api</module>
         <module>mingink-common</module>
+        <module>mingink-gateway</module>
+        <module>mingink-modules</module>
     </modules>
 
     <build>
