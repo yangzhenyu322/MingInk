@@ -1,4 +1,4 @@
-package com.minglink.common.core.utils.time;
+package com.mingink.common.core.utils.time;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

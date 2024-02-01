@@ -1,4 +1,4 @@
-package com.minglink.common.core.utils.id;
+package com.mingink.common.core.utils.id;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

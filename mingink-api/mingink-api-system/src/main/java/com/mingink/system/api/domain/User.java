@@ -1,20 +1,21 @@
 package com.mingink.system.api.domain;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.util.Date;
 
 
 /**
  * 用户实体类
  * @author ZenSheep
+ *
  */
 @Data
 @TableName("user")
-public class User implements Serializable {
+public class User {
     /**
     * 用户ID
     */
@@ -59,7 +60,7 @@ public class User implements Serializable {
     * 用户权限 (1: 管理员 2:VIP用户 3: 普通用户)
     * 默认普通成员
     */
-    private Integer roleId;
+    private Long roleId;
 
     /**
     * 个性签名
@@ -126,4 +127,24 @@ public class User implements Serializable {
     * 更新时间
     */
     private Date updateTime;
+
+    // 非表字段
+
+    /**
+     * 重复密码
+     */
+    @TableField(exist = false)
+    private String repeatPassword;
+
+    /**
+     * 验证码请求id
+     */
+    @TableField(exist = false)
+    private String codeRequestId;
+
+    /**
+     * 输入的验证码
+     */
+    @TableField(exist = false)
+    private String inputCode;
 }
