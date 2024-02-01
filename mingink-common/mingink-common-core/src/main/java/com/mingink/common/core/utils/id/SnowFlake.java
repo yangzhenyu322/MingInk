@@ -1,6 +1,6 @@
-package com.minglink.common.core.utils.id;
+package com.mingink.common.core.utils.id;
 
-import com.minglink.common.core.utils.time.SystemClock;
+import com.mingink.common.core.utils.time.SystemClock;
 
 import java.util.Date;
 

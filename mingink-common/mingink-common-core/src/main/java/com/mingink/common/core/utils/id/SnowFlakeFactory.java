@@ -1,4 +1,4 @@
-package com.minglink.common.core.utils.id;
+package com.mingink.common.core.utils.id;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -69,10 +69,9 @@ public class SnowFlakeFactory {
     }
 
     public static void main(String[] args) {
-        for(int i = 0; i < 100; i++) {
+        for(int i = 0; i < 10; i++) {
             System.out.println(getSnowFlakeFromCache().nextId());
         }
     }
-
 }
 

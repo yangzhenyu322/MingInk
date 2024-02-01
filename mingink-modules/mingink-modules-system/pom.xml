@@ -16,7 +16,7 @@
     </description>
 
     <dependencies>
-        <!-- SpringCloud Alibaba Nacos -->
+        <!-- SpringCloud Alibaba Nacos Discovery -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -28,11 +28,11 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
-<!--        &lt;!&ndash;JustAuth&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>me.zhyd.oauth</groupId>-->
-<!--            <artifactId>JustAuth</artifactId>-->
-<!--        </dependency>-->
+        <!--JustAuth-->
+        <dependency>
+            <groupId>me.zhyd.oauth</groupId>
+            <artifactId>JustAuth</artifactId>
+        </dependency>
 
 <!--        &lt;!&ndash;http请求相关&ndash;&gt;-->
 <!--        <dependency>-->
@@ -52,11 +52,11 @@
 <!--            <artifactId>aliyun-oss-spring-boot-starter</artifactId>-->
 <!--        </dependency>-->
 
-<!--        &lt;!&ndash; 阿里云短信sdk &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.aliyun</groupId>-->
-<!--            <artifactId>alibabacloud-dysmsapi20170525</artifactId>-->
-<!--        </dependency>-->
+        <!-- 阿里云短信sdk -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>alibabacloud-dysmsapi20170525</artifactId>
+        </dependency>
 
         <!-- junit-test -->
         <dependency>
@@ -72,17 +72,11 @@
             <artifactId>mingink-api-system</artifactId>
         </dependency>
 
-        <!-- 系统接口: 在本模块仅为了使用feign模块的公共类 -->
+        <!-- 核心模块 -->
         <dependency>
             <groupId>com.mingink</groupId>
-            <artifactId>mingink-api-system</artifactId>
+            <artifactId>mingink-common-core</artifactId>
         </dependency>
-
-<!--        &lt;!&ndash; 核心模块  &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.mingink</groupId>-->
-<!--            <artifactId>mingink-common-core</artifactId>-->
-<!--        </dependency>-->
     </dependencies>
 
     <build>
