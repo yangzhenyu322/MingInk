@@ -1,0 +1,99 @@
+server:
+  port: 8080 # 网关端口
+spring:
+  application:
+    name: mingink-gateway # 服务名称
+  redis:
+    database: 0 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+    host: 223.82.75.76 # Redis服务器地址
+    password: lovelumine78 # Redis服务器连接密码（默认为空）
+    jedis:
+      pool:
+        max-active: 8 # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 8 # 连接池中的最大空闲连接
+        min-idle: 0 # 连接池中的最小空闲连接
+    timeout: 3600 # 连接超时时间（毫秒）
+  cache:
+    redis:
+      time-to-live: 1800s
+    cache-names: gateway_cache
+    type: redis
+  profiles:
+    # 环境配置：dev、production
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 223.82.75.76:8848 # nacos地址
+        username: lovelumine
+        password: lovelumine47
+      config:
+        # 配置中心地址
+        server-addr: 223.82.75.76:8848
+        username: ${spring.cloud.nacos.discovery.username}
+        password: ${spring.cloud.nacos.discovery.password}
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 是否与服务注册于发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为 false
+          lowerCaseServiceId: true # 是将请求路径上的服务名配置为小写（因为服务注册的时候，向注册中心注册时将服务名转成大写的了）
+      routes: # 网关路由配置
+        - id: mingink-system # 路由id
+          uri: lb://mingink-system # 路由的目标地址 lb就是负载均衡，后面跟服务名称
+          predicates:
+            - Path=/api/v1/user/**, /api/v1/oauth/**, /api/v1/role/**, /api/v1/file/**, /api/v1/oss/**, /api/v1/sms/** # 按照路径匹配
+          filters:
+            - StripPrefix=2 # 去除前 n 个请求路径前缀
+      globalcors: # 全局的跨域请求
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:  # 允许哪些网站的跨域请求
+              - "http://223.82.75.77:5173"
+            allowedMethods: # 允许的跨域ajax的请求方法
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedHeaders: "*" # 允许在请求中携带头信息
+            allowCredentials: true # 是否允许携带cookie信息
+            maxAge: 360000 # 这次跨域检测的有效期
+      default-filters:
+        - DedupeResponseHeader=Vary Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_FIRST
+      httpclient:
+        pool:
+          # 在连接池中的空闲连接的最大空闲时间,默认60000ms，http.timeout默认为30000ms（要保证max-idle-time不大于connection-timeout）
+          max-idle-time: 20000ms
+        connect-timeout: 60000 # 连接超时时间，单位为毫秒，默认为30秒
+        response-timeout: 60000 # 响应超时时间，单位为毫秒，默认为30秒
+
+mingink-system:
+  ribbon:
+    # 负载均衡规则
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+
+# 子模块下的声明式接口包 日志级别必须是debug ,不然不打印日志
+logging:
+  level:
+    com:
+      mingink:
+        system:
+          api: debug
+# Feign
+feign:
+  client:
+    config:
+      default: # default全局的配置
+        loggerLevel: BASIC # 日志级别，BASIC就是基本的请求和响应信息
+  httpclient:
+    enabled: true # 开启feign对HttpClient的支持
+    max-connections: 200 # 最大的连接数
+    max-connections-per-route: 50 # 每个路径的最大连接数

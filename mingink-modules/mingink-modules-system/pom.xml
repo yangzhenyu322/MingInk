@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mingink</groupId>
+        <artifactId>mingink-modules</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>mingink-modules-system</artifactId>
+
+    <description>
+        mingink-modules-system系统模块
+    </description>
+
+    <dependencies>
+        <!-- SpringCloud Alibaba Nacos -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!-- SpringCloud Alibaba Nacos Config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+<!--        &lt;!&ndash;JustAuth&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>me.zhyd.oauth</groupId>-->
+<!--            <artifactId>JustAuth</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash;http请求相关&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>cn.hutool</groupId>-->
+<!--            <artifactId>hutool-http</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; aliyun-sdk-core &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.aliyun</groupId>-->
+<!--            <artifactId>aliyun-java-sdk-core</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; aliyun-oss &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>aliyun-oss-spring-boot-starter</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; 阿里云短信sdk &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.aliyun</groupId>-->
+<!--            <artifactId>alibabacloud-dysmsapi20170525</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- junit-test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 系统接口: 在本模块仅使用feign模块的公共类 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-api-system</artifactId>
+        </dependency>
+
+        <!-- 系统接口: 在本模块仅为了使用feign模块的公共类 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-api-system</artifactId>
+        </dependency>
+
+<!--        &lt;!&ndash; 核心模块  &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.mingink</groupId>-->
+<!--            <artifactId>mingink-common-core</artifactId>-->
+<!--        </dependency>-->
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
