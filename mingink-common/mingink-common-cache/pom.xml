@@ -5,19 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.mingink</groupId>
-        <artifactId>mingink</artifactId>
+        <artifactId>mingink-common</artifactId>
         <version>1.0.0</version>
     </parent>
 
-    <modules>
-        <module>mingink-common-core</module>
-        <module>mingink-common-cache</module>
-    </modules>
+    <artifactId>mingink-common-cache</artifactId>
 
-    <artifactId>mingink-common</artifactId>
-    <packaging>pom</packaging>
 
-    <description>
-        mingink-common通用模块
-    </description>
+
 </project>
