@@ -20,7 +20,6 @@ public class ScPermitUrlConfig {
      */
     private String[] permitUrl = {
             "/user/register/**",
-            "/user/check/**",
             "/user/password/**",
             "/oauth/**",
             "/sms/**"
