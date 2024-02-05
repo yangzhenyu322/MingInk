@@ -22,8 +22,6 @@
         <spring-cloud.version>2021.0.8</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
         <java-jwt.version>3.4.0</java-jwt.version>
-        <justAuth.version>1.16.6</justAuth.version>
-        <hutool.http.version>5.7.7</hutool.http.version>
         <mysql-connector.version>8.0.28</mysql-connector.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <fastjson2.verson>2.0.34</fastjson2.verson>
@@ -69,20 +67,6 @@
                 <groupId>com.auth0</groupId>
                 <artifactId>java-jwt</artifactId>
                 <version>${java-jwt.version}</version>
-            </dependency>
-
-            <!--JustAuth-->
-            <dependency>
-                <groupId>me.zhyd.oauth</groupId>
-                <artifactId>JustAuth</artifactId>
-                <version>${justAuth.version}</version>
-            </dependency>
-
-            <!--http请求相关-->
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-http</artifactId>
-                <version>${hutool.http.version}</version>
             </dependency>
 
             <!-- Apache Commons Lang -->
@@ -158,6 +142,15 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <!-- 默认关掉单元测试，不用手动关闭了 -->
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>

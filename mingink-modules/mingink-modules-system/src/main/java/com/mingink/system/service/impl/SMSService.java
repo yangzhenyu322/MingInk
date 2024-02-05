@@ -1,10 +1,10 @@
 package com.mingink.system.service.impl;
 
-import com.aliyun.sdk.service.dysmsapi20170525.AsyncClient;
-import com.aliyun.sdk.service.dysmsapi20170525.models.SendSmsRequest;
-import com.aliyun.sdk.service.dysmsapi20170525.models.SendSmsResponse;
+import com.baidubce.services.sms.SmsClient;
+import com.baidubce.services.sms.model.SendMessageV3Request;
+import com.baidubce.services.sms.model.SendMessageV3Response;
 import com.mingink.common.core.domain.R;
-import com.mingink.system.config.SMSConfiguration;
+import com.mingink.system.config.BaiDuSMSConfiguration;
 import com.mingink.system.service.ISMSService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -13,9 +13,9 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -26,8 +26,11 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @Service
 public class SMSService implements ISMSService {
+//    @Autowired
+//    private AsyncClient smsClient;
+
     @Autowired
-    private AsyncClient smsClient;
+    private SmsClient smsClient;
 
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
@@ -53,39 +56,30 @@ public class SMSService implements ISMSService {
         }
 
         String randomCode = generateRandomCode(codeLength); // 随机验证码
-        SendSmsRequest sendSmsRequest = SendSmsRequest.builder()
-                .phoneNumbers(phoneNumber)
-                .signName(SMSConfiguration.getSignName())
-                .templateCode(SMSConfiguration.getTemplateCode())
-                .templateParam("{\"code\":\"" + randomCode + "\"}")
-                .build();
+        SendMessageV3Request request = new SendMessageV3Request();
+        request.setMobile(phoneNumber);
+        request.setSignatureId(BaiDuSMSConfiguration.getSignatureId());
+        request.setTemplate(BaiDuSMSConfiguration.getTemplate());
+        Map<String, String> contentVar = new HashMap<>(); // 填充短信模板的变量内容
+        contentVar.put("code", randomCode);
+        request.setContentVar(contentVar);
 
-        // Asynchronously get the return value of the API request
-        CompletableFuture<SendSmsResponse> response = smsClient.sendSms(sendSmsRequest);
-        // Synchronously get the return value of the API request
-        SendSmsResponse resp = null;
-        try {
-            resp = response.get();
-        } catch (InterruptedException | ExecutionException e) {
-            log.error("发送验证码失败：{}", e.getMessage());
-            return R.fail("发送验证码失败：" + e.getMessage());
+        SendMessageV3Response response = smsClient.sendMessage(request);
+        if (response != null && response.isSuccess()) {
+            //  submit success
+            String requestId = response.getRequestId();
+            // 缓存<requestId, randomCode>以验证用户输入的inputCode, 并设置有效时间（单位：秒）
+            redisTemplate.opsForValue().set(requestId, randomCode, validTime, TimeUnit.SECONDS);
+
+            // 输出响应结果到日志
+            log.info("RequestId:{}", requestId);
+            log.info("code:{}", randomCode);
+
+            return R.ok(requestId);
+        } else {
+            //  fail
+            return R.fail(response.getMessage());
         }
-
-        if (!"OK".equals(resp.getBody().getCode())) {
-            // 发送验证码失败
-            return R.fail(resp.getBody().getMessage());
-        }
-
-        // 缓存<requestId, randomCode>以验证用户输入的inputCode, 并设置有效时间（单位：秒）
-        redisTemplate.opsForValue().set(resp.getBody().getRequestId(), randomCode, validTime, TimeUnit.SECONDS);
-
-        // 输出响应结果到日志
-        log.info("RequestId:" + resp.getBody().getRequestId());
-        log.info("Code:" + resp.getBody().getCode());
-        log.info("Message:" + resp.getBody().getMessage());
-        log.info("BizId:" + resp.getBody().getBizId());
-
-        return R.ok(resp.getBody().getRequestId());
     }
 
     /**
