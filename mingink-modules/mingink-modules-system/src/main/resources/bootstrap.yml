@@ -45,7 +45,17 @@ mybatis-plus:
 file-server:
   root-path: ./temp/localFile/
 
-# AliYun-OSS
+# BaiDuYun
+baidu:
+  accessKeyId: ALTAKgIm9DHzDPsRcLjVycygfT
+  secretAccessKey: b9e34bc5c6a04204813857cfe7d8c3b2
+  # SMS 服务
+  sms:
+    signatureId: sms-sign-HKpwwl39058
+    template: sms-tmpl-btFhKG25676
+    endpoint: http://smsv3.bj.baidubce.com
+
+# AliYun
 aliyun:
   accessKeyId: LTAI5tBLXP1DsNu2hchBoHCh
   accessKeySecret: 3Z81Vghe5xCARlnCwvcM3k8zH3bxZ0

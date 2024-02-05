@@ -22,16 +22,10 @@
         <spring-cloud.version>2021.0.8</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
         <java-jwt.version>3.4.0</java-jwt.version>
-        <justAuth.version>1.16.6</justAuth.version>
-        <hutool.http.version>5.7.7</hutool.http.version>
         <mysql-connector.version>8.0.28</mysql-connector.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <fastjson2.verson>2.0.34</fastjson2.verson>
-        <aliyun.sdk.core.version>4.5.7</aliyun.sdk.core.version>
-        <aliyun.oss.version>1.0.0</aliyun.oss.version>
-        <hutool.version>5.3.9</hutool.version>
         <alibabacloud.dysmsapi20170525.version>2.0.24</alibabacloud.dysmsapi20170525.version>
-        <aliyun.java.sdk.dysmsapi.version>2.0.0</aliyun.java.sdk.dysmsapi.version>
         <commons.lang3.version>3.12.0</commons.lang3.version>
         <spring-cloud-starter-bootstrap.version>3.1.1</spring-cloud-starter-bootstrap.version>
         <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
@@ -75,20 +69,6 @@
                 <version>${java-jwt.version}</version>
             </dependency>
 
-            <!--JustAuth-->
-            <dependency>
-                <groupId>me.zhyd.oauth</groupId>
-                <artifactId>JustAuth</artifactId>
-                <version>${justAuth.version}</version>
-            </dependency>
-
-            <!--http请求相关-->
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-http</artifactId>
-                <version>${hutool.http.version}</version>
-            </dependency>
-
             <!-- Apache Commons Lang -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -101,26 +81,6 @@
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
                 <version>${fastjson2.verson}</version>
-            </dependency>
-
-            <!-- aliyun-sdk-core -->
-            <dependency>
-                <groupId>com.aliyun</groupId>
-                <artifactId>aliyun-java-sdk-core</artifactId>
-                <version>${aliyun.sdk.core.version}</version>
-            </dependency>
-
-            <!-- aliyun-oss -->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>aliyun-oss-spring-boot-starter</artifactId>
-                <version>${aliyun.oss.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.aliyun</groupId>
-                        <artifactId>aliyun-java-sdk-oss</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <!-- 阿里云短信sdk -->

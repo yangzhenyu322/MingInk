@@ -15,6 +15,10 @@
         mingink-modules-system系统模块
     </description>
 
+    <properties>
+        <bce-java-dsk.version>0.10.294</bce-java-dsk.version>
+    </properties>
+
     <dependencies>
         <!-- SpringCloud Alibaba Nacos Discovery -->
         <dependency>
@@ -28,42 +32,17 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
-        <!--JustAuth-->
-        <dependency>
-            <groupId>me.zhyd.oauth</groupId>
-            <artifactId>JustAuth</artifactId>
-        </dependency>
-
-<!--        &lt;!&ndash;http请求相关&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>cn.hutool</groupId>-->
-<!--            <artifactId>hutool-http</artifactId>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; aliyun-sdk-core &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.aliyun</groupId>-->
-<!--            <artifactId>aliyun-java-sdk-core</artifactId>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; aliyun-oss &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>aliyun-oss-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
-
         <!-- 阿里云短信sdk -->
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>alibabacloud-dysmsapi20170525</artifactId>
         </dependency>
 
-        <!-- junit-test -->
+        <!-- 百度云短信sdk -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
+            <groupId>com.baidubce</groupId>
+            <artifactId>bce-java-sdk</artifactId>
+            <version>${bce-java-dsk.version}</version>
         </dependency>
 
         <!-- 系统接口: 在本模块仅使用feign模块的公共类 -->
