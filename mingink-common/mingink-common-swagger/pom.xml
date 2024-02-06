@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mingink</groupId>
+        <artifactId>mingink-common</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>mingink-common-swagger</artifactId>
+    <description>
+        mingink-common-swagger模块
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- 解决外部引用jar包问题 -->
+    <build>
+        <resources>
+            <resource>
+                <!-- 自己(非Maven引入)导入jar包的目录 -->
+                <directory>src/main/resources/lib</directory>
+                <!-- Spring-Boot项目打包后存放的目录 -->
+                <targetPath>BOOT-INF/lib/</targetPath>
+                <includes>
+                    <include>**/*.jar</include>
+                </includes>
+            </resource>
+            <resource>
+                <!-- 是否替换@xx@表示的maven properties属性值 -->
+                <filtering>true</filtering>
+                <!-- 源文件存放目录 -->
+                <directory>src/main/resources</directory>
+                <!-- 打包后存放目录 -->
+                <targetPath>BOOT-INF/classes/</targetPath>
+            </resource>
+        </resources>
+    </build>
+</project>

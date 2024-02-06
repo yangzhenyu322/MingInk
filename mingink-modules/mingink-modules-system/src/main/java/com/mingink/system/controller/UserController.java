@@ -3,6 +3,8 @@ package com.mingink.system.controller;
 import com.mingink.common.core.domain.R;
 import com.mingink.system.api.domain.User;
 import com.mingink.system.service.IUserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/user")
+@Api(value = "用户接口功能", tags = "UserController", description = "用户接口相关介绍")
 public class UserController {
     @Autowired
     private IUserService userService;
@@ -22,6 +25,7 @@ public class UserController {
      * @return
      */
     @GetMapping("/all")
+    @ApiOperation("查询所有用户信息")
     public R<?> getAllUsers() {
         return userService.getUserList();
     }
@@ -42,6 +46,7 @@ public class UserController {
      * @return
      */
     @PutMapping("/password")
+    @ApiOperation("忘记密码（修改密码）")
     public R<?> changeUserPassword(@RequestBody User user) {
         return userService.changeUserPassword(user);
     }
@@ -52,6 +57,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/register")
+    @ApiOperation("用户注册")
     public R<?> register(@RequestBody User user) {
         return userService.registerUser(user);
     }
