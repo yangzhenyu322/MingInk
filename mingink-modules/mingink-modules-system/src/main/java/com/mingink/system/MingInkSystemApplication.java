@@ -2,6 +2,7 @@ package com.mingink.system;
 
 import com.mingink.common.core.annotaion.EnableCustomConfig;
 import com.mingink.common.core.annotaion.EnableMIFeignClients;
+import com.mingink.common.swagger.annotaion.EnableCustomSwagger2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,8 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Author: ZenSheep
  * @Date: 2024/1/30 21:09
  */
-@EnableMIFeignClients
 @EnableCustomConfig
+@EnableCustomSwagger2
+@EnableMIFeignClients
 @SpringBootApplication
 public class MingInkSystemApplication {
     public static void main(String[] args) {

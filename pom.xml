@@ -25,6 +25,7 @@
         <mysql-connector.version>8.0.28</mysql-connector.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <fastjson2.verson>2.0.34</fastjson2.verson>
+        <swagger.fox.version>3.0.0</swagger.fox.version>
         <hutool.version>5.7.17</hutool.version>
         <alibabacloud.dysmsapi20170525.version>2.0.24</alibabacloud.dysmsapi20170525.version>
         <commons.lang3.version>3.12.0</commons.lang3.version>
@@ -81,7 +82,13 @@
             <dependency>
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
-                <version>${fastjson2.verson}</version>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${swagger.fox.version}</version>
             </dependency>
 
             <!-- 阿里云短信sdk -->
@@ -102,6 +109,13 @@
             <dependency>
                 <groupId>com.mingink</groupId>
                 <artifactId>mingink-common-core</artifactId>
+                <version>${mingink.version}</version>
+            </dependency>
+
+            <!-- Swagger模块 -->
+            <dependency>
+                <groupId>com.mingink</groupId>
+                <artifactId>mingink-common-swagger</artifactId>
                 <version>${mingink.version}</version>
             </dependency>
         </dependencies>

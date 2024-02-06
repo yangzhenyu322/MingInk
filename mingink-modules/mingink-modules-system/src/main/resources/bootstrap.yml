@@ -7,6 +7,9 @@ spring:
   application:
     # 应用名称
     name: mingink-system
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher # swagger路径匹配方式
   profiles:
     active: dev
   cloud:
