@@ -2,6 +2,11 @@ package com.mingink.system.service;
 
 import com.mingink.common.core.domain.R;
 import com.mingink.system.api.domain.User;
+import com.mingink.system.api.domain.UserSafeInfo;
+import com.mingink.system.api.domain.request.UserInfoUptReq;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @Author: ZenSheep
@@ -9,11 +14,36 @@ import com.mingink.system.api.domain.User;
  */
 public interface IUserService {
 
-    R<?> getUserList();
-
-    User getUserByUserName(String username);
+    R<List<UserSafeInfo>> getUserList();
 
     R<?> changeUserPassword(User user);
 
     R<?> registerUser(User user);
+
+    /**
+     * 更新用户信息
+     * @param userInfo
+     */
+    R<Boolean> updateUserInfo(UserInfoUptReq userInfo, UserSafeInfo loginUser);
+
+    /**
+     * 获取当前登录用户
+     * @param request
+     */
+    UserSafeInfo getCurrentUser(HttpServletRequest request);
+
+    /**
+     * 判断是否管理员
+     */
+    boolean isAdmin(HttpServletRequest request);
+
+    /**
+     * 判断是否管理员
+     */
+    boolean isAdmin(UserSafeInfo loginUser);
+
+    /**
+     * 通过用户名查询用户信息
+     */
+    R<List<UserSafeInfo>> searchUserByName(String username);
 }

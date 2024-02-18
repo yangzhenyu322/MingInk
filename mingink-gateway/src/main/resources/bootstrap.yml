@@ -74,6 +74,10 @@ mingink-system:
 # 子模块下的声明式接口包 日志级别必须是debug ,不然不打印日志
 logging:
   level:
+    io:
+      lettuce:
+        core:
+          protocol: ERROR
     com:
       mingink:
         system:

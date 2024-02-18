@@ -2,11 +2,16 @@ package com.mingink.system.controller;
 
 import com.mingink.common.core.domain.R;
 import com.mingink.system.api.domain.User;
+import com.mingink.system.api.domain.UserSafeInfo;
+import com.mingink.system.api.domain.request.UserInfoUptReq;
 import com.mingink.system.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 用户服务接口
@@ -26,7 +31,7 @@ public class UserController {
      */
     @GetMapping("/all")
     @ApiOperation("查询所有用户信息")
-    public R<?> getAllUsers() {
+    public R<List<UserSafeInfo>> getAllUsers() {
         return userService.getUserList();
     }
 
@@ -36,8 +41,8 @@ public class UserController {
      * @return
      */
     @GetMapping("/username/{username}")
-    public User getUserByUserName(@PathVariable("username") String username) {
-        return userService.getUserByUserName(username);
+    public R<List<UserSafeInfo>> getUserByUserName(@PathVariable("username") String username) {
+        return userService.searchUserByName(username);
     }
 
     /**
@@ -60,5 +65,18 @@ public class UserController {
     @ApiOperation("用户注册")
     public R<?> register(@RequestBody User user) {
         return userService.registerUser(user);
+    }
+
+    @PostMapping("/current")
+    @ApiOperation("个人中心获取当前登录用户信息")
+    public R<UserSafeInfo> getCurrentUser(HttpServletRequest request) {
+        return R.ok(userService.getCurrentUser(request));
+    }
+
+    @PostMapping("/updateInfo")
+    @ApiOperation("更新用户基础信息")
+    public R<Boolean> updateUser(@RequestBody UserInfoUptReq userInfo, HttpServletRequest request) {
+        UserSafeInfo loginUser = userService.getCurrentUser(request);
+        return userService.updateUserInfo(userInfo, loginUser);
     }
 }

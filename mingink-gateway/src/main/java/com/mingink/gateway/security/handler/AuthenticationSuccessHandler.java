@@ -1,7 +1,7 @@
 package com.mingink.gateway.security.handler;
 
 import com.alibaba.fastjson2.JSON;
-import com.mingink.gateway.security.tool.JWTUtils;
+import com.mingink.common.core.utils.jwt.JWTUtils;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.buffer.DataBuffer;
