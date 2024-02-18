@@ -1,19 +1,28 @@
 package com.mingink.system.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mingink.common.core.domain.R;
 import com.mingink.common.core.utils.id.SnowFlakeFactory;
+import com.mingink.common.core.utils.jwt.JWTUtils;
+import com.mingink.system.api.domain.Role;
 import com.mingink.system.api.domain.User;
+import com.mingink.system.api.domain.UserSafeInfo;
+import com.mingink.system.api.domain.request.UserInfoUptReq;
 import com.mingink.system.mapper.UserMapper;
 import com.mingink.system.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * 用户服务业务
@@ -26,29 +35,18 @@ public class UserService implements IUserService {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private RoleService roleService;
+
     @Override
-    public R<?> getUserList() {
+    public R<List<UserSafeInfo>> getUserList() {
         List<User> userList = userMapper.selectList(null);
 
         if (userList.size() <= 0) {
             return R.fail("不存在任何用户");
         }
-
-        return R.ok(userList);
-    }
-
-    @Override
-    public User getUserByUserName(String username) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("user_name", username);
-        List<User> sysUsers = userMapper.selectByMap(map);
-
-        User user = null;
-        if (sysUsers.size() > 0) {
-            user = sysUsers.get(0);
-        }
-
-        return user;
+        List<UserSafeInfo> userSafeList = userList.stream().map(this::getSafeUser).collect(Collectors.toList());
+        return R.ok(userSafeList);
     }
 
     @Override
@@ -139,5 +137,115 @@ public class UserService implements IUserService {
 
         log.info("用户[{}]注册成功：", user.getUserName());
         return R.ok(null, "用户注册成功");
+    }
+
+    @Override
+    public R<Boolean> updateUserInfo(UserInfoUptReq userInfo, UserSafeInfo loginUser) {
+        String userId = userInfo.getUserId();
+        if(StringUtils.isBlank(userId)) return R.fail("用户信息异常");
+        //仅管理员和自己可以修改
+        //管理员 允许更新任意用户
+        //非管理员 只允许更新当前(自己的)信息
+        if (!isAdmin(loginUser) && userId.equals(loginUser.getUserId())) {
+            return R.fail("用户无权限");
+        }
+        User oldUser = userMapper.selectById(userInfo.getUserId());
+        if (oldUser == null) {
+            return R.fail("用户不存在");
+        }
+        oldUser.setNickName(userInfo.getNickName());
+        oldUser.setAvatar(userInfo.getAvatar());
+        oldUser.setEmail(userInfo.getEmail());
+        oldUser.setRemark(userInfo.getRemark());
+        oldUser.setCountry(userInfo.getCountry());
+        oldUser.setAddress(userInfo.getAddress());
+        oldUser.setRegion(userInfo.getRegion());
+        int result = userMapper.updateById(oldUser);
+        if(result != 0) {
+            return R.ok(true, "用户信息更新成功");
+        }
+        return R.fail(false,"系统内部异常");
+    }
+
+    @Override
+    public UserSafeInfo getCurrentUser(HttpServletRequest request) {
+        //获取token
+        String token = request.getHeader(HttpHeaders.AUTHORIZATION);
+        log.info("token: {}", token);
+        if(StringUtils.isBlank(token)) {
+            return null;
+        }
+        //解析token
+        Map<String, Object> userMap = JWTUtils.getTokenInfo(token);
+        String username = (String) userMap.get("username");
+        QueryWrapper queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_name", username);
+        User user = userMapper.selectOne(queryWrapper);
+        if(user == null) return null;
+        return getSafeUser(user);
+    }
+
+    @Override
+    public boolean isAdmin(HttpServletRequest request) {
+        //获取token
+        String token = request.getHeader(HttpHeaders.AUTHORIZATION);
+        log.info("token: {}", token);
+        if(StringUtils.isBlank(token)) {
+            return false;
+        }
+        //解析token
+        Map<String, Object> userMap = JWTUtils.getTokenInfo(token);
+        String role = (String) userMap.get("role");
+        return "admin".equals(role);
+    }
+
+    @Override
+    public boolean isAdmin(UserSafeInfo loginUser) {
+        if(loginUser == null) return false;
+        QueryWrapper queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_name", loginUser.getUserName());
+        User user = userMapper.selectOne(queryWrapper);
+        Role role = roleService.getSysRoleById(user.getRoleId());
+        return "admin".equals(role.getRoleKey());
+    }
+
+    @Override
+    public R<List<UserSafeInfo>> searchUserByName(String username) {
+        if(StringUtils.isBlank(username)) return R.fail("用户名为空");
+        QueryWrapper queryWrapper = new QueryWrapper<>();
+        queryWrapper.like("user_name", username);
+        List<User> users = userMapper.selectList(queryWrapper);
+        if(users.size() == 0) {
+            return R.fail("用户查询失败");
+        }
+        List<UserSafeInfo> results = users.stream().map(this::getSafeUser).collect(Collectors.toList());
+        return R.ok(results, "用户查询成功");
+    }
+
+    /**
+     * 获取脱敏信息
+     * @param originUser
+     * @return
+     */
+    UserSafeInfo getSafeUser(User originUser) {
+        if (originUser == null) {
+            return null;
+        }
+        UserSafeInfo safeInfo = new UserSafeInfo();
+        safeInfo.setBirthday(originUser.getBirthday());
+        safeInfo.setEmail(originUser.getEmail());
+        safeInfo.setRemark(originUser.getRemark());
+        safeInfo.setSex(originUser.getSex());
+        safeInfo.setTag(originUser.getTag());
+        safeInfo.setUserName(originUser.getUserName());
+        safeInfo.setAvatar(originUser.getAvatar());
+        safeInfo.setUid(originUser.getUid());
+        safeInfo.setUserId(originUser.getUserId());
+        safeInfo.setPhoneNumber(originUser.getPhoneNumber());
+        safeInfo.setNickName(originUser.getNickName());
+        safeInfo.setAddress(originUser.getAddress());
+        safeInfo.setCountry(originUser.getCountry());
+        safeInfo.setRegion(originUser.getRegion());
+        return safeInfo;
     }
 }

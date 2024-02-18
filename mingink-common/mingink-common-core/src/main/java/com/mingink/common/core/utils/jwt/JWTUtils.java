@@ -1,4 +1,4 @@
-package com.mingink.gateway.security.tool;
+package com.mingink.common.core.utils.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;

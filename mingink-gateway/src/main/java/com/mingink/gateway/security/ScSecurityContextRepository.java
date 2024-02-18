@@ -1,6 +1,6 @@
 package com.mingink.gateway.security;
 
-import com.mingink.gateway.security.tool.JWTUtils;
+import com.mingink.common.core.utils.jwt.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpHeaders;
