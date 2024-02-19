@@ -24,7 +24,7 @@
         <java-jwt.version>3.4.0</java-jwt.version>
         <mysql-connector.version>8.0.28</mysql-connector.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
-        <fastjson2.version>2.0.34</fastjson2.version>
+        <fastjson2.verson>2.0.34</fastjson2.verson>
         <swagger.fox.version>3.0.0</swagger.fox.version>
         <hutool.version>5.7.17</hutool.version>
         <alibabacloud.dysmsapi20170525.version>2.0.24</alibabacloud.dysmsapi20170525.version>
