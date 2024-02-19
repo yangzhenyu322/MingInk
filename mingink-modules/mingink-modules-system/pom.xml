@@ -43,6 +43,12 @@
             <groupId>com.baidubce</groupId>
             <artifactId>bce-java-sdk</artifactId>
             <version>${bce-java-dsk.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jdk.tools</artifactId>
+                    <groupId>jdk.tools</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- 系统接口: 在本模块仅使用feign模块的公共类 -->
