@@ -27,12 +27,6 @@ public class LogoutSuccessHandler implements ServerLogoutSuccessHandler {
     @Override
     public Mono<Void> onLogoutSuccess(WebFilterExchange webFilterExchange, Authentication authentication) {
         ServerHttpResponse response = webFilterExchange.getExchange().getResponse();
-        // 设置headers
-        HttpHeaders httpHeaders = response.getHeaders();
-        httpHeaders.add("Content-Type", "application/json; charset=UTF-8");
-        httpHeaders.add("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
-        httpHeaders.add("Access-Control-Allow-Credentials", "true");
-        httpHeaders.add("Access-Control-Allow-Origin", "http://223.82.75.76:5173");
         // 设置body
         Map<String, Object> map = new HashMap<>();
         // 删除token

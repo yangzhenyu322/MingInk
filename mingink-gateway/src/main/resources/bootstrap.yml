@@ -18,7 +18,7 @@ spring:
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
         username: ${spring.cloud.nacos.discovery.username}
         password: ${spring.cloud.nacos.discovery.password}
-        namespace: fba13bcb-89a6-40d0-8492-40e3eadc9a0e
+        namespace: ${spring.cloud.nacos.discovery.namespace}
         # 配置文件格式
         file-extension: yml
         extension-configs[0]:
@@ -46,8 +46,9 @@ spring:
         add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
         cors-configurations:
           '[/**]':
-            allowedOrigins:  # 允许哪些网站的跨域请求
-              - "http://223.82.75.77:5173"
+            allowedOriginPatterns: "*" # 允许所有网站的跨域请求
+#            allowedOrigins:  # 允许哪些网站的跨域请求
+#              - "http://223.82.75.77:5173"
             allowedMethods: # 允许的跨域ajax的请求方法
               - "GET"
               - "POST"

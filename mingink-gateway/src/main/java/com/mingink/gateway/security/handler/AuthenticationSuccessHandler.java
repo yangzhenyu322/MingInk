@@ -50,13 +50,6 @@ public class AuthenticationSuccessHandler extends WebFilterChainServerAuthentica
     public Mono<Void> onAuthenticationSuccess(WebFilterExchange webFilterExchange, Authentication authentication) {
         ServerWebExchange exchange = webFilterExchange.getExchange();
         ServerHttpResponse response = exchange.getResponse();
-        // 设置headers
-        HttpHeaders httpHeaders = response.getHeaders();
-        httpHeaders.add("Content-Type", "application/json; charset=UTF-8");
-        httpHeaders.add("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
-        httpHeaders.add("Access-Control-Allow-Credentials", "true");
-        // 在使用凭据时，Access-Control-Allow-Origin 不可以设置为 *，而应该指定具体的域名
-        httpHeaders.add("Access-Control-Allow-Origin", "http://223.82.75.76:5173");
 
         // 设置body
         HashMap<String, Object> map = new HashMap<>();

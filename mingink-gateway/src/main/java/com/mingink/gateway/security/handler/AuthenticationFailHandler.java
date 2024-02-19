@@ -29,9 +29,6 @@ public class AuthenticationFailHandler implements ServerAuthenticationFailureHan
     public Mono<Void> onAuthenticationFailure(WebFilterExchange webFilterExchange, AuthenticationException exception) {
         ServerHttpResponse response = webFilterExchange.getExchange().getResponse();
         response.setStatusCode(HttpStatus.FORBIDDEN);
-        response.getHeaders().add("Content-Type", "application/json; charset=UTF-8");
-        response.getHeaders().add("Access-Control-Allow-Credentials", "true");
-        response.getHeaders().add("Access-Control-Allow-Origin", "http://223.82.75.76:5173");
         HashMap<String, Object> map = new HashMap<>();
         map.put("code", HttpStatus.FORBIDDEN.value());
         map.put("msg", exception.getMessage());

@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @Date: 2024/2/1 19:13
  */
 public interface IRoleService {
-    Role getSysRoleById(Long id);
+    Role getRoleById(Long id);
 }
