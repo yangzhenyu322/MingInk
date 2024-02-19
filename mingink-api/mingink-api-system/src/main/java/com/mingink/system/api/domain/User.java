@@ -83,6 +83,21 @@ public class User {
     private String email;
 
     /**
+     * 国家
+     */
+    private String country;
+
+    /**
+     * 所在地区
+     */
+    private String region;
+
+    /**
+     * 具体地址
+     */
+    private String address;
+
+    /**
     * 账户状态 0正常 1停用 2注销
     * 默认正常
     */
