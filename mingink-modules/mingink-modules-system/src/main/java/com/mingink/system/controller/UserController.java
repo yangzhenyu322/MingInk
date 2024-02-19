@@ -36,13 +36,24 @@ public class UserController {
     }
 
     /**
-     * 通过用户名获取指定用户
+     * 通过用户名模糊查询多个用户
+     * @param username
+     * @return
+     */
+    @GetMapping("/userSafeInfos/username/{username}")
+    @ApiOperation("通过用户名模糊查询多个用户信息")
+    public R<List<UserSafeInfo>> getUserSafeInfoListByUserName(@PathVariable("username") String username) {
+        return userService.searchUserByName(username);
+    }
+
+    /**
+     * 通过用户名查询单个用户
      * @param username
      * @return
      */
     @GetMapping("/username/{username}")
-    public R<List<UserSafeInfo>> getUserByUserName(@PathVariable("username") String username) {
-        return userService.searchUserByName(username);
+    public User getUserByUserName(@PathVariable("username") String username) {
+        return userService.getUserByName(username);
     }
 
     /**

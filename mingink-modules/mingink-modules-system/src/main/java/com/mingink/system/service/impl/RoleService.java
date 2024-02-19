@@ -21,7 +21,7 @@ public class RoleService implements IRoleService {
     private RoleMapper roleMapper;
 
     @Override
-    public Role getSysRoleById(Long id) {
+    public Role getRoleById(Long id) {
         return roleMapper.selectById(id);
     }
 }

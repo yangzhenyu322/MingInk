@@ -205,7 +205,7 @@ public class UserService implements IUserService {
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_name", loginUser.getUserName());
         User user = userMapper.selectOne(queryWrapper);
-        Role role = roleService.getSysRoleById(user.getRoleId());
+        Role role = roleService.getRoleById(user.getRoleId());
         return "admin".equals(role.getRoleKey());
     }
 
@@ -220,6 +220,22 @@ public class UserService implements IUserService {
         }
         List<UserSafeInfo> results = users.stream().map(this::getSafeUser).collect(Collectors.toList());
         return R.ok(results, "用户查询成功");
+    }
+
+    @Override
+    public User getUserByName(String username) {
+        if(StringUtils.isBlank(username)) {
+            return null;
+        }
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("user_name", username);
+        List<User> users = userMapper.selectByMap(map);
+        if (users.size() == 0) {
+            return null;
+        }
+
+        return users.get(0);
     }
 
     /**
