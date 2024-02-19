@@ -46,4 +46,6 @@ public interface IUserService {
      * 通过用户名查询用户信息
      */
     R<List<UserSafeInfo>> searchUserByName(String username);
+
+    User getUserByName(String username);
 }
