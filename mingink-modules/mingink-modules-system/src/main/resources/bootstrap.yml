@@ -35,7 +35,6 @@ spring:
           refresh: true
         # 共享配置
         shared-configs:
-          - bootstrap-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
 
 # Mybatis-Plus
 mybatis-plus:

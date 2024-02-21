@@ -27,25 +27,25 @@
     </dependencies>
 
     <!-- 解决外部引用jar包问题 -->
-    <build>
-        <resources>
-            <resource>
-                <!-- 自己(非Maven引入)导入jar包的目录 -->
-                <directory>src/main/resources/lib</directory>
-                <!-- Spring-Boot项目打包后存放的目录 -->
-                <targetPath>BOOT-INF/lib/</targetPath>
-                <includes>
-                    <include>**/*.jar</include>
-                </includes>
-            </resource>
-            <resource>
-                <!-- 是否替换@xx@表示的maven properties属性值 -->
-                <filtering>true</filtering>
-                <!-- 源文件存放目录 -->
-                <directory>src/main/resources</directory>
-                <!-- 打包后存放目录 -->
-                <targetPath>BOOT-INF/classes/</targetPath>
-            </resource>
-        </resources>
-    </build>
+<!--    <build>-->
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                &lt;!&ndash; 自己(非Maven引入)导入jar包的目录 &ndash;&gt;-->
+<!--                <directory>src/main/resources/lib</directory>-->
+<!--                &lt;!&ndash; Spring-Boot项目打包后存放的目录 &ndash;&gt;-->
+<!--                <targetPath>BOOT-INF/lib/</targetPath>-->
+<!--                <includes>-->
+<!--                    <include>**/*.jar</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
+<!--            <resource>-->
+<!--                &lt;!&ndash; 是否替换@xx@表示的maven properties属性值 &ndash;&gt;-->
+<!--                <filtering>true</filtering>-->
+<!--                &lt;!&ndash; 源文件存放目录 &ndash;&gt;-->
+<!--                <directory>src/main/resources</directory>-->
+<!--                &lt;!&ndash; 打包后存放目录 &ndash;&gt;-->
+<!--                <targetPath>BOOT-INF/classes/</targetPath>-->
+<!--            </resource>-->
+<!--        </resources>-->
+<!--    </build>-->
 </project>
