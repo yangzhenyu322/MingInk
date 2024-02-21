@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mingink-gateway:
+    container_name: mingink-gateway
+    build: # 服务的 Docker 构建文件位置
+      context: ./mingink-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - mynetwork
+    volumes:
+      - ./logs/mingink-gateway:/app/log
+
+  mingink-modules-system:
+    container_name: mingink-modules-system
+    build:
+      context: ./mingink-modules/mingink-modules-system
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - mynetwork
+    depends_on: # 本服务依赖的服务，控制启动先后顺序
+      - mingink-gateway
+    volumes:
+      - ./logs/mingink-modules-system:/app/log
+
+# 网络，不定义的话就是默认网络
+networks:
+  mynetwork:

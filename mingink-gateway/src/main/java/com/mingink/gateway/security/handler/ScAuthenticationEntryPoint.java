@@ -25,9 +25,6 @@ public class ScAuthenticationEntryPoint implements ServerAuthenticationEntryPoin
     public Mono<Void> commence(ServerWebExchange exchange, AuthenticationException ex) {
         ServerHttpResponse response = exchange.getResponse();
         response.setStatusCode(HttpStatus.FORBIDDEN);
-        response.getHeaders().add("Content-Type", "application/json; charset=UTF-8");
-        response.getHeaders().add("Access-Control-Allow-Credentials", "true");
-        response.getHeaders().add("Access-Control-Allow-Origin", "http://223.82.75.76:5173");
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("code", HttpStatus.FORBIDDEN.value());

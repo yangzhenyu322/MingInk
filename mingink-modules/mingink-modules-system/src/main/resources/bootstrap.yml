@@ -35,7 +35,6 @@ spring:
           refresh: true
         # 共享配置
         shared-configs:
-          - bootstrap-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
 
 # Mybatis-Plus
 mybatis-plus:
@@ -44,9 +43,6 @@ mybatis-plus:
     map-underscore-to-camel-case: true
   # 指定类型别名的包路径
   type-aliases-package: com.opentool.system.domain.entity
-
-file-server:
-  root-path: ./temp/localFile/
 
 # BaiDuYun
 baidu:
@@ -57,20 +53,3 @@ baidu:
     signatureId: sms-sign-HKpwwl39058
     template: sms-tmpl-btFhKG25676
     endpoint: http://smsv3.bj.baidubce.com
-
-# AliYun
-aliyun:
-  accessKeyId: LTAI5tBLXP1DsNu2hchBoHCh
-  accessKeySecret: 3Z81Vghe5xCARlnCwvcM3k8zH3bxZ0
-  # OSS服务
-  oss:
-    # 管理所存储Object的存储空间名称
-    bucketName: opentool
-    # 访问OSS的域名
-    endpoint: http://oss-cn-shenzhen.aliyuncs.com
-  # SMS服务
-  sms:
-    signName: OpenTool # 短信签名名称, 当前是开发测试用的，上线前需要申请相应signName和templateCode
-    templateCode: SMS_464785669 # 短信模板Code
-    region: cn-hangzhou # Region ID
-    endpoint: dysmsapi.aliyuncs.com # 访问SMS的域名, 请参考 https://api.aliyun.com/product/Dysmsapi

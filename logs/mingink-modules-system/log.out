@@ -1,0 +1,59 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/app/mingink-modules-system.jar!/BOOT-INF/lib/logback-classic-1.2.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/app/mingink-modules-system.jar!/BOOT-INF/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+2024-02-21 18:38:17.363  INFO 1 --- [           main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2024-02-21 18:38:18.366  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-02-21 18:38:18.366  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.13)
+
+2024-02-21 18:38:20.139  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[bootstrap-dev.yml] & group[DEFAULT_GROUP]
+2024-02-21 18:38:20.169  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system] & group[DEFAULT_GROUP]
+2024-02-21 18:38:20.176  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system.yml] & group[DEFAULT_GROUP]
+2024-02-21 18:38:20.183  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system-dev.yml] & group[DEFAULT_GROUP]
+2024-02-21 18:38:20.184  INFO 1 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-mingink-system-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-bootstrap-dev.yml,DEFAULT_GROUP'}]
+2024-02-21 18:38:20.228  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : The following 1 profile is active: "dev"
+2024-02-21 18:38:22.729  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-21 18:38:22.739  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-02-21 18:38:22.807  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2024-02-21 18:38:23.478  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=793ce242-7245-3f63-bbf4-156cabf0db32
+2024-02-21 18:38:24.799  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2024-02-21 18:38:24.822  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-21 18:38:24.823  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-02-21 18:38:25.012  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-21 18:38:25.013  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4720 ms
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.4.2 
+2024-02-21 18:38:28.794  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-02-21 18:38:28.893  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2024-02-21 18:38:28.907  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-02-21 18:38:28.907  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-02-21 18:38:29.147  INFO 1 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP mingink-system 172.19.0.3:8082 register finished
+2024-02-21 18:38:29.654  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : Started MingInkSystemApplication in 13.26 seconds (JVM running for 14.344)
+2024-02-21 18:38:29.668  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system.yml, group=DEFAULT_GROUP
+2024-02-21 18:38:29.669  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-redis.yml, group=DEFAULT_GROUP
+2024-02-21 18:38:29.669  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-mysql.yml, group=DEFAULT_GROUP
+2024-02-21 18:38:29.669  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system, group=DEFAULT_GROUP
+2024-02-21 18:38:29.670  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system-dev.yml, group=DEFAULT_GROUP
+(♥◠‿◠)ﾉﾞ  MingInk-System系统模块启动成功   ლ(´ڡ`ლ)ﾞ  
+  __  __   _                   ___           _    
+ |  \/  | (_)  _ __     __ _  |_ _|  _ __   | | __
+ | |\/| | | | | '_ \   / _` |  | |  | '_ \  | |/ /
+ | |  | | | | | | | | | (_| |  | |  | | | | |   < 
+ |_|  |_| |_| |_| |_|  \__, | |___| |_| |_| |_|\_\
+                       |___/                      
+2024-02-21 18:38:35.917  INFO 1 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-21 18:38:35.917  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-21 18:38:35.919  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-21 19:01:33.881  INFO 1 --- [nio-8082-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-21 19:01:34.109  INFO 1 --- [nio-8082-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

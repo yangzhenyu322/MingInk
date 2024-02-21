@@ -1,0 +1,95 @@
+2024-02-21 18:38:16.711  INFO 1 --- [           main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2024-02-21 18:38:17.650  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-02-21 18:38:17.650  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.13)
+
+2024-02-21 18:38:19.386  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[application-dev.yml] & group[DEFAULT_GROUP]
+2024-02-21 18:38:19.429  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway] & group[DEFAULT_GROUP]
+2024-02-21 18:38:19.435  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway.yml] & group[DEFAULT_GROUP]
+2024-02-21 18:38:19.449  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway-dev.yml] & group[DEFAULT_GROUP]
+2024-02-21 18:38:19.450  INFO 1 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-mingink-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-gateway,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-application-dev.yml,DEFAULT_GROUP'}]
+2024-02-21 18:38:19.502  INFO 1 --- [           main] c.m.gateway.MingInkGatewayApplication    : The following 1 profile is active: "dev"
+2024-02-21 18:38:21.098  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-21 18:38:21.105  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-02-21 18:38:21.158  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2024-02-21 18:38:21.637  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9076e821-f9f4-35fc-b345-da52d9b7609c
+2024-02-21 18:38:21.933  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-02-21 18:38:21.937  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-02-21 18:38:21.940  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-02-21 18:38:24.765  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2024-02-21 18:38:24.765  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2024-02-21 18:38:24.765  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2024-02-21 18:38:24.766  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-02-21 18:38:24.767  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2024-02-21 18:38:24.767  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-02-21 18:38:25.196  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-02-21 18:38:25.653  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-02-21 18:38:26.127  INFO 1 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2024-02-21 18:38:26.156  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-02-21 18:38:26.156  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-02-21 18:38:26.425  INFO 1 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP mingink-gateway 172.19.0.2:8081 register finished
+2024-02-21 18:38:26.697  INFO 1 --- [           main] a.c.n.d.GatewayLocatorHeartBeatPublisher : Start nacos gateway locator heartBeat task scheduler.
+2024-02-21 18:38:26.818  INFO 1 --- [           main] c.m.gateway.MingInkGatewayApplication    : Started MingInkGatewayApplication in 11.029 seconds (JVM running for 11.866)
+2024-02-21 18:38:26.829  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-redis.yml, group=DEFAULT_GROUP
+2024-02-21 18:38:26.830  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-mysql.yml, group=DEFAULT_GROUP
+2024-02-21 18:38:26.830  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway, group=DEFAULT_GROUP
+2024-02-21 18:38:26.831  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway.yml, group=DEFAULT_GROUP
+2024-02-21 18:38:26.831  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway-dev.yml, group=DEFAULT_GROUP
+(♥◠‿◠)ﾉﾞ  Gateway网关模块启动成功   ლ(´ڡ`ლ)ﾞ  
+  __  __   _                   ___           _    
+ |  \/  | (_)  _ __     __ _  |_ _|  _ __   | | __
+ | |\/| | | | | '_ \   / _` |  | |  | '_ \  | |/ /
+ | |  | | | | | | | | | (_| |  | |  | | | | |   < 
+ |_|  |_| |_| |_| |_|  \__, | |___| |_| |_| |_|\_\
+                       |___/                      
+2024-02-21 19:01:33.077  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-21 19:01:33.079  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-21 19:01:33.083  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-21 19:01:33.083  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidmlwIiwiZXhwIjoxNzA5MTE2MzIwLCJ1c2VybmFtZSI6InZpcCJ9.tFXXhf1sBtPw2dOj3tUjVl3bVm6rvDxY_g5Cntbx6q4
+2024-02-21 19:01:33.104  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : username:vip
+2024-02-21 19:01:33.480  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : role = vip
+2024-02-21 19:01:33.503  INFO 1 --- [or-http-epoll-2] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-21 19:01:33.504  INFO 1 --- [or-http-epoll-2] c.m.g.security.ScAuthenticationManager   : username:vip
+2024-02-21 19:01:33.504  INFO 1 --- [or-http-epoll-2] c.m.g.security.ScAuthenticationManager   : password:vip
+2024-02-21 19:01:33.661  INFO 1 --- [         task-1] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-system' URL not provided. Will try picking an instance via load-balancing.
+2024-02-21 19:01:33.692 DEBUG 1 --- [         task-1] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
+2024-02-21 19:01:34.197 DEBUG 1 --- [         task-1] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (505ms)
+2024-02-21 19:01:34.268  INFO 1 --- [         task-2] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-system' URL not provided. Will try picking an instance via load-balancing.
+2024-02-21 19:01:34.276 DEBUG 1 --- [         task-2] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getSysRoleById] ---> GET http://mingink-system/role/id/2 HTTP/1.1
+2024-02-21 19:01:34.289 DEBUG 1 --- [         task-2] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getSysRoleById] <--- HTTP/1.1 200  (12ms)
+2024-02-21 19:01:34.467  INFO 1 --- [or-http-epoll-2] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[vip]]
+2024-02-21 19:01:34.468  INFO 1 --- [or-http-epoll-2] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:true
+2024-02-21 19:01:34.487  INFO 1 --- [or-http-epoll-2] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidmlwIiwiZXhwIjoxNzA5MTE4MDk0LCJ1c2VybmFtZSI6InZpcCJ9.3VhnqRFo2tMVqHKGyxjNmrgmqUZJXoAfK3Bn2R8WkKI
+2024-02-21 19:01:34.487  INFO 1 --- [or-http-epoll-2] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-21 19:07:13.363  INFO 1 --- [or-http-epoll-3] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-21 19:07:13.363  INFO 1 --- [or-http-epoll-3] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-21 19:07:13.363  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-21 19:07:13.363  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidmlwIiwiZXhwIjoxNzA5MTE4MDk0LCJ1c2VybmFtZSI6InZpcCJ9.3VhnqRFo2tMVqHKGyxjNmrgmqUZJXoAfK3Bn2R8WkKI
+2024-02-21 19:07:13.364  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : username:vip
+2024-02-21 19:07:13.367  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : role = vip
+2024-02-21 19:07:13.368  INFO 1 --- [or-http-epoll-3] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-21 19:07:13.368  INFO 1 --- [or-http-epoll-3] c.m.g.security.ScAuthenticationManager   : username:vip
+2024-02-21 19:07:13.368  INFO 1 --- [or-http-epoll-3] c.m.g.security.ScAuthenticationManager   : password:vip
+2024-02-21 19:07:13.369 DEBUG 1 --- [         task-3] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
+2024-02-21 19:07:13.376 DEBUG 1 --- [         task-3] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (7ms)
+2024-02-21 19:07:13.378 DEBUG 1 --- [         task-4] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getSysRoleById] ---> GET http://mingink-system/role/id/2 HTTP/1.1
+2024-02-21 19:07:13.383 DEBUG 1 --- [         task-4] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getSysRoleById] <--- HTTP/1.1 200  (4ms)
+2024-02-21 19:07:13.470  INFO 1 --- [or-http-epoll-3] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[vip]]
+2024-02-21 19:07:13.470  INFO 1 --- [or-http-epoll-3] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:true
+2024-02-21 19:07:13.474  INFO 1 --- [or-http-epoll-3] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidmlwIiwiZXhwIjoxNzA5MTE4NDMzLCJ1c2VybmFtZSI6InZpcCJ9.PQi7RTMqQPMevof0odOVAt8pE-hTIPgH7LSipJPR_mg
+2024-02-21 19:07:13.474  INFO 1 --- [or-http-epoll-3] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
