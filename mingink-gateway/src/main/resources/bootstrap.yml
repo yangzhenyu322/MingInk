@@ -4,7 +4,7 @@ spring:
   application:
     name: mingink-gateway # 服务名称
   profiles:
-    # 环境配置：dev、production
+    # 环境配置：dev、prod
     active: dev
   cloud:
     nacos:

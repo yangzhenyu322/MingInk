@@ -25,6 +25,16 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
+    @GetMapping("/vip")
+    public R<String> getVIP() {
+        return R.ok("vip");
+    }
+
+    @GetMapping("/admin")
+    public R<String> getAdmin() {
+        return R.ok("admin");
+    }
+
     /**
      * 获取所有用户
      * @return

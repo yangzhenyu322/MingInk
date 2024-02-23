@@ -1,6 +1,5 @@
 package com.mingink.system.controller;
 
-import com.mingink.common.core.domain.R;
 import com.mingink.system.api.domain.Role;
 import com.mingink.system.service.IRoleService;
 import io.swagger.annotations.Api;
@@ -9,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * Role服务接口
@@ -23,12 +24,12 @@ public class RoleController {
     private IRoleService roleService;
 
     /**
-     * 通过用户id获取指定Role对象
-     * @param id
+     * 通过用户id获取该用户的所有Role对象
+     * @param userId
      * @return
      */
-    @GetMapping("/id/{id}")
-    public Role getRoleById(@PathVariable("id") Long id) {
-        return roleService.getRoleById(id);
+    @GetMapping("/userId/{userId}")
+    public List<Role> getRolesByUserId(@PathVariable("userId") String userId) {
+        return roleService.getRolesByUserId(userId);
     }
 }
