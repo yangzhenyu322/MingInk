@@ -9,6 +9,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.concurrent.Future;
 
 /**
@@ -23,9 +24,8 @@ public class ReactiveRemoteRoleService {
     private RemoteRoleService remoteRoleService;
 
     @Async
-    public Future<Role> getSysRoleById(Long id) {
-        Role role = remoteRoleService.getSysRoleById(id);
-
-        return new AsyncResult<>(role);
+    public Future<List<Role>> getRolesByUserId(String userId) {
+        List<Role> roles = remoteRoleService.getRolesByUserId(userId);
+        return new AsyncResult<>(roles);
     }
 }

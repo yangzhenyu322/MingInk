@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * 登录认证成功类
@@ -62,7 +63,12 @@ public class AuthenticationSuccessHandler extends WebFilterChainServerAuthentica
         try {
             Map<String, String> payload = new HashMap<>();
             payload.put("username", authentication.getName());
-            payload.put("role", list.get(0).getAuthority()); // 这里只添加了一种角色，实际上用户可以有不同的角色类型
+            // 将多个roleKey以JSON字符串形式存储到token中
+            String rolesJsonStr = JSON.toJSONString(list.stream().map(authority -> {
+                return authority.getAuthority();
+            }).collect(Collectors.toList()));
+
+            payload.put("roleKeys", rolesJsonStr);
 
             String token;
             if (isRememberMe) {

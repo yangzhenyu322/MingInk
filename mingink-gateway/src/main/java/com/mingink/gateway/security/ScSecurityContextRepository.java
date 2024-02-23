@@ -1,5 +1,6 @@
 package com.mingink.gateway.security;
 
+import com.alibaba.fastjson2.JSON;
 import com.mingink.common.core.utils.jwt.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -17,6 +18,7 @@ import reactor.core.publisher.Mono;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -60,7 +62,10 @@ public class ScSecurityContextRepository implements ServerSecurityContextReposit
                 // token校验成功，进行授权
                 SecurityContext securityContext = SecurityContextHolder.createEmptyContext();
                 Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-                authorities.add(new SimpleGrantedAuthority((String) userMap.get("role")));
+
+                List<String> roleKeys = JSON.parseArray((String) userMap.get("roleKeys"), String.class);
+                roleKeys.stream().forEach(roleKey -> authorities.add(new SimpleGrantedAuthority(roleKey)));
+
                 log.info("role = {}", (String) userMap.get("role"));
 
                 Authentication authentication = new UsernamePasswordAuthenticationToken(null, null, authorities);

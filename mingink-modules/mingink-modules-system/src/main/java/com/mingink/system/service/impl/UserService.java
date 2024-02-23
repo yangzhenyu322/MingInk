@@ -1,10 +1,10 @@
 package com.mingink.system.service.impl;
 
+import com.alibaba.fastjson2.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mingink.common.core.domain.R;
 import com.mingink.common.core.utils.id.SnowFlakeFactory;
 import com.mingink.common.core.utils.jwt.JWTUtils;
-import com.mingink.system.api.domain.Role;
 import com.mingink.system.api.domain.User;
 import com.mingink.system.api.domain.UserSafeInfo;
 import com.mingink.system.api.domain.request.UserInfoUptReq;
@@ -121,7 +121,6 @@ public class UserService implements IUserService {
         // 插入新用户
         user.setUserId(SnowFlakeFactory.getSnowFlakeFromCache().nextId()); // 雪花算法设置用户Id
         user.setUid((String.valueOf(userMapper.selectList(null).size() + 100001))); // 设置用户Uid
-        user.setRoleId(3L);  // 设置默认权限
         user.setNickName(user.getUserName()); // 默认新用户昵称为用户（账户）名
         user.setAvatar("null"); // 设置用户默认头像
         user.setStatus(0); // 默认用户状态为正常——0
@@ -129,6 +128,9 @@ public class UserService implements IUserService {
         user.setCreateTime(new Date()); // 当前时间
         user.setUpdateTime(new Date()); // 当前时间
         boolean isInsertSuccess = userMapper.insert(user) > 0;  // 返回值int代表插入成功条数，大于0表示插入成功条数，等于0则代表插入失败
+
+        // 设置默认权限
+        roleService.addUserRole(user.getUserId(), 3L);
 
         if (!isInsertSuccess) {
             log.info("用户[{}]注册失败：", user.getUserName());
@@ -195,8 +197,8 @@ public class UserService implements IUserService {
         }
         //解析token
         Map<String, Object> userMap = JWTUtils.getTokenInfo(token);
-        String role = (String) userMap.get("role");
-        return "admin".equals(role);
+        List<String> roleKeys = JSON.parseArray((String) userMap.get("roleKeys"), String.class);
+        return roleKeys.contains("admin");
     }
 
     @Override
@@ -205,8 +207,11 @@ public class UserService implements IUserService {
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_name", loginUser.getUserName());
         User user = userMapper.selectOne(queryWrapper);
-        Role role = roleService.getRoleById(user.getRoleId());
-        return "admin".equals(role.getRoleKey());
+        List<String> roleKeys = roleService.getRolesByUserId(user.getUserId()).stream().map(role -> {
+            return role.getRoleKey();
+        }).collect(Collectors.toList());
+
+        return roleKeys.contains("admin");
     }
 
     @Override

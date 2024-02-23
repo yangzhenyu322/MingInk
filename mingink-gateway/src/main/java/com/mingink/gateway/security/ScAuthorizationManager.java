@@ -8,6 +8,9 @@ import org.springframework.security.web.server.authorization.AuthorizationContex
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * 鉴权（访问授权）管理
  * 3. 权限认证，是否放行
@@ -24,31 +27,30 @@ public class ScAuthorizationManager implements ReactiveAuthorizationManager<Auth
         log.info("ScAuthorizationManager.check()");
 
         return authentication.map(auth -> {
+            // 鉴权成功 -> CookieToHeadersFilter设置请求头 -> 访问服务接口
+            // 鉴权失败：-> ScAuthenticationEntryPoint -> ScAccessDeniedHandler
+
             //SecurityUserDetails userSecurity = (SecurityUserDetails) auth.getPrincipal();
+            // 请求路径
             String path = authorizationContext.getExchange().getRequest().getURI().getPath();
-//            for (GrantedAuthority authority : auth.getAuthorities()) {
-//                // 根据用户权限和请求路径判断是否授权（待修改）
-//                if (authority.getAuthority().equals("ROLE_USER") && path.contains("/user/normal")) {
-//                    return new AuthorizationDecision(true);  // 授予权限访问服务
-//                } else if (authority.getAuthority().equals("ROLE_ADMIN") && path.contains("/user/admin")) {
-//                    return new AuthorizationDecision(true);
-//                }
-//            }
+            log.info("Authority url:{}", path);
+            // roleKeys
+            List<String> roleKeys = auth.getAuthorities().stream().map(authority -> authority.getAuthority()).collect(Collectors.toList());
+            log.info("roleKeys:{}", roleKeys);
 
-            // 鉴权：判断该用户角色是否有访问该接口的权限
-//            for (GrantedAuthority authority : auth.getAuthorities()) {
-//                if (!"admin".equals(authority.getAuthority())) {
-//                    log.info("AuthorizationDecision");
-//                    return new AuthorizationDecision(false);  // 鉴权失败：-> ScAuthenticationEntryPoint -> ScAccessDeniedHandler
-//                }
-//            }
-
-            if (auth.getAuthorities().size() <= 0) {
-                return new AuthorizationDecision(false); // 鉴权失败：-> ScAuthenticationEntryPoint -> ScAccessDeniedHandler
+            // 鉴权：根据请求路径和用户角色进行鉴权
+            if (path.contains("admin")) {
+                // admin权限
+                return new AuthorizationDecision(roleKeys.contains("admin"));
             }
 
-            log.info("Authorization Success！");
-            return new AuthorizationDecision(true); // 鉴权成功 -> CookieToHeadersFilter设置请求头 -> 访问服务接口
+            if (path.contains("vip")) {
+                // vip权限
+                return new AuthorizationDecision(roleKeys.contains("vip"));
+            }
+
+            // common 权限
+            return new AuthorizationDecision(true);
         }).defaultIfEmpty(new AuthorizationDecision(false)); // 无任何权限（未登录） ——> AcAuthenticationEntryPoint(只有这里才仅进入AcAuthenticationEntryPoint，而不进入ScAccessDeniedHandler)
     }
 }

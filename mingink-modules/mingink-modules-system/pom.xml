@@ -32,12 +32,6 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
-        <!-- 阿里云短信sdk -->
-        <dependency>
-            <groupId>com.aliyun</groupId>
-            <artifactId>alibabacloud-dysmsapi20170525</artifactId>
-        </dependency>
-
         <!-- 百度云短信sdk -->
         <dependency>
             <groupId>com.baidubce</groupId>
