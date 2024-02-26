@@ -9,15 +9,11 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>mingink-modules-system</artifactId>
+    <artifactId>mingink-modules-article</artifactId>
 
     <description>
-        mingink-modules-system系统模块
+        mingink-modules-article小说模块
     </description>
-
-    <properties>
-        <bce-java-dsk.version>0.10.294</bce-java-dsk.version>
-    </properties>
 
     <dependencies>
         <!-- SpringCloud Alibaba Nacos Discovery -->
@@ -30,19 +26,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-
-        <!-- 百度云短信sdk -->
-        <dependency>
-            <groupId>com.baidubce</groupId>
-            <artifactId>bce-java-sdk</artifactId>
-            <version>${bce-java-dsk.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>jdk.tools</artifactId>
-                    <groupId>jdk.tools</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <!-- 系统接口: 在本模块仅使用feign模块的公共类 -->
