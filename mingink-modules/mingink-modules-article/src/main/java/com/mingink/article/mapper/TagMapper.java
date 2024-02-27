@@ -1,7 +1,7 @@
 package com.mingink.article.mapper;
 
-import com.mingink.article.domain.entity.Tag;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mingink.article.api.domain.entity.Tag;
 
 /**
  * Tag Mapper 接口

@@ -1,8 +1,8 @@
 package com.mingink.article.service;
 
-import com.mingink.article.domain.entity.Author;
+
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mingink.article.domain.entity.Book;
+import com.mingink.article.api.domain.entity.Author;
 
 /**
  * @author ZenSheep
