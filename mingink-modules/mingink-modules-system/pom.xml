@@ -45,16 +45,10 @@
             </exclusions>
         </dependency>
 
-        <!-- 系统接口: 在本模块仅使用feign模块的公共类 -->
+        <!-- 系统接口 -->
         <dependency>
             <groupId>com.mingink</groupId>
             <artifactId>mingink-api-system</artifactId>
-        </dependency>
-
-        <!-- 核心模块 -->
-        <dependency>
-            <groupId>com.mingink</groupId>
-            <artifactId>mingink-common-core</artifactId>
         </dependency>
 
         <!-- Swagger模块 -->
