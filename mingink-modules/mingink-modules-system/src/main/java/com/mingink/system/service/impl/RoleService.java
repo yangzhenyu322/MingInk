@@ -1,14 +1,12 @@
 package com.mingink.system.service.impl;
 
-import com.mingink.common.core.domain.R;
 import com.mingink.system.api.domain.Role;
-import com.mingink.system.domain.UserRole;
+import com.mingink.system.domain.entity.UserRole;
 import com.mingink.system.mapper.RoleMapper;
 import com.mingink.system.mapper.UserRoleMapper;
 import com.mingink.system.service.IRoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

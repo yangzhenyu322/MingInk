@@ -1,0 +1,19 @@
+package com.mingink.article.service.impl;
+
+import com.mingink.article.domain.entity.BookTag;
+import com.mingink.article.mapper.BookTagMapper;
+import com.mingink.article.service.IBookTagService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+/**
+ * BookTag 服务实现类
+ * @author ZenSheep
+ * @since 2024-02-27
+ */
+@Slf4j
+@Service
+public class BookTagServiceImpl extends ServiceImpl<BookTagMapper, BookTag> implements IBookTagService {
+
+}

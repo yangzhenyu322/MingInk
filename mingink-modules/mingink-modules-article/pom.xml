@@ -9,15 +9,11 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>mingink-modules-system</artifactId>
+    <artifactId>mingink-modules-article</artifactId>
 
     <description>
-        mingink-modules-system系统模块
+        mingink-modules-article小说模块
     </description>
-
-    <properties>
-        <bce-java-dsk.version>0.10.294</bce-java-dsk.version>
-    </properties>
 
     <dependencies>
         <!-- SpringCloud Alibaba Nacos Discovery -->
@@ -26,49 +22,10 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
-        <!--JustAuth-->
-        <dependency>
-            <groupId>me.zhyd.oauth</groupId>
-            <artifactId>JustAuth</artifactId>
-            <version>1.15.9</version>
-        </dependency>
-        <!--http请求相关-->
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-http</artifactId>
-            <version>5.3.9</version>
-        </dependency>
-        <!--导入lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-            <scope>provided</scope>
-        </dependency>
-        <!--fastjson-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.62</version>
-        </dependency>
-
         <!-- SpringCloud Alibaba Nacos Config -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-
-        <!-- 百度云短信sdk -->
-        <dependency>
-            <groupId>com.baidubce</groupId>
-            <artifactId>bce-java-sdk</artifactId>
-            <version>${bce-java-dsk.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>jdk.tools</artifactId>
-                    <groupId>jdk.tools</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <!-- 系统接口: 在本模块仅使用feign模块的公共类 -->
