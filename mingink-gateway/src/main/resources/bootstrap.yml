@@ -57,7 +57,7 @@ spring:
         - id: mingink-article
           uri: lb://mingink-article
           predicates:
-            - Path=/api/v1/book/**
+            - Path=/api/v1/author/**, /api/v1/book/**, /api/v1/book-tag/**, /api/v1/chapter/**, /api/v1/comment/**, /api/v1/tag/**
           filters:
             - StripPrefix=2 # 去除前 n 个请求路径前缀
       globalcors: # 全局的跨域请求
