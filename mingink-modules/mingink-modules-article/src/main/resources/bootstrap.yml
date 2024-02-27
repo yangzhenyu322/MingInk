@@ -1,12 +1,12 @@
 # Tomcat
 server:
-  port: 8082
+  port: 8083
 
 # Spring
 spring:
   application:
     # 应用名称
-    name: mingink-system
+    name: mingink-article
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher # swagger路径匹配方式
@@ -42,14 +42,4 @@ mybatis-plus:
     # 将数据库中含有下划线字段映射成驼峰命名法
     map-underscore-to-camel-case: true
   # 指定类型别名的包路径
-  type-aliases-package: com.opentool.system.domain.entity
-
-# BaiDuYun
-baidu:
-  accessKeyId: ALTAKgIm9DHzDPsRcLjVycygfT
-  secretAccessKey: b9e34bc5c6a04204813857cfe7d8c3b2
-  # SMS 服务
-  sms:
-    signatureId: sms-sign-HKpwwl39058
-    template: sms-tmpl-btFhKG25676
-    endpoint: http://smsv3.bj.baidubce.com
+  type-aliases-package: com.opentool.article.domain.entity

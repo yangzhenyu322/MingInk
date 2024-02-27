@@ -7,6 +7,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.List;
+
 /**
  * Role Feign：提供Role的远程服务
  * @Author: ZenSheep
@@ -14,6 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 @FeignClient(name = "mingink-system", contextId = "remote-role", configuration = DefaultFeignConfiguration.class)
 public interface RemoteRoleService {
-    @GetMapping("/role/id/{id}")
-    public Role getSysRoleById(@PathVariable("id") Long id);
+    @GetMapping("/role/userId/{userId}")
+    public List<Role> getRolesByUserId(@PathVariable("userId") String userId);
 }

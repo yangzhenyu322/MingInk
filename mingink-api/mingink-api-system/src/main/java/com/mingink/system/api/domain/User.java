@@ -57,12 +57,6 @@ public class User {
     private Date birthday;
 
     /**
-    * 用户权限 (1: 管理员 2:VIP用户 3: 普通用户)
-    * 默认普通成员
-    */
-    private Long roleId;
-
-    /**
     * 个性签名
     */
     private String remark;

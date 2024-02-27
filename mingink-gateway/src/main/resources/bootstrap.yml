@@ -1,10 +1,22 @@
 server:
   port: 8081 # 网关端口
+  # 配置SSL 证书
+  ssl:
+    enabled: true
+    # 证书位置
+    key-store: classpath:scg-keystore.p12
+    # 证书别名
+    key-alias: mingink
+    # 密钥库类型
+    key-store-type: PKCS12
+    # 密钥库口令（密码）
+    key-store-password: lovelumine364
+
 spring:
   application:
     name: mingink-gateway # 服务名称
   profiles:
-    # 环境配置：dev、production
+    # 环境配置：dev、prod
     active: dev
   cloud:
     nacos:
@@ -42,6 +54,12 @@ spring:
             - Path=/api/v1/user/**, /api/v1/oauth/**, /api/v1/role/**, /api/v1/file/**, /api/v1/oss/**, /api/v1/sms/** # 按照路径匹配
           filters:
             - StripPrefix=2 # 去除前 n 个请求路径前缀
+        - id: mingink-article
+          uri: lb://mingink-article
+          predicates:
+            - Path=/api/v1/book/**
+          filters:
+            - StripPrefix=2 # 去除前 n 个请求路径前缀
       globalcors: # 全局的跨域请求
         add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
         cors-configurations:
@@ -66,11 +84,6 @@ spring:
           max-idle-time: 20000ms
         connect-timeout: 60000 # 连接超时时间，单位为毫秒，默认为30秒
         response-timeout: 60000 # 响应超时时间，单位为毫秒，默认为30秒
-
-mingink-system:
-  ribbon:
-    # 负载均衡规则
-    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
 
 # 子模块下的声明式接口包 日志级别必须是debug ,不然不打印日志
 logging:

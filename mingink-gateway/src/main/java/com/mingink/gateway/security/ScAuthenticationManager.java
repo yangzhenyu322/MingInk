@@ -22,6 +22,8 @@ import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 登录认证管理
@@ -73,10 +75,11 @@ public class ScAuthenticationManager implements ReactiveAuthenticationManager {
         }
 
         // 登录成功，进行授权
-        Role sysRole = reactiveRemoteRoleService.getSysRoleById(user.getRoleId()).get();
-        String role = sysRole.getRoleKey();
+        List<Role> roles = reactiveRemoteRoleService.getRolesByUserId(user.getUserId()).get();
+
+//        String role = sysRole.getRoleKey();
         Collection<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(role));
+        roles.stream().forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getRoleKey())));
 
         // 返回securityUserDetails对象后会自定校验用户密码是否正确
         SecurityUserDetails securityUserDetails = new SecurityUserDetails(username, "{bcrypt}" + passwordEncoder.encode(user.getPassword()), authorities, user.getUserId());
