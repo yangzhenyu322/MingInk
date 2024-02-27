@@ -1,7 +1,7 @@
 package com.mingink.gateway.remote;
 
 import com.mingink.system.api.RemoteUserService;
-import com.mingink.system.api.domain.UserSafeInfo;
+import com.mingink.system.api.domain.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -9,7 +9,6 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.concurrent.Future;
 
 /**
@@ -28,9 +27,8 @@ public class ReactiveRemoteUserService {
 
     // 必须在异步线程中执行，执行结果返回Future
     @Async
-    public Future<List<UserSafeInfo>> findUserByUserName(String username) {
-        List<UserSafeInfo> users = remoteUserService.getUserByUserName(username);
-
-        return new AsyncResult<>(users);
+    public Future<User> findUserByUserName(String username) {
+        User user = remoteUserService.getUserByUserName(username);
+        return new AsyncResult<>(user);
     }
 }
