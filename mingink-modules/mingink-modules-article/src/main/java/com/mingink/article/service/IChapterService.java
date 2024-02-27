@@ -1,8 +1,13 @@
 package com.mingink.article.service;
 
+import com.mingink.article.domain.entity.Chapter;
+import com.baomidou.mybatisplus.extension.service.IService;
+
 /**
- * @Author: ZenSheep
- * @Date: 2024/2/26 22:05
+ * Chapter 服务类
+ * @author ZenSheep
+ * @since 2024-02-27
  */
-public interface IChapterService {
+public interface IChapterService extends IService<Chapter> {
+
 }

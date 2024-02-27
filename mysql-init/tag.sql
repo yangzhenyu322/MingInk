@@ -29,7 +29,7 @@ use mingink
 DROP TABLE IF EXISTS `tag`;
 CREATE TABLE `tag`  (
   `tag_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '标签ID',
-  `name` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '标签名字\n',
+  `name` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '标签名字',
   `slug` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '标签slug（用于URL）',
   `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '标签状态（1:激活 0:非激活）',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',

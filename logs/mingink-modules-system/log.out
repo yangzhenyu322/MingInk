@@ -33,7 +33,7 @@ SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorSta
 | | |\/|_)(_| | |_\  |_)||_|_\ 
      /               |         
                         3.4.2 
-2024-02-26 17:20:19.996  WARN 1 --- [           main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mingink.system.domain.UserRole".
+2024-02-26 17:20:19.996  WARN 1 --- [           main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mingink.system.domain.entity.UserRole".
 2024-02-26 17:20:22.850  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
 2024-02-26 17:20:22.989  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
 2024-02-26 17:20:23.006  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
