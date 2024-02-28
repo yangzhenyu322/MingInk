@@ -1,7 +1,7 @@
 package com.mingink.article.mapper;
 
-import com.mingink.article.domain.entity.BookTag;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mingink.article.api.domain.entity.BookTag;
 
 /**
  * BookTag Mapper 接口

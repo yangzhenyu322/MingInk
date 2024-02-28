@@ -29,7 +29,6 @@ public class ReactiveRemoteUserService {
     @Async
     public Future<User> findUserByUserName(String username) {
         User user = remoteUserService.getUserByUserName(username);
-
         return new AsyncResult<>(user);
     }
 }

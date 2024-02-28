@@ -1,7 +1,7 @@
 package com.mingink.article.mapper;
 
-import com.mingink.article.domain.entity.Chapter;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mingink.article.api.domain.entity.Chapter;
 
 /**
  * Chapter Mapper 接口
