@@ -57,3 +57,1425 @@
  | |  | | | | | | | | | (_| |  | |  | | | | |   < 
  |_|  |_| |_| |_| |_|  \__, | |___| |_| |_| |_|\_\
                        |___/                      
+2024-02-26 22:41:12.489  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-26 22:41:12.492  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/miR4
+2024-02-26 22:41:12.492  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-26 22:41:12.513  INFO 1 --- [     parallel-1] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-26 22:41:12.520 ERROR 1 --- [     parallel-1] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/miR4
+2024-02-27 00:46:36.753  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 00:46:36.753  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/
+2024-02-27 00:46:36.754  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 00:46:36.755  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 00:46:36.755 ERROR 1 --- [     parallel-2] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/
+2024-02-27 00:46:40.560  INFO 1 --- [or-http-epoll-6] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 00:46:40.560  INFO 1 --- [or-http-epoll-6] c.m.g.s.ScSecurityContextRepository      : new access request path=/
+2024-02-27 00:46:40.560  INFO 1 --- [or-http-epoll-6] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 00:46:40.561  INFO 1 --- [     parallel-3] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 00:46:40.562 ERROR 1 --- [     parallel-3] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/
+2024-02-27 00:46:41.493  WARN 1 --- [or-http-epoll-7] r.n.http.server.HttpServerOperations     : [7b82b0b5, L:/172.19.0.2:8081 - R:/167.94.146.58:59778] Decoding failed: REQUEST(decodeResult: failure(java.lang.IllegalStateException: Unexpected request [PRI * HTTP/2.0]), version: HTTP/2.0)
+PRI * HTTP/2.0
+2024-02-27 03:43:49.446  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 03:43:49.447  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/
+2024-02-27 03:43:49.447  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 03:43:49.448  INFO 1 --- [     parallel-4] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 03:43:49.448 ERROR 1 --- [     parallel-4] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/
+2024-02-27 06:45:29.021  INFO 1 --- [or-http-epoll-6] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 06:45:29.021  INFO 1 --- [or-http-epoll-6] c.m.g.s.ScSecurityContextRepository      : new access request path=/
+2024-02-27 06:45:29.021  INFO 1 --- [or-http-epoll-6] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 06:45:29.022  INFO 1 --- [     parallel-5] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 06:45:29.022 ERROR 1 --- [     parallel-5] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/
+2024-02-27 06:45:34.822  INFO 1 --- [or-http-epoll-7] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 06:45:34.822  INFO 1 --- [or-http-epoll-7] c.m.g.s.ScSecurityContextRepository      : new access request path=/
+2024-02-27 06:45:34.822  INFO 1 --- [or-http-epoll-7] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 06:45:34.823  INFO 1 --- [     parallel-6] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 06:45:34.824 ERROR 1 --- [     parallel-6] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/
+2024-02-27 06:45:35.776  WARN 1 --- [or-http-epoll-8] r.n.http.server.HttpServerOperations     : [52e81b80, L:/172.19.0.2:8081 - R:/167.94.145.58:48204] Decoding failed: REQUEST(decodeResult: failure(java.lang.IllegalStateException: Unexpected request [PRI * HTTP/2.0]), version: HTTP/2.0)
+PRI * HTTP/2.0
+2024-02-27 12:29:51.457  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 12:29:51.457  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/
+2024-02-27 12:29:51.457  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 12:29:51.458  INFO 1 --- [     parallel-7] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 13:18:01.199  INFO 1 --- [or-http-epoll-7] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 13:18:01.199  INFO 1 --- [or-http-epoll-7] c.m.g.s.ScSecurityContextRepository      : new access request path=/
+2024-02-27 13:18:01.199  INFO 1 --- [or-http-epoll-7] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 13:18:01.201  INFO 1 --- [     parallel-8] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 13:18:01.201 ERROR 1 --- [     parallel-8] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/
+2024-02-27 16:30:30.397  INFO 1 --- [or-http-epoll-3] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 16:30:30.399  INFO 1 --- [or-http-epoll-3] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 16:30:30.402  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 16:30:30.402  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk0MzYzMjksInJvbGVLZXlzIjoiW1wiYWRtaW5cIixcImNvbW1vblwiLFwidmlwXCJdIiwidXNlcm5hbWUiOiJhZG1pbiJ9.sq680CwfTdWCZ6XFraqG-5p_roc0K09CCQx_0FLggs4
+2024-02-27 16:30:30.423  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : username:admin
+2024-02-27 16:30:30.839  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 16:30:30.854  INFO 1 --- [or-http-epoll-3] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 16:30:30.855  INFO 1 --- [or-http-epoll-3] c.m.g.security.ScAuthenticationManager   : username:admin
+2024-02-27 16:30:30.855  INFO 1 --- [or-http-epoll-3] c.m.g.security.ScAuthenticationManager   : password:admin333
+2024-02-27 16:30:31.020  INFO 1 --- [         task-1] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-system' URL not provided. Will try picking an instance via load-balancing.
+2024-02-27 16:30:31.054 DEBUG 1 --- [         task-1] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/admin HTTP/1.1
+2024-02-27 16:30:31.527 DEBUG 1 --- [         task-1] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (472ms)
+2024-02-27 16:30:31.570  INFO 1 --- [         task-2] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-system' URL not provided. Will try picking an instance via load-balancing.
+2024-02-27 16:30:31.577 DEBUG 1 --- [         task-2] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734272 HTTP/1.1
+2024-02-27 16:30:31.590 DEBUG 1 --- [         task-2] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (13ms)
+2024-02-27 16:30:31.729  INFO 1 --- [or-http-epoll-3] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[admin, common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[admin, common, vip]]
+2024-02-27 16:30:31.729  INFO 1 --- [or-http-epoll-3] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:true
+2024-02-27 16:30:31.748  INFO 1 --- [or-http-epoll-3] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk2Mjc0MzEsInJvbGVLZXlzIjoiW1wiYWRtaW5cIixcImNvbW1vblwiLFwidmlwXCJdIiwidXNlcm5hbWUiOiJhZG1pbiJ9.A97jpF1BTxOYQ1O2JvVKaElAK9ah4F_MfqXE31Gbxts
+2024-02-27 16:30:31.748  INFO 1 --- [or-http-epoll-3] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 17:44:07.440  INFO 1 --- [or-http-epoll-4] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 17:44:07.441  INFO 1 --- [or-http-epoll-4] c.m.g.s.ScSecurityContextRepository      : new access request path=/
+2024-02-27 17:44:07.441  INFO 1 --- [or-http-epoll-4] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 17:44:07.442  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 17:44:07.442 ERROR 1 --- [     parallel-2] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/
+2024-02-27 21:10:37.748  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:10:37.748  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:10:37.748  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:10:37.748  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk2Mjc0MzEsInJvbGVLZXlzIjoiW1wiYWRtaW5cIixcImNvbW1vblwiLFwidmlwXCJdIiwidXNlcm5hbWUiOiJhZG1pbiJ9.A97jpF1BTxOYQ1O2JvVKaElAK9ah4F_MfqXE31Gbxts
+2024-02-27 21:10:37.749  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : username:admin
+2024-02-27 21:10:37.752  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:10:37.752  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:10:37.752  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:10:37.753 DEBUG 1 --- [         task-3] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:10:37.759 DEBUG 1 --- [         task-3] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (6ms)
+2024-02-27 21:10:37.761 DEBUG 1 --- [         task-4] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:10:37.766 DEBUG 1 --- [         task-4] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:10:37.853  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:10:37.853  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:true
+2024-02-27 21:10:37.855  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk2NDQyMzcsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.YV-jkGaEhRq1uomcsgStf_coxil251vu1vkSw52SpLQ
+2024-02-27 21:10:37.855  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:11:27.271  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:11:27.271  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:11:27.271  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
+2024-02-27 21:11:27.271  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk2NDQyMzcsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.YV-jkGaEhRq1uomcsgStf_coxil251vu1vkSw52SpLQ
+2024-02-27 21:11:27.272  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:11:27.273  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:11:27.274  INFO 1 --- [     parallel-4] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:11:27.274  INFO 1 --- [     parallel-4] c.m.g.security.ScAuthorizationManager    : Authority url:/api/v1/user/all
+2024-02-27 21:11:27.275  INFO 1 --- [     parallel-4] c.m.g.security.ScAuthorizationManager    : roleKeys:[common]
+2024-02-27 21:11:27.275  INFO 1 --- [     parallel-4] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:11:27.275  INFO 1 --- [     parallel-4] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:16:16.830  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:16:16.831  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
+2024-02-27 21:16:16.831  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:16:16.831  INFO 1 --- [     parallel-8] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:16:16.832 ERROR 1 --- [     parallel-8] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
+2024-02-27 21:16:25.284  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:16:25.284  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
+2024-02-27 21:16:25.284  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:16:25.285  INFO 1 --- [     parallel-1] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:16:25.285 ERROR 1 --- [     parallel-1] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
+2024-02-27 21:16:41.210  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:16:41.210  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
+2024-02-27 21:16:41.210  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:16:41.211  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:16:41.211 ERROR 1 --- [     parallel-2] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
+2024-02-27 21:18:00.856  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:18:00.856  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/admin
+2024-02-27 21:18:00.857  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:18:00.857  INFO 1 --- [     parallel-3] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:18:00.858 ERROR 1 --- [     parallel-3] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/admin
+2024-02-27 21:22:19.434  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:22:19.434  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/admin
+2024-02-27 21:22:19.434  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:22:19.435  INFO 1 --- [     parallel-4] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:22:19.435 ERROR 1 --- [     parallel-4] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/admin
+2024-02-27 21:22:54.381  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:22:54.381  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/login
+2024-02-27 21:22:54.381  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:22:54.382  INFO 1 --- [     parallel-5] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:22:54.382 ERROR 1 --- [     parallel-5] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/login
+2024-02-27 21:22:55.799  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:22:55.799  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/login
+2024-02-27 21:22:55.799  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:22:55.800  INFO 1 --- [     parallel-6] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:22:55.800 ERROR 1 --- [     parallel-6] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/login
+2024-02-27 21:31:15.741  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:31:15.741  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/login
+2024-02-27 21:31:15.741  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:31:15.741  INFO 1 --- [     parallel-7] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:31:15.742 ERROR 1 --- [     parallel-7] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/login
+2024-02-27 21:31:17.097  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:31:17.097  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/login
+2024-02-27 21:31:17.097  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:31:17.097  INFO 1 --- [     parallel-8] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:31:17.098 ERROR 1 --- [     parallel-8] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/login
+2024-02-27 21:31:50.496  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:31:50.497  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/login
+2024-02-27 21:31:50.497  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:31:50.497  INFO 1 --- [     parallel-1] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:31:50.498 ERROR 1 --- [     parallel-1] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/login
+2024-02-27 21:31:51.669  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:31:51.669  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/login
+2024-02-27 21:31:51.669  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:31:51.670  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:31:51.670 ERROR 1 --- [     parallel-2] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/login
+2024-02-27 21:32:08.223  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:32:08.223  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:32:08.223  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:32:08.224  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:32:08.224  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:32:08.224  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:32:08.224 DEBUG 1 --- [         task-5] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:32:08.230 DEBUG 1 --- [         task-5] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:32:08.231 DEBUG 1 --- [         task-6] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:32:08.236 DEBUG 1 --- [         task-6] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:32:08.322  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:32:08.322  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:32:08.324  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcxMjgsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.9vZO_KZsvOYoeleDzrRu3FR73KeH_tWwqPEjjd3GMzI
+2024-02-27 21:32:08.324  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:34:29.502  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:34:29.503  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:34:29.503  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:34:29.503  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcxMjgsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.9vZO_KZsvOYoeleDzrRu3FR73KeH_tWwqPEjjd3GMzI
+2024-02-27 21:34:29.504  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:34:29.505  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:34:29.505  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:34:29.506  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:34:29.506  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:34:29.506 DEBUG 1 --- [         task-7] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:34:29.511 DEBUG 1 --- [         task-7] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:34:29.513 DEBUG 1 --- [         task-8] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:34:29.518 DEBUG 1 --- [         task-8] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:34:29.604  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:34:29.604  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:34:29.606  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyNjksInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.GMHsSt2HPyNJ-we7wmblH8zdFVAhqaBPDFTDnur20UI
+2024-02-27 21:34:29.606  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:34:39.996  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:34:39.997  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:34:39.997  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:34:39.997  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyNjksInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.GMHsSt2HPyNJ-we7wmblH8zdFVAhqaBPDFTDnur20UI
+2024-02-27 21:34:39.998  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:34:39.999  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:34:39.999  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:34:39.999  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:34:40.000  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:34:40.000 DEBUG 1 --- [         task-9] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:34:40.006 DEBUG 1 --- [         task-9] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:34:40.007 DEBUG 1 --- [        task-10] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:34:40.014 DEBUG 1 --- [        task-10] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (6ms)
+2024-02-27 21:34:40.100  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:34:40.100  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:34:40.102  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyODAsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.2uJivVyJ6-k32PyBa53-IECdzjLkOuAZjtoYaZBkbFg
+2024-02-27 21:34:40.102  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:34:43.528  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:34:43.528  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:34:43.528  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:34:43.528  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyODAsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.2uJivVyJ6-k32PyBa53-IECdzjLkOuAZjtoYaZBkbFg
+2024-02-27 21:34:43.529  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:34:43.531  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:34:43.531  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:34:43.531  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:
+2024-02-27 21:34:43.552 ERROR 1 --- [or-http-epoll-5] a.w.r.e.AbstractErrorWebExceptionHandler : [1e365791-27]  500 Server Error for HTTP POST "/api/v1/login"
+
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.springframework.security.core.Authentication.getCredentials()" is null
+	at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ com.mingink.gateway.security.filter.CookieToHeadersFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP POST "/api/v1/login" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+		at org.springframework.security.web.server.authentication.AuthenticationWebFilter.lambda$authenticate$5(AuthenticationWebFilter.java:121) ~[spring-security-web-5.7.9.jar!/:5.7.9]
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:152) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.signalCached(MonoCacheTime.java:337) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onNext(MonoCacheTime.java:354) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2400) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime$CoordinatorSubscriber.onSubscribe(MonoCacheTime.java:293) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime.subscribeOrReturn(MonoCacheTime.java:143) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:489) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:422) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2400) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:424) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:80) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1002) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:707) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:481) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:621) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:230) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1383) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1246) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1295) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2024-02-27 21:34:46.611  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:34:46.611  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:34:46.611  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:34:46.611  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyODAsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.2uJivVyJ6-k32PyBa53-IECdzjLkOuAZjtoYaZBkbFg
+2024-02-27 21:34:46.612  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:34:46.613  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:34:46.614  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:34:46.614  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:34:46.614  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:34:46.615 DEBUG 1 --- [        task-11] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:34:46.621 DEBUG 1 --- [        task-11] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (6ms)
+2024-02-27 21:34:46.623 DEBUG 1 --- [        task-12] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:34:46.629 DEBUG 1 --- [        task-12] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (6ms)
+2024-02-27 21:34:46.715  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:34:46.715  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:34:46.717  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyODYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.W2yJJj3651YA83kiYR9yQQNi_phv532d1VG3L0-LgIc
+2024-02-27 21:34:46.717  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:34:51.625  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:34:51.625  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:34:51.625  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:34:51.625  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyODYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.W2yJJj3651YA83kiYR9yQQNi_phv532d1VG3L0-LgIc
+2024-02-27 21:34:51.626  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:34:51.628  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:34:51.628  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:34:51.628  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:34:51.628  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:34:51.629 DEBUG 1 --- [        task-13] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:34:51.634 DEBUG 1 --- [        task-13] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:34:51.636 DEBUG 1 --- [        task-14] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:34:51.640 DEBUG 1 --- [        task-14] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:34:51.726  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:34:51.726  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:34:51.728  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyOTEsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.M_yDfFq1VFVZpWo6ZLYTncNgBLsq97FmqIfgtOFj7cU
+2024-02-27 21:34:51.728  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:38:44.763  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:38:44.763  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:38:44.763  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:38:44.763  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjcyOTEsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.M_yDfFq1VFVZpWo6ZLYTncNgBLsq97FmqIfgtOFj7cU
+2024-02-27 21:38:44.764  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:38:44.766  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:38:44.766  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:38:44.766  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:38:44.766  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:38:44.767 DEBUG 1 --- [        task-15] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:38:44.772 DEBUG 1 --- [        task-15] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:38:44.773 DEBUG 1 --- [        task-16] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:38:44.778 DEBUG 1 --- [        task-16] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:38:44.864  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:38:44.864  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:38:44.866  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc1MjQsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.iPoYdBv_EbnXDvjDt7rXQhFMuydXbhBjIPxlstjCaB8
+2024-02-27 21:38:44.866  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:39:03.464  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:39:03.464  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:39:03.464  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:39:03.464  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc1MjQsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.iPoYdBv_EbnXDvjDt7rXQhFMuydXbhBjIPxlstjCaB8
+2024-02-27 21:39:03.465  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:39:03.466  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:39:03.467  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:39:03.467  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:39:03.467  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:39:03.467 DEBUG 1 --- [        task-17] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:39:03.473 DEBUG 1 --- [        task-17] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:39:03.474 DEBUG 1 --- [        task-18] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:39:03.479 DEBUG 1 --- [        task-18] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:39:03.564  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:39:03.564  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:39:03.566  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc1NDMsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.obVvhcWpQRHgP7nlGrXZ9BXwLUTtToTKZQy9nEqU6u8
+2024-02-27 21:39:03.566  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:39:38.480  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:39:38.480  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:39:38.480  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:39:38.480  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc1NDMsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.obVvhcWpQRHgP7nlGrXZ9BXwLUTtToTKZQy9nEqU6u8
+2024-02-27 21:39:38.481  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:39:38.483  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:39:38.483  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:39:38.483  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:39:38.483  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:39:38.484 DEBUG 1 --- [        task-19] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:39:38.490 DEBUG 1 --- [        task-19] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:39:38.491 DEBUG 1 --- [        task-20] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:39:38.495 DEBUG 1 --- [        task-20] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:39:38.581  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:39:38.581  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:39:38.583  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc1NzgsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.RkR9e36tGTW5xmT18_pIyEGW6C4bfJ0yEkAyO4Z95_8
+2024-02-27 21:39:38.583  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:42:16.142  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:16.143  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:16.143  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:16.143  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc1NzgsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.RkR9e36tGTW5xmT18_pIyEGW6C4bfJ0yEkAyO4Z95_8
+2024-02-27 21:42:16.144  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:16.145  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:16.145  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:16.145  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:42:16.145  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:42:16.146 DEBUG 1 --- [        task-21] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:42:16.151 DEBUG 1 --- [        task-21] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:42:16.152 DEBUG 1 --- [        task-22] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:42:16.157 DEBUG 1 --- [        task-22] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:42:16.242  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:42:16.242  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:42:16.244  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3MzYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.tO1ZCPBixb9V-8Wa1yI5oH1O8qbVSbb_mKSZJG0iabg
+2024-02-27 21:42:16.244  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:42:20.415  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:20.416  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:20.416  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:20.416  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3MzYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.tO1ZCPBixb9V-8Wa1yI5oH1O8qbVSbb_mKSZJG0iabg
+2024-02-27 21:42:20.417  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:20.418  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:20.418  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:20.418  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:
+2024-02-27 21:42:20.420 ERROR 1 --- [or-http-epoll-5] a.w.r.e.AbstractErrorWebExceptionHandler : [1e365791-34]  500 Server Error for HTTP POST "/api/v1/login?username=guest&username=guest"
+
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.springframework.security.core.Authentication.getCredentials()" is null
+	at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ com.mingink.gateway.security.filter.CookieToHeadersFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP POST "/api/v1/login?username=guest&username=guest" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+		at org.springframework.security.web.server.authentication.AuthenticationWebFilter.lambda$authenticate$5(AuthenticationWebFilter.java:121) ~[spring-security-web-5.7.9.jar!/:5.7.9]
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:152) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime.subscribeOrReturn(MonoCacheTime.java:151) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:489) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:422) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2400) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:424) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:80) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1002) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:707) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:481) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:621) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:230) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1383) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1246) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1295) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2024-02-27 21:42:28.638  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:28.639  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:28.639  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:28.639  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3MzYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.tO1ZCPBixb9V-8Wa1yI5oH1O8qbVSbb_mKSZJG0iabg
+2024-02-27 21:42:28.639  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:28.641  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:28.641  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:28.641  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:42:28.641  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:42:28.642 DEBUG 1 --- [        task-23] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:42:28.650 DEBUG 1 --- [        task-23] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (7ms)
+2024-02-27 21:42:28.651 DEBUG 1 --- [        task-24] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:42:28.655 DEBUG 1 --- [        task-24] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:42:28.740  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:42:28.740  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:42:28.742  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NDgsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.BiNl_Z_nm7b0CDEqpV67BbJnBjHxAiZZI_56w1Fm7q8
+2024-02-27 21:42:28.742  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:42:45.219  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:45.219  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:45.220  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:45.220  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NDgsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.BiNl_Z_nm7b0CDEqpV67BbJnBjHxAiZZI_56w1Fm7q8
+2024-02-27 21:42:45.220  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:45.222  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:45.222  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:45.222  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:42:45.222  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:42:45.223 DEBUG 1 --- [        task-25] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:42:45.228 DEBUG 1 --- [        task-25] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:42:45.229 DEBUG 1 --- [        task-26] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:42:45.234 DEBUG 1 --- [        task-26] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:42:45.320  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:42:45.320  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:42:45.322  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NjUsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.40o-y5Tt9SjcqrVb1oHsHff11oJLCkHYT2JjpcjjoOs
+2024-02-27 21:42:45.322  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:42:46.615  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:46.615  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:46.615  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:46.615  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NjUsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.40o-y5Tt9SjcqrVb1oHsHff11oJLCkHYT2JjpcjjoOs
+2024-02-27 21:42:46.616  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:46.617  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:46.618  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:46.618  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:42:46.618  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:42:46.618 DEBUG 1 --- [        task-27] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:42:46.623 DEBUG 1 --- [        task-27] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:42:46.624 DEBUG 1 --- [        task-28] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:42:46.630 DEBUG 1 --- [        task-28] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (6ms)
+2024-02-27 21:42:46.717  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:42:46.717  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:42:46.719  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NjYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.FSNp7Wyu02bm5adYGFpN1ldWoSOogceFBllQ_JWM3EM
+2024-02-27 21:42:46.719  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:42:51.812  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:51.813  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:51.813  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:51.813  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NjYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.FSNp7Wyu02bm5adYGFpN1ldWoSOogceFBllQ_JWM3EM
+2024-02-27 21:42:51.814  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:51.815  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:51.815  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:51.815  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:
+2024-02-27 21:42:51.817 ERROR 1 --- [or-http-epoll-5] a.w.r.e.AbstractErrorWebExceptionHandler : [1e365791-38]  500 Server Error for HTTP POST "/api/v1/login"
+
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.springframework.security.core.Authentication.getCredentials()" is null
+	at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ com.mingink.gateway.security.filter.CookieToHeadersFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP POST "/api/v1/login" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+		at org.springframework.security.web.server.authentication.AuthenticationWebFilter.lambda$authenticate$5(AuthenticationWebFilter.java:121) ~[spring-security-web-5.7.9.jar!/:5.7.9]
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:152) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime.subscribeOrReturn(MonoCacheTime.java:151) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:489) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:422) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2400) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:424) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:80) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1002) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:707) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:481) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:621) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:230) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1383) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1246) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1295) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2024-02-27 21:42:53.095  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:53.096  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:53.096  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:53.096  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NjYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.FSNp7Wyu02bm5adYGFpN1ldWoSOogceFBllQ_JWM3EM
+2024-02-27 21:42:53.097  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:53.098  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:53.098  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:53.099  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:
+2024-02-27 21:42:53.100 ERROR 1 --- [or-http-epoll-5] a.w.r.e.AbstractErrorWebExceptionHandler : [1e365791-39]  500 Server Error for HTTP POST "/api/v1/login"
+
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.springframework.security.core.Authentication.getCredentials()" is null
+	at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ com.mingink.gateway.security.filter.CookieToHeadersFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP POST "/api/v1/login" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+		at org.springframework.security.web.server.authentication.AuthenticationWebFilter.lambda$authenticate$5(AuthenticationWebFilter.java:121) ~[spring-security-web-5.7.9.jar!/:5.7.9]
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:152) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime.subscribeOrReturn(MonoCacheTime.java:151) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:489) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:422) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2400) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:424) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:80) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1002) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:707) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:481) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:621) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:230) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1383) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1246) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1295) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2024-02-27 21:42:55.845  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:55.845  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:55.846  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:55.846  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NjYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.FSNp7Wyu02bm5adYGFpN1ldWoSOogceFBllQ_JWM3EM
+2024-02-27 21:42:55.847  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:55.848  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:55.849  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:55.849  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:42:55.849  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:42:55.849 DEBUG 1 --- [        task-21] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:42:55.855 DEBUG 1 --- [        task-21] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:42:55.856 DEBUG 1 --- [        task-22] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:42:55.860 DEBUG 1 --- [        task-22] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:42:55.955  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:42:55.955  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:42:55.957  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NzUsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.pUAt5HBmZiJkLT3fha7G6aHYyJhWI5f6KQv00wlL4ZI
+2024-02-27 21:42:55.957  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:42:57.909  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:42:57.909  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:42:57.909  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:42:57.909  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NzUsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.pUAt5HBmZiJkLT3fha7G6aHYyJhWI5f6KQv00wlL4ZI
+2024-02-27 21:42:57.910  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:42:57.911  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:42:57.912  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:42:57.912  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:
+2024-02-27 21:42:57.914 ERROR 1 --- [or-http-epoll-5] a.w.r.e.AbstractErrorWebExceptionHandler : [1e365791-41]  500 Server Error for HTTP POST "/api/v1/login"
+
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.springframework.security.core.Authentication.getCredentials()" is null
+	at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ com.mingink.gateway.security.filter.CookieToHeadersFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP POST "/api/v1/login" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+		at org.springframework.security.web.server.authentication.AuthenticationWebFilter.lambda$authenticate$5(AuthenticationWebFilter.java:121) ~[spring-security-web-5.7.9.jar!/:5.7.9]
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:152) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime.subscribeOrReturn(MonoCacheTime.java:151) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:489) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:422) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2400) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:424) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:80) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1002) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:707) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:481) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:621) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:230) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1383) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1246) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1295) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2024-02-27 21:43:26.924  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:43:26.924  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:43:26.924  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:43:26.925  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NzUsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.pUAt5HBmZiJkLT3fha7G6aHYyJhWI5f6KQv00wlL4ZI
+2024-02-27 21:43:26.925  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:43:26.927  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:43:26.927  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:43:26.927  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:
+2024-02-27 21:43:26.929 ERROR 1 --- [or-http-epoll-5] a.w.r.e.AbstractErrorWebExceptionHandler : [1e365791-42]  500 Server Error for HTTP POST "/api/v1/login"
+
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.springframework.security.core.Authentication.getCredentials()" is null
+	at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ com.mingink.gateway.security.filter.CookieToHeadersFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP POST "/api/v1/login" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.mingink.gateway.security.ScAuthenticationManager.authenticate(ScAuthenticationManager.java:58) ~[classes!/:na]
+		at org.springframework.security.web.server.authentication.AuthenticationWebFilter.lambda$authenticate$5(AuthenticationWebFilter.java:121) ~[spring-security-web-5.7.9.jar!/:5.7.9]
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:152) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCacheTime.subscribeOrReturn(MonoCacheTime.java:151) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:113) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:489) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:422) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:148) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:118) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2400) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:191) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:110) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:87) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:249) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:129) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:424) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:80) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:157) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:301) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:140) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:200) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.4.30.jar!/:3.4.30]
+		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1002) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:707) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:481) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:621) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113) ~[reactor-netty-core-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:230) ~[reactor-netty-http-1.0.33.jar!/:1.0.33]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1383) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1246) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1295) ~[netty-handler-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397) ~[netty-transport-classes-epoll-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.94.Final.jar!/:4.1.94.Final]
+		at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2024-02-27 21:43:30.436  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:43:30.436  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:43:30.436  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:43:30.436  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc3NzUsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.pUAt5HBmZiJkLT3fha7G6aHYyJhWI5f6KQv00wlL4ZI
+2024-02-27 21:43:30.437  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:43:30.438  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:43:30.439  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:43:30.439  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:43:30.439  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:43:30.440 DEBUG 1 --- [        task-29] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:43:30.448 DEBUG 1 --- [        task-29] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (8ms)
+2024-02-27 21:43:30.454 DEBUG 1 --- [        task-30] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:43:30.459 DEBUG 1 --- [        task-30] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:43:30.545  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:43:30.545  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:43:30.547  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc4MTAsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.zxnzlhQP5QPcfHUHQ2GIc3VZ0bSLp2qZWSD_0CxnLYE
+2024-02-27 21:43:30.547  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:43:37.072  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:43:37.072  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:43:37.072  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:43:37.072  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc4MTAsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.zxnzlhQP5QPcfHUHQ2GIc3VZ0bSLp2qZWSD_0CxnLYE
+2024-02-27 21:43:37.073  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:43:37.075  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:43:37.075  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:43:37.075  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:43:37.075  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:43:37.076 DEBUG 1 --- [        task-25] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:43:37.081 DEBUG 1 --- [        task-25] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
+2024-02-27 21:43:37.082 DEBUG 1 --- [        task-26] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:43:37.086 DEBUG 1 --- [        task-26] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (3ms)
+2024-02-27 21:43:37.171  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:43:37.171  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:43:37.173  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc4MTcsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.xVs7E-hO7XNp8wQ9bDh9hnBFTUldMcyolYpQZO6WPk0
+2024-02-27 21:43:37.173  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:49:31.506  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:49:31.506  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:49:31.507  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:49:31.507  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjc4MTcsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.xVs7E-hO7XNp8wQ9bDh9hnBFTUldMcyolYpQZO6WPk0
+2024-02-27 21:49:31.508  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:49:31.509  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:49:31.510  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:49:31.510  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:49:31.510  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:49:31.510 DEBUG 1 --- [        task-31] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:49:31.515 DEBUG 1 --- [        task-31] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:49:31.516 DEBUG 1 --- [        task-32] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:49:31.521 DEBUG 1 --- [        task-32] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:49:31.606  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:49:31.606  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:49:31.608  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjgxNzEsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.ZQ57vDVVzApKfTk1c9JW5NnFWsAJKcOMKtwE7DBbNhc
+2024-02-27 21:49:31.608  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:49:33.651  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:49:33.652  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:49:33.652  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:49:33.652  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjgxNzEsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.ZQ57vDVVzApKfTk1c9JW5NnFWsAJKcOMKtwE7DBbNhc
+2024-02-27 21:49:33.653  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:49:33.654  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:49:33.654  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:49:33.654  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:49:33.655  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:49:33.655 DEBUG 1 --- [        task-33] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:49:33.660 DEBUG 1 --- [        task-33] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:49:33.661 DEBUG 1 --- [        task-34] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:49:33.665 DEBUG 1 --- [        task-34] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:49:33.751  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:49:33.751  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:49:33.753  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjgxNzMsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.QdCOo45E9DBjzHd2bt3d3IDZKzECXPebkvziVipJi68
+2024-02-27 21:49:33.753  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:50:59.078  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:50:59.078  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:50:59.078  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:50:59.078  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjgxNzMsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.QdCOo45E9DBjzHd2bt3d3IDZKzECXPebkvziVipJi68
+2024-02-27 21:50:59.079  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:50:59.080  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:50:59.080  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:50:59.080  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:50:59.080  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:50:59.081 DEBUG 1 --- [        task-35] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:50:59.086 DEBUG 1 --- [        task-35] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:50:59.087 DEBUG 1 --- [        task-36] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:50:59.091 DEBUG 1 --- [        task-36] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:50:59.176  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:50:59.176  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:50:59.178  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjgyNTksInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.Q5UlNJrmv7prCXJjtRzhdq6TQGGdh60DoJaNVW2GAj4
+2024-02-27 21:50:59.178  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:51:00.424  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:51:00.425  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : set request header
+2024-02-27 21:51:00.425  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:51:00.425  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjgyNTksInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.Q5UlNJrmv7prCXJjtRzhdq6TQGGdh60DoJaNVW2GAj4
+2024-02-27 21:51:00.425  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : username:guest
+2024-02-27 21:51:00.427  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : role = null
+2024-02-27 21:51:00.427  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
+2024-02-27 21:51:00.427  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:guest
+2024-02-27 21:51:00.427  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:guest
+2024-02-27 21:51:00.428 DEBUG 1 --- [        task-37] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/guest HTTP/1.1
+2024-02-27 21:51:00.432 DEBUG 1 --- [        task-37] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:51:00.434 DEBUG 1 --- [        task-38] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734274 HTTP/1.1
+2024-02-27 21:51:00.438 DEBUG 1 --- [        task-38] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
+2024-02-27 21:51:00.523  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=guest, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common]]
+2024-02-27 21:51:00.523  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
+2024-02-27 21:51:00.525  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDkxMjgyNjAsInJvbGVLZXlzIjoiW1wiY29tbW9uXCJdIiwidXNlcm5hbWUiOiJndWVzdCJ9.DHzsV85YiSo4XcXd91S5jTSZhv8Sa39KU7h6_vLZCNs
+2024-02-27 21:51:00.525  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
+2024-02-27 21:55:40.379  INFO 1 --- [or-http-epoll-3] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:55:40.379  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
+2024-02-27 21:55:40.379  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:55:40.380  INFO 1 --- [     parallel-4] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:55:40.380 ERROR 1 --- [     parallel-4] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/login
+2024-02-27 21:55:40.577  INFO 1 --- [or-http-epoll-3] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
+2024-02-27 21:55:40.577  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : new access request path=/favicon.ico
+2024-02-27 21:55:40.577  INFO 1 --- [or-http-epoll-3] c.m.g.s.ScSecurityContextRepository      : authorization = null
+2024-02-27 21:55:40.578  INFO 1 --- [     parallel-5] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
+2024-02-27 21:55:40.579 ERROR 1 --- [     parallel-5] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/favicon.ico

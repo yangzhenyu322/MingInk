@@ -12,12 +12,10 @@ import me.zhyd.oauth.request.AuthQqRequest;
 import me.zhyd.oauth.utils.AuthStateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,7 +57,6 @@ public class OAuthController {
         AuthQqRequest authRequest = getQQAuthRequest();
         //打印生成的链接
         System.out.println("生成登录链接：" + authRequest.authorize("yourState"));
-        System.out.println();
         //页面跳转，其中state参数可自定义
         response.sendRedirect(authRequest.authorize(AuthStateUtils.createState()));
     }
@@ -83,7 +80,7 @@ public class OAuthController {
             // 第三方登录成功
             // 根据第三方登录账号ID查询用户是否存在
             // 验证用户是否已注册,从前端获取用户名
-            User user = oauthService.getUserByOAuthId(authUser.getUuid()); //
+            User user = oauthService.getUserByOAuthId(authUser.getUuid());
 
             if (user == null) {  // 未注册的第三方登录
                 // 返回qq信息给前端新增oauth_type、oauth_id，前端让用户补充相关信息

@@ -70,3 +70,33 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x03
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar!/:na]
 	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
 
+                                                                                                                                                                                                                                                      2024-02-27 20:51:02.525  INFO 1 --- [nio-8082-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xeb0x010x000x000xe70x030x03r%0xd00xd10xda0x1a0xf6e0x980x0e0xa80xf0c0x180xf070x0ce0x9d0xc5Y0xb20xe50x0c:0xda0x1f0x8f0x9dP0xc30x060x000x0080xc0,0xc000x000x9f0xcc0xa90xcc0xa80xcc0xaa0xc0+0xc0/0x000x9e0xc0$0xc0(0x00k0xc0#0xc0'0x00g0xc00x0a0xc00x140x0090xc00x090xc00x130x0030x000x9d0x000x9c0x00=0x00<0x0050x00/0x000xff0x010x000x000x860x000x000x000x110x000x0f0x000x000x0c223.82.75.760x000x0b0x000x040x030x000x010x020x000x0a0x000x0c0x000x0a0x000x1d0x000x170x000x1e0x000x190x000x180x00#0x000x003t0x000x000x000x100x000x110x000x0f0x02h20x05h2-160x05h2-140x000x160x000x000x000x170x000x000x000x0d0x0000x00.0x040x030x050x030x060x030x080x070x080x080x080x090x080x0a0x080x0b0x080x040x080x050x080x060x040x010x050x010x060x010x030x030x020x030x030x010x020x010x030x020x020x020x040x020x050x020x060x02...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2024-02-27 20:57:12.140  INFO 1 --- [nio-8082-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x1a0x010x000x020x160x030x030x13,0x0dG0x9e0x81~6#?D0x170x1be0xc1"0xab0x920xad0x050x8e]0xd10xd00x04'0x96X0xb0h0x8b0xee ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+

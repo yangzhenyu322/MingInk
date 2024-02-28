@@ -21,8 +21,7 @@ MingInk是一个同人小说平台，为创作者提供了分享、创作和阅�
 日志可视化治理：ELK  
 监控：Prometheus，Grafana  
 单元测试：Junit  
-压力测试：JMeter  
-
+压力测试：JMeter
 
 
 ## 系统模块

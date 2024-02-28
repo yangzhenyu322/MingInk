@@ -26,6 +26,12 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
+        <!-- SpringCloud Alibaba Nacos Config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
         <!--JustAuth-->
         <dependency>
             <groupId>me.zhyd.oauth</groupId>
@@ -39,23 +45,17 @@
             <version>5.3.9</version>
         </dependency>
         <!--导入lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <version>1.18.12</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
         <!--fastjson-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.62</version>
-        </dependency>
-
-        <!-- SpringCloud Alibaba Nacos Config -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
         <!-- 百度云短信sdk -->
@@ -71,16 +71,10 @@
             </exclusions>
         </dependency>
 
-        <!-- 系统接口: 在本模块仅使用feign模块的公共类 -->
+        <!-- 系统接口 -->
         <dependency>
             <groupId>com.mingink</groupId>
             <artifactId>mingink-api-system</artifactId>
-        </dependency>
-
-        <!-- 核心模块 -->
-        <dependency>
-            <groupId>com.mingink</groupId>
-            <artifactId>mingink-common-core</artifactId>
         </dependency>
 
         <!-- Swagger模块 -->
