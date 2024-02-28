@@ -22,6 +22,7 @@ public class OauthService implements IOauthService {
 
     @Autowired
     private UserMapper userMapper;
+
     @Override
     public User getUserByOAuthId(String oAuthId){
         if(StringUtils.isBlank(oAuthId)) {
