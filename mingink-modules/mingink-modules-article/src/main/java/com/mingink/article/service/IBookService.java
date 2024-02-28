@@ -1,7 +1,8 @@
 package com.mingink.article.service;
 
-import com.mingink.article.domain.entity.Book;
+
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.mingink.article.api.domain.entity.Book;
 
 /**
  * Book 服务类

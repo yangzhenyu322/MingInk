@@ -1,9 +1,9 @@
 package com.mingink.article.service.impl;
 
-import com.mingink.article.domain.entity.Comment;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mingink.article.api.domain.entity.Comment;
 import com.mingink.article.mapper.CommentMapper;
 import com.mingink.article.service.ICommentService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

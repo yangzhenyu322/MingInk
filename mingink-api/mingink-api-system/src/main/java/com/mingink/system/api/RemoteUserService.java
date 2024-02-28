@@ -1,11 +1,11 @@
 package com.mingink.system.api;
 
-import com.mingink.common.core.domain.R;
 import com.mingink.system.api.config.DefaultFeignConfiguration;
 import com.mingink.system.api.domain.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+
 
 /**
  * User Feign：提供User的远程服务

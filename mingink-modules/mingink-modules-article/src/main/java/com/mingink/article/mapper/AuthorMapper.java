@@ -1,7 +1,8 @@
 package com.mingink.article.mapper;
 
-import com.mingink.article.domain.entity.Author;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mingink.article.api.domain.entity.Author;
 
 /**
  * @author ZenSheep

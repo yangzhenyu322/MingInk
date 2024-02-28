@@ -1,6 +1,6 @@
 package com.mingink.article.service.impl;
 
-import com.mingink.article.domain.entity.Book;
+import com.mingink.article.api.domain.entity.Book;
 import com.mingink.article.mapper.BookMapper;
 import com.mingink.article.service.IBookService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,7 +1,7 @@
 package com.mingink.article.service;
 
-import com.mingink.article.domain.entity.Tag;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.mingink.article.api.domain.entity.Tag;
 
 /**
  * Tag 服务类

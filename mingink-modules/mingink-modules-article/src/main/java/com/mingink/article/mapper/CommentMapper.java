@@ -1,7 +1,7 @@
 package com.mingink.article.mapper;
 
-import com.mingink.article.domain.entity.Comment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mingink.article.api.domain.entity.Comment;
 
 /**
  * Comment Mapper 接口

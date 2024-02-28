@@ -1,4 +1,4 @@
-package com.mingink.article.domain.entity;
+package com.mingink.article.api.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -9,8 +9,6 @@ import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
 
 /**
  * Tag 实体类
@@ -31,10 +29,6 @@ public class Tag implements Serializable {
     @ApiModelProperty(value = "标签名字")
     @TableField("name")
     private String name;
-
-    @ApiModelProperty(value = "父级标签id")
-    @TableField("upper_level_id")
-    private Long upperLevelId;
 
     @ApiModelProperty(value = "标签描述")
     @TableField("description")
