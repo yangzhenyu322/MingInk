@@ -1,7 +1,7 @@
 package com.mingink.gateway.remote;
 
 import com.mingink.system.api.RemoteUserService;
-import com.mingink.system.api.domain.User;
+import com.mingink.system.api.domain.entiry.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;

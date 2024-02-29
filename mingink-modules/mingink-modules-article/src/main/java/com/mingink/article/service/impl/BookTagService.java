@@ -14,6 +14,6 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class BookTagServiceImpl extends ServiceImpl<BookTagMapper, BookTag> implements IBookTagService {
+public class BookTagService extends ServiceImpl<BookTagMapper, BookTag> implements IBookTagService {
 
 }

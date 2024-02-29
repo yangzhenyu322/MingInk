@@ -1,6 +1,6 @@
 package com.mingink.system.controller;
 
-import com.mingink.system.api.domain.Role;
+import com.mingink.system.api.domain.entiry.Role;
 import com.mingink.system.service.IRoleService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;

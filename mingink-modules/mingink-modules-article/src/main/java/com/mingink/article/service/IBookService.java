@@ -3,7 +3,7 @@ package com.mingink.article.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.mingink.article.api.domain.entity.Book;
-import com.mingink.article.api.domain.vo.BookRequest;
+import com.mingink.article.api.domain.dto.BookRequest;
 
 import java.util.List;
 

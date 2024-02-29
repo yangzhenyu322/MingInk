@@ -3,7 +3,7 @@ package com.mingink.article.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mingink.article.api.domain.entity.Book;
-import com.mingink.article.api.domain.vo.BookRequest;
+import com.mingink.article.api.domain.dto.BookRequest;
 import com.mingink.article.mapper.BookMapper;
 import com.mingink.article.service.IBookService;
 import lombok.extern.slf4j.Slf4j;

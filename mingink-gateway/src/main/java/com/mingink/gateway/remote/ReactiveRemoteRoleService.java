@@ -1,7 +1,7 @@
 package com.mingink.gateway.remote;
 
 import com.mingink.system.api.RemoteRoleService;
-import com.mingink.system.api.domain.Role;
+import com.mingink.system.api.domain.entiry.Role;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;

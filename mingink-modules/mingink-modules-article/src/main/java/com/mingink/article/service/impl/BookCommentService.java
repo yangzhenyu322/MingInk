@@ -1,9 +1,9 @@
 package com.mingink.article.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mingink.article.api.domain.entity.Comment;
-import com.mingink.article.mapper.CommentMapper;
-import com.mingink.article.service.ICommentService;
+import com.mingink.article.api.domain.entity.BookComment;
+import com.mingink.article.mapper.BookCommentMapper;
+import com.mingink.article.service.IBookCommentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +14,6 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> implements ICommentService {
+public class BookCommentService extends ServiceImpl<BookCommentMapper, BookComment> implements IBookCommentService {
 
 }

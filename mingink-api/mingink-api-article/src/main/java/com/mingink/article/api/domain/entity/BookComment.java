@@ -21,9 +21,9 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("comment")
-@ApiModel(value="Comment对象", description="Comment实体对象")
-public class Comment implements Serializable {
+@TableName("book_comment")
+@ApiModel(value="Book Comment对象", description="Book Comment实体对象")
+public class BookComment implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

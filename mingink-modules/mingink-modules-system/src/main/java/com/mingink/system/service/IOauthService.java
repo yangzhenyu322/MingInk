@@ -1,6 +1,6 @@
 package com.mingink.system.service;
 
-import com.mingink.system.api.domain.User;
+import com.mingink.system.api.domain.entiry.User;
 
 /**
  * @Author: ZXY

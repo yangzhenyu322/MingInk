@@ -1,7 +1,7 @@
 package com.mingink.system.api;
 
 import com.mingink.system.api.config.DefaultFeignConfiguration;
-import com.mingink.system.api.domain.User;
+import com.mingink.system.api.domain.entiry.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

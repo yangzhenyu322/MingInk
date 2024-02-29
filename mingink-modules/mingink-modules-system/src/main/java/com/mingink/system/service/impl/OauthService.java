@@ -1,6 +1,6 @@
 package com.mingink.system.service.impl;
 
-import com.mingink.system.api.domain.User;
+import com.mingink.system.api.domain.entiry.User;
 import com.mingink.system.mapper.UserMapper;
 import com.mingink.system.service.IOauthService;
 import lombok.extern.slf4j.Slf4j;

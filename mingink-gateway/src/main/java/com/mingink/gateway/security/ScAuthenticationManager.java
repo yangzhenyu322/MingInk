@@ -3,8 +3,8 @@ package com.mingink.gateway.security;
 import com.mingink.gateway.remote.ReactiveRemoteRoleService;
 import com.mingink.gateway.remote.ReactiveRemoteUserService;
 import com.mingink.gateway.security.domain.SecurityUserDetails;
-import com.mingink.system.api.domain.Role;
-import com.mingink.system.api.domain.User;
+import com.mingink.system.api.domain.entiry.Role;
+import com.mingink.system.api.domain.entiry.User;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,6 @@ import reactor.core.publisher.Mono;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 登录认证管理
