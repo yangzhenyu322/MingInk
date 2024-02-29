@@ -26,9 +26,6 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @Service
 public class SMSService implements ISMSService {
-//    @Autowired
-//    private AsyncClient smsClient;
-
     @Autowired
     private SmsClient smsClient;
 
