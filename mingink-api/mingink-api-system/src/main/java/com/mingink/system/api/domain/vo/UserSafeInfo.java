@@ -1,4 +1,4 @@
-package com.mingink.system.api.domain.request;
+package com.mingink.system.api.domain.vo;
 
 import lombok.Data;
 
@@ -9,13 +9,13 @@ import java.util.Date;
 /**
  * @author hulx
  * @version 1.0.0
- * @date 2024/2/18 10:36
- * @description 用户信息修改请求实体
+ * @date 2024/2/18 10:46
+ * @description 脱敏用户信息
  */
 @Data
-public class UserInfoUptReq implements Serializable {
+public class UserSafeInfo implements Serializable {
     @Serial
-    private static final long serialVersionUID = 6913991521842271421L;
+    private static final long serialVersionUID = -8933150503249502227L;
     /**
      * 用户ID
      */
@@ -42,9 +42,23 @@ public class UserInfoUptReq implements Serializable {
     private String avatar;
 
     /**
-     * 个人简介
+     * 用户性别（0：男，1:女，2：未知，默认为未知）
+     */
+    private Integer sex;
+    /**
+     * 生日
+     */
+    private Date birthday;
+
+    /**
+     * 个性签名
      */
     private String remark;
+
+    /**
+     * 电话号码
+     */
+    private String phoneNumber;
 
     /**
      * 邮箱
@@ -65,4 +79,5 @@ public class UserInfoUptReq implements Serializable {
      * 具体地址
      */
     private String address;
+
 }

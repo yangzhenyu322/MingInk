@@ -2,7 +2,7 @@ package com.mingink.article.controller;
 
 
 import com.mingink.article.api.domain.entity.Book;
-import com.mingink.article.api.domain.vo.BookRequest;
+import com.mingink.article.api.domain.dto.BookRequest;
 import com.mingink.article.service.IBookService;
 import com.mingink.common.core.domain.R;
 import io.gorse.gorse4j.Feedback;

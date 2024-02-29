@@ -1,4 +1,4 @@
-package com.mingink.article.api.domain.vo;
+package com.mingink.article.api.domain.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -1,9 +1,9 @@
 package com.mingink.system.service;
 
 import com.mingink.common.core.domain.R;
-import com.mingink.system.api.domain.User;
-import com.mingink.system.api.domain.UserSafeInfo;
-import com.mingink.system.api.domain.request.UserInfoUptReq;
+import com.mingink.system.api.domain.entiry.User;
+import com.mingink.system.api.domain.vo.UserSafeInfo;
+import com.mingink.system.api.domain.dto.UserInfoUptReq;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;

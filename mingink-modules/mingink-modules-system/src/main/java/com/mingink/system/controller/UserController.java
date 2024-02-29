@@ -1,9 +1,9 @@
 package com.mingink.system.controller;
 
 import com.mingink.common.core.domain.R;
-import com.mingink.system.api.domain.User;
-import com.mingink.system.api.domain.UserSafeInfo;
-import com.mingink.system.api.domain.request.UserInfoUptReq;
+import com.mingink.system.api.domain.entiry.User;
+import com.mingink.system.api.domain.vo.UserSafeInfo;
+import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

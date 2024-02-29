@@ -14,6 +14,6 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> implements IChapterService {
+public class ChapterService extends ServiceImpl<ChapterMapper, Chapter> implements IChapterService {
 
 }

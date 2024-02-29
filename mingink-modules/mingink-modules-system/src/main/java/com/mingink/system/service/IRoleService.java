@@ -1,9 +1,6 @@
 package com.mingink.system.service;
 
-import com.mingink.common.core.domain.R;
-import com.mingink.system.api.domain.Role;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import com.mingink.system.api.domain.entiry.Role;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.mingink.system.service.impl;
 
-import com.mingink.system.api.domain.Role;
-import com.mingink.system.domain.entity.UserRole;
+import com.mingink.system.api.domain.entiry.Role;
+import com.mingink.system.api.domain.entiry.UserRole;
 import com.mingink.system.mapper.RoleMapper;
 import com.mingink.system.mapper.UserRoleMapper;
 import com.mingink.system.service.IRoleService;
