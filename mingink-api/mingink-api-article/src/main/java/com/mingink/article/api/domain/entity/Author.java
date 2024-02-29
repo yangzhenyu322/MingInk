@@ -1,13 +1,14 @@
 package com.mingink.article.api.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
-import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * Author 实体类
@@ -35,7 +36,7 @@ public class Author implements Serializable {
 
     @ApiModelProperty(value = "作家状态：0-正常、1-禁用")
     @TableField("status")
-    private Boolean status;
+    private int status;
 
     @ApiModelProperty(value = "注册时间")
     @TableField("create_time")

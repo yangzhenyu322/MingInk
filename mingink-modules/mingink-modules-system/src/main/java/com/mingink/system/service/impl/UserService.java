@@ -12,7 +12,6 @@ import com.mingink.system.mapper.UserMapper;
 import com.mingink.system.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
@@ -257,7 +256,6 @@ public class UserService implements IUserService {
         safeInfo.setEmail(originUser.getEmail());
         safeInfo.setRemark(originUser.getRemark());
         safeInfo.setSex(originUser.getSex());
-        safeInfo.setTag(originUser.getTag());
         safeInfo.setUserName(originUser.getUserName());
         safeInfo.setAvatar(originUser.getAvatar());
         safeInfo.setUid(originUser.getUid());

@@ -56,11 +56,6 @@ public class UserSafeInfo implements Serializable {
     private String remark;
 
     /**
-     * 用户标签
-     */
-    private String tag;
-
-    /**
      * 电话号码
      */
     private String phoneNumber;

@@ -15,6 +15,10 @@
         mingink-modules-article小说模块
     </description>
 
+    <properties>
+        <gorse.version>0.4.0</gorse.version>
+    </properties>
+
     <dependencies>
         <!-- SpringCloud Alibaba Nacos Discovery -->
         <dependency>
@@ -28,10 +32,10 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
-        <!-- 系统接口 -->
         <dependency>
-            <groupId>com.mingink</groupId>
-            <artifactId>mingink-api-system</artifactId>
+            <groupId>io.gorse</groupId>
+            <artifactId>gorse-client</artifactId>
+            <version>${gorse.version}</version>
         </dependency>
 
         <!-- Swagger模块 -->
@@ -40,10 +44,16 @@
             <artifactId>mingink-common-swagger</artifactId>
         </dependency>
 
+        <!-- 系统接口 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-api-system</artifactId>
+        </dependency>
+
+        <!-- 小说接口 -->
         <dependency>
             <groupId>com.mingink</groupId>
             <artifactId>mingink-api-article</artifactId>
-            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

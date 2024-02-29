@@ -27,5 +27,4 @@
             <artifactId>mingink-common-swagger</artifactId>
         </dependency>
     </dependencies>
-
 </project>
