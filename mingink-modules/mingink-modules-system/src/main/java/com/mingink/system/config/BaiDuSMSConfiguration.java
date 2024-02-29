@@ -90,5 +90,4 @@ public class BaiDuSMSConfiguration {
 
         return smsClient;
     }
-
 }

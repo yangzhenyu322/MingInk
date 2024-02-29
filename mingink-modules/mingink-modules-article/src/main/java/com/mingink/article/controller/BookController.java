@@ -77,6 +77,7 @@ public class BookController {
         return R.ok(books);
     }
 
+
     @SneakyThrows
     @GetMapping("/recommend")
     public R<?> getRecommend() {
@@ -96,7 +97,6 @@ public class BookController {
 
         return R.ok(recommends);
     }
-
 
     /**
      * 新增小说

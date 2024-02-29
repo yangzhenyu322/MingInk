@@ -18,7 +18,7 @@ spring:
         server-addr: 223.82.75.76:8848
         username: lovelumine
         password: lovelumine47
-        namespace: fba13bcb-89a6-40d0-8492-40e3eadc9a0e
+        namespace: bcc846fe-65f3-4783-84a7-ed5c8f69495b
       config:
         # 配置中心地址
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
@@ -43,3 +43,8 @@ mybatis-plus:
     map-underscore-to-camel-case: true
   # 指定类型别名的包路径
   type-aliases-package: com.mingink.article.api.domain.entity
+
+# Gorse
+gorse:
+  endpoint: http://223.82.75.76:8088
+  apiKey:
