@@ -1,16 +1,17 @@
 package com.mingink.article.api.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.time.LocalDateTime;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * Comment 实体类
@@ -56,15 +57,13 @@ public class Comment implements Serializable {
 
     @ApiModelProperty(value = "是否置顶：0-否、1-是")
     @TableField("is_top")
-    private Boolean isTop;
+    private int isTop;
 
     @ApiModelProperty(value = "是否精华：0-否、1-是")
     @TableField("is_essence")
-    private Boolean isEssence;
+    private int isEssence;
 
     @ApiModelProperty(value = "评论时间")
     @TableField("create_time")
     private LocalDateTime createTime;
-
-
 }

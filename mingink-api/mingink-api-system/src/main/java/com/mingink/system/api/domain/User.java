@@ -66,11 +66,6 @@ public class User implements Serializable {
     private String remark;
 
     /**
-    * 用户标签
-    */
-    private String tag;
-
-    /**
     * 电话号码
     */
     private String phoneNumber;
@@ -110,26 +105,6 @@ public class User implements Serializable {
     * 用户最后登录时间
     */
     private Date loginDate;
-
-    /**
-    * 第三方登录类型（1：微信，2：QQ）等等
-    */
-    private Integer oauthType;
-
-    /**
-    * 第三方登录账号ID
-    */
-    private String oauthId;
-
-    /**
-    * 认证access_token
-    */
-    private String accessToken;
-
-    /**
-    * 认证refresh_token
-    */
-    private String refreshToken;
 
     /**
     * 创建时间

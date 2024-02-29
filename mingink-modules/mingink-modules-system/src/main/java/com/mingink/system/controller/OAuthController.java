@@ -92,7 +92,6 @@ public class OAuthController {
                 responseData.put("email", authUser.getEmail() );//邮箱
                 //如有其他需要返回的信息可以进行补充
                 return responseData;
-
             } else {
                 Map<String, Object> responseData = new HashMap<>();
                 responseData.put("message", "登录成功");

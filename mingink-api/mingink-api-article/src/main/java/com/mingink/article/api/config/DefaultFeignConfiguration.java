@@ -1,4 +1,4 @@
-package com.mingink.system.api.config;
+package com.mingink.article.api.config;
 
 import feign.Logger;
 import org.springframework.beans.factory.ObjectProvider;

@@ -24,7 +24,7 @@ spring:
         server-addr: 223.82.75.76:8848 # nacos地址
         username: lovelumine
         password: lovelumine47
-        namespace: bcc846fe-65f3-4783-84a7-ed5c8f69495b
+        namespace: fba13bcb-89a6-40d0-8492-40e3eadc9a0e
       config:
         # 配置中心地址
         server-addr: ${spring.cloud.nacos.discovery.server-addr}

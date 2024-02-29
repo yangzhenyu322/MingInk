@@ -88,13 +88,13 @@ public class UserController {
         return userService.registerUser(user);
     }
 
-    @PostMapping("/current")
+    @GetMapping("/current")
     @ApiOperation("个人中心获取当前登录用户信息")
     public R<UserSafeInfo> getCurrentUser(HttpServletRequest request) {
         return R.ok(userService.getCurrentUser(request));
     }
 
-    @PostMapping("/updateInfo")
+    @PutMapping("/updateInfo")
     @ApiOperation("更新用户基础信息")
     public R<Boolean> updateUser(@RequestBody UserInfoUptReq userInfo, HttpServletRequest request) {
         UserSafeInfo loginUser = userService.getCurrentUser(request);

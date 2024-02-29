@@ -39,7 +39,6 @@ public class OauthService implements IOauthService {
 
     @Override
     public int createUser(User user) {
-
         return userMapper.insert(user);
     }
     @Override
