@@ -42,6 +42,4 @@ public class GorseFeedback implements Serializable {
     @ApiModelProperty(value = "反馈的注释信息")
     @TableField("comment")
     private String comment;
-
-
 }

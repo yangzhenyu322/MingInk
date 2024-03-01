@@ -2,15 +2,16 @@ package com.mingink.article.controller;
 
 
 import com.alibaba.fastjson2.JSONObject;
+import com.mingink.article.api.domain.dto.GorseFeedbackRequest;
+import com.mingink.article.api.domain.dto.GorseItemRequest;
+import com.mingink.article.api.domain.dto.GorseUserRequest;
+import com.mingink.article.api.domain.entity.GorseItem;
 import com.mingink.article.service.IGorseService;
 import com.mingink.common.core.domain.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/gorse")
-@Api(value = "Gorse接口功能", tags = "ChapterController", description = "Gorse接口相关介绍")
+@Api(value = "Gorse推荐接口功能", tags = "ChapterController", description = "Gorse推荐接口相关介绍")
 public class GorseController {
     @Autowired
     private IGorseService gorseService;
@@ -112,5 +113,90 @@ public class GorseController {
     public R<List<JSONObject>> getSimilarRecommendBookByBookIdAndCategory(@PathVariable("bookId") String bookId,
                                                                           @PathVariable("category") String category) {
         return R.ok(gorseService.getSimilarRecommendBookByBookIdAndCategory(bookId, category));
+    }
+
+    /**
+     * 新增GorseUser
+     * @param gorseUserRequest
+     * @return
+     */
+    @PostMapping("/user")
+    public Boolean addNewGorseUser(@RequestBody GorseUserRequest gorseUserRequest) {
+        return gorseService.addNewGorseUser(gorseUserRequest);
+    }
+
+    /**
+     * 删除GorseUser
+     * @param userId
+     * @return
+     */
+    @DeleteMapping("/user/userId/{userId}")
+    public Boolean removeGorseUser(@PathVariable("userId") String userId) {
+        return gorseService.removeGorseUser(userId);
+    }
+
+    /**
+     * 更新Gorse User 信息
+     * @param gorseUserRequest
+     * @return
+     */
+    @PutMapping("/user")
+    public Boolean updateGorseUser(@RequestBody GorseUserRequest gorseUserRequest) {
+        return gorseService.updateGorseUser(gorseUserRequest);
+    }
+
+    /**
+     * 新增Gorse Item
+     * @param gorseItemRequest
+     * @return
+     */
+    @PostMapping("/item")
+    public Boolean addNewItem(@RequestBody GorseItemRequest gorseItemRequest) {
+        return gorseService.addNewItem(gorseItemRequest);
+    }
+
+    /**
+     * 删除Gorse Item
+     * @param bookId
+     * @return
+     */
+    @DeleteMapping("/item/bookId/{bookId}")
+    public Boolean removeItem(@PathVariable("bookId") String bookId) {
+        return gorseService.removeItem(bookId);
+    }
+
+    @PutMapping("/item")
+    public Boolean updateItem(@RequestBody GorseItem gorseItem) {
+        return gorseService.updateGorseItem(gorseItem);
+    }
+
+    /**
+     * 新增用户反馈
+     * @param gorseFeedbackRequest
+     * @return
+     */
+    @PostMapping("/feedback")
+    @ApiOperation("新增用户反馈")
+    public R<String> addNewFeedBack(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
+        if (!gorseService.addNewFeedBack(gorseFeedbackRequest)) {
+            return R.fail("新增反馈失败");
+        }
+
+        return R.ok("新增反馈成功");
+    }
+
+    /**
+     * 删除用户反馈
+     * @param gorseFeedbackRequest
+     * @return
+     */
+    @DeleteMapping("/feedback")
+    @ApiOperation("删除用户反馈")
+    public R<String> removeFeedBack(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
+        if (!gorseService.removeFeedBack(gorseFeedbackRequest)) {
+            return R.fail("删除反馈失败");
+        }
+
+        return R.ok("删除反馈成功");
     }
 }

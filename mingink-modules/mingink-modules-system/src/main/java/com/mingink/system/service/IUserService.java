@@ -48,4 +48,6 @@ public interface IUserService {
     R<List<UserSafeInfo>> searchUserByName(String username);
 
     User getUserByName(String username);
+
+    boolean removeUser(String userId);
 }

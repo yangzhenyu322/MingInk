@@ -23,7 +23,7 @@ public class GorseItem implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "物品(小说)的唯一ID，不能包含斜线")
+    @ApiModelProperty(value = "物品(小说)的唯一ID(BookId)，不能包含斜线")
     @TableId(value = "item_id", type = IdType.NONE)
     private String itemId;
 

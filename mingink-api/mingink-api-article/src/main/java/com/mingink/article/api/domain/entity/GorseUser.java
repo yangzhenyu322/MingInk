@@ -26,7 +26,7 @@ public class GorseUser implements Serializable {
     @TableId(value = "user_id", type = IdType.NONE)
     private String userId;
 
-    @ApiModelProperty(value = "标签Key")
+    @ApiModelProperty(value = "标签Key集合，例[\"玄幻\", \"现代\"]")
     @TableField("labels")
     private String labels;
 
@@ -34,7 +34,7 @@ public class GorseUser implements Serializable {
     @TableField("comment")
     private String comment;
 
-    @ApiModelProperty(value = "订阅的小说ID集合")
+    @ApiModelProperty(value = "订阅")
     @TableField("subscribe")
     private String subscribe;
 }
