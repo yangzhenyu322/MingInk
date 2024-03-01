@@ -2,6 +2,8 @@ package com.mingink.system.service.impl;
 
 import com.alibaba.fastjson2.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.mingink.article.api.RemoteGorseService;
+import com.mingink.article.api.domain.dto.GorseUserRequest;
 import com.mingink.common.core.domain.R;
 import com.mingink.common.core.utils.id.SnowFlakeFactory;
 import com.mingink.common.core.utils.jwt.JWTUtils;
@@ -37,6 +39,9 @@ public class UserService implements IUserService {
     @Autowired
     private RoleService roleService;
 
+    @Autowired
+    private RemoteGorseService remoteGorseService;
+
     @Override
     public R<List<UserSafeInfo>> getUserList() {
         List<User> userList = userMapper.selectList(null);
@@ -71,6 +76,7 @@ public class UserService implements IUserService {
         return R.fail("更新密码失败");
     }
 
+    // TODO seata 事务管理
     @Override
     public R<?> registerUser(User user) {
         log.info("Begin Register: 【{}】", user.getUserName());
@@ -122,6 +128,7 @@ public class UserService implements IUserService {
         user.setUid((String.valueOf(userMapper.selectList(null).size() + 100001))); // 设置用户Uid
         user.setNickName(user.getUserName()); // 默认新用户昵称为用户（账户）名
         user.setAvatar("null"); // 设置用户默认头像
+        user.setBirthday(new Date());
         user.setStatus(0); // 默认用户状态为正常——0
         user.setLoginDate(new Date()); // 最近登录时间
         user.setCreateTime(new Date()); // 当前时间
@@ -133,6 +140,16 @@ public class UserService implements IUserService {
 
         if (!isInsertSuccess) {
             log.info("用户[{}]注册失败：", user.getUserName());
+            return R.fail("用户注册失败");
+        }
+
+        // 注册Gorse User
+        GorseUserRequest gorseUserRequest = new GorseUserRequest();
+        gorseUserRequest.setUserId(user.getUserId());
+        gorseUserRequest.setLabels("[]");
+        if (!remoteGorseService.addNewGorseUser(gorseUserRequest)) {
+            // 注册Gorse User失败
+            log.info("用户[{}]注册Gorse User失败：", user.getUserName());
             return R.fail("用户注册失败");
         }
 
@@ -240,6 +257,24 @@ public class UserService implements IUserService {
         }
 
         return users.get(0);
+    }
+
+    @Override
+    public boolean removeUser(String userId) {
+        // TODO 移除之前与其管理表的数据
+
+        boolean isRemoveSucess = userMapper.deleteById(userId) > 0;
+
+        if (isRemoveSucess) {
+            if (remoteGorseService.removeGorseUser(userId)) {
+                // 注销Gorse User成功
+                log.info("注销Gorse User成功");
+            } else {
+                log.info("注销Gorse User失败");
+            }
+        }
+
+        return isRemoveSucess;
     }
 
     /**

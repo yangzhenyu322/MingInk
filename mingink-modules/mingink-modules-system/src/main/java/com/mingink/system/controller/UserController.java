@@ -7,6 +7,7 @@ import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ import java.util.List;
  * @Author: ZenSheep
  * @Date: 2024/2/1 12:03
  */
+@Slf4j
 @RestController
 @RequestMapping("/user")
 @Api(value = "用户接口功能", tags = "UserController", description = "用户接口相关介绍")
@@ -99,5 +101,20 @@ public class UserController {
     public R<Boolean> updateUser(@RequestBody UserInfoUptReq userInfo, HttpServletRequest request) {
         UserSafeInfo loginUser = userService.getCurrentUser(request);
         return userService.updateUserInfo(userInfo, loginUser);
+    }
+
+    /**
+     * 注销用户
+     * @return
+     */
+    @DeleteMapping("/userId/{userId}")
+    public R<String> removeUser(@PathVariable("userId") String userId) {
+        if (userService.removeUser(userId)) {
+            log.info("用户[{}]注销失败", userId);
+            return R.fail("用户注销失败");
+        }
+
+        log.info("用户[{}]注销成功", userId);
+        return R.ok("用户注销成功");
     }
 }
