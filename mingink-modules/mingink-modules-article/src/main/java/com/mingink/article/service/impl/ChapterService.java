@@ -37,42 +37,35 @@ public class ChapterService extends ServiceImpl<ChapterMapper, Chapter> implemen
     private BookMapper bookMapper;
 
     @Override
-    public R<Boolean> addChapter(AddChapterRequest addChapterRequest) {
+    public Boolean addChapter(AddChapterRequest addChapterRequest) {
         Chapter chapter = new Chapter();
         if(addChapterRequest.getId() != 0L) {
             chapter = chapterMapper.selectById(addChapterRequest.getId());
             if(chapter == null) {
-//                throw new BusinessException(ErrorCode.PARAMS_ERROR, "请求参数错误");
-                return R.fail("请求参数错误");
+                throw new BusinessException(ErrorCode.PARAMS_ERROR, "请求参数错误");
             }
         }
         if(StringUtils.isEmpty(addChapterRequest.getContent())) {
-//            throw new BusinessException(ErrorCode.NULL_ERROR, "小说内容为空");
-            return R.fail("请求参数为空");
+            throw new BusinessException(ErrorCode.NULL_ERROR, "小说内容为空");
         }
         if(StringUtils.isEmpty(addChapterRequest.getTitle())) {
-//            throw new BusinessException(ErrorCode.NULL_ERROR, "小说标题为空");
-            return R.fail("请求参数为空");
+            throw new BusinessException(ErrorCode.NULL_ERROR, "小说标题为空");
         }
         if(StringUtils.isEmpty(addChapterRequest.getAuthorId())) {
-//            throw new BusinessException(ErrorCode.NULL_ERROR, "作家ID为空");
-            return R.fail("请求参数为空");
+            throw new BusinessException(ErrorCode.NULL_ERROR, "作家ID为空");
         }
         if(addChapterRequest.getBookId() == null || addChapterRequest.getBookId() == 0L) {
-//            throw new BusinessException(ErrorCode.PARAMS_ERROR, "书籍ID异常");
-            return R.fail("请求参数为空");
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "书籍ID异常");
         }
         if(addChapterRequest.getWordCount() == null) {
-//            throw new BusinessException(ErrorCode.NULL_ERROR, "章节字数为空");
-            return R.fail("请求参数为空");
+            throw new BusinessException(ErrorCode.NULL_ERROR, "章节字数为空");
         }
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("author_id",addChapterRequest.getAuthorId());
         List<Book> bookList = bookMapper.selectList(queryWrapper);
         List<Long> bookIdList = bookList.stream().map(Book::getId).collect(Collectors.toList());
         if(!bookIdList.contains(addChapterRequest.getBookId())) {
-//            throw new BusinessException(ErrorCode.NO_AUTH, "该作家无权限操作该小说");
-            return R.fail("无权限");
+            throw new BusinessException(ErrorCode.NO_AUTH, "该作家无权限操作该小说");
         }
         chapter.setStatus(addChapterRequest.getStatus());
         chapter.setContent(addChapterRequest.getContent());
@@ -84,23 +77,18 @@ public class ChapterService extends ServiceImpl<ChapterMapper, Chapter> implemen
         //TODO 可以分为实时发布，定时发布，后续添加吧
         chapter.setPublishTime(addChapterRequest.getPublishTime());
         chapter.setSerialNumber(addChapterRequest.getSerialNumber());
-        if(addChapterRequest.getId() != 0L) {
-            if(chapterMapper.updateById(chapter) > 0) return R.ok(Boolean.TRUE);
-            else return R.fail(Boolean.FALSE);
-        }
-        if(chapterMapper.insert(chapter) > 0) return R.ok(Boolean.TRUE);
-        else return R.fail(Boolean.FALSE);
+        if(addChapterRequest.getId() != 0L) return chapterMapper.updateById(chapter) > 0;
+        return chapterMapper.insert(chapter) > 0;
     }
 
     @Override
-    public R<Boolean> updateChapterStatus(BaseChapterRequest baseChapterRequest) {
+    public Boolean updateChapterStatus(BaseChapterRequest baseChapterRequest) {
         if(baseChapterRequest == null) {
-            return R.fail("请求参数为空");
+            throw new BusinessException(ErrorCode.NULL_ERROR);
         }
         Chapter chapter = chapterMapper.selectById(baseChapterRequest.getId());
         chapter.setStatus(baseChapterRequest.getStatus());
-        if(chapterMapper.updateById(chapter) > 0) return R.ok(Boolean.TRUE);
-        return R.fail(Boolean.FALSE);
+        return chapterMapper.updateById(chapter) > 0;
     }
 
 }

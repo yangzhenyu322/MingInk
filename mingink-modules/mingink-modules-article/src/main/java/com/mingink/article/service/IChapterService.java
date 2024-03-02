@@ -17,13 +17,13 @@ public interface IChapterService extends IService<Chapter> {
      * @param addChapterRequest
      * @return
      */
-    R<Boolean> addChapter(AddChapterRequest addChapterRequest);
+    Boolean addChapter(AddChapterRequest addChapterRequest);
 
     /**
      * 修改小说章节状态信息
      * @param baseChapterRequest
      * @return
      */
-    R<Boolean> updateChapterStatus(BaseChapterRequest baseChapterRequest);
+    Boolean updateChapterStatus(BaseChapterRequest baseChapterRequest);
 
 }

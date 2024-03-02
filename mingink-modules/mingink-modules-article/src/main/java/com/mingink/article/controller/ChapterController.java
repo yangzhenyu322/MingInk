@@ -38,7 +38,7 @@ public class ChapterController {
     @PostMapping("/add")
     @ApiOperation("章节存为草稿/发布 status: 0-草稿 1-发布")
     public R<?> addChapter(@RequestBody AddChapterRequest addChapterRequest, HttpServletRequest request) {
-        return iChapterService.addChapter(addChapterRequest);
+        return R.ok(iChapterService.addChapter(addChapterRequest));
     }
 
     /**
@@ -49,6 +49,6 @@ public class ChapterController {
     @PostMapping("/update/status")
     @ApiOperation("修改小说章节状态")
     public R<?> updateChapterStatus(@RequestBody BaseChapterRequest baseChapterRequest, HttpServletRequest request) {
-        return iChapterService.updateChapterStatus(baseChapterRequest);
+        return R.ok(iChapterService.updateChapterStatus(baseChapterRequest));
     }
 }
