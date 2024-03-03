@@ -12,6 +12,7 @@ import com.mingink.article.mapper.GorseFeedbackMapper;
 import com.mingink.article.mapper.GorseItemsMapper;
 import com.mingink.article.mapper.GorseUsersMapper;
 import com.mingink.article.service.IGorseService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,8 +90,8 @@ public class GorseService implements IGorseService {
         return gorseClient.getSimilar(bookId, category);
     }
 
-    @SneakyThrows
     @Override
+    @GlobalTransactional
     public boolean addNewGorseUser(GorseUserRequest gorseUserRequest) {
         GorseUser gorseUser = new GorseUser();
         gorseUser.setUserId(gorseUserRequest.getUserId());
@@ -101,8 +102,8 @@ public class GorseService implements IGorseService {
         return gorseUsersMapper.insert(gorseUser) > 0;
     }
 
-    @SneakyThrows
     @Override
+    @GlobalTransactional
     public boolean removeGorseUser(String userId) {
         return gorseUsersMapper.deleteById(userId) > 0;
     }
