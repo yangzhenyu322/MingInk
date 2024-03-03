@@ -73,6 +73,11 @@
             <groupId>com.mingink</groupId>
             <artifactId>mingink-api-article</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-core</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

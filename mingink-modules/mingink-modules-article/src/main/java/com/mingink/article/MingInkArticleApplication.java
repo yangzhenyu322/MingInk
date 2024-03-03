@@ -5,6 +5,7 @@ import com.mingink.common.core.annotaion.EnableMIFeignClients;
 import com.mingink.common.swagger.annotaion.EnableCustomSwagger2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Author: ZenSheep
@@ -14,6 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableCustomSwagger2
 @EnableMIFeignClients
 @SpringBootApplication
+@ComponentScan("com.mingink")
 public class MingInkArticleApplication {
     public static void main(String[] args) {
         SpringApplication.run(MingInkArticleApplication.class, args);

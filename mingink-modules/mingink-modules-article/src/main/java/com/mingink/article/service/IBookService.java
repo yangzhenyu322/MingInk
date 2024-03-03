@@ -22,4 +22,6 @@ public interface IBookService extends IService<Book> {
     Boolean updateBookStatus(Long bookId, int status);
 
     Boolean updateBookVisitCount(Long bookId);
+
+
 }
