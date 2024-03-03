@@ -2,14 +2,13 @@ package com.mingink.article.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mingink.article.api.domain.dto.BaseChapterRequest;
 import com.mingink.article.api.domain.dto.AddChapterRequest;
+import com.mingink.article.api.domain.dto.BaseChapterRequest;
 import com.mingink.article.api.domain.entity.Book;
 import com.mingink.article.api.domain.entity.Chapter;
 import com.mingink.article.mapper.BookMapper;
 import com.mingink.article.mapper.ChapterMapper;
 import com.mingink.article.service.IChapterService;
-import com.mingink.common.core.domain.R;
 import com.mingink.common.core.exception.BusinessException;
 import com.mingink.common.core.exception.ErrorCode;
 import lombok.extern.slf4j.Slf4j;
@@ -90,5 +89,4 @@ public class ChapterService extends ServiceImpl<ChapterMapper, Chapter> implemen
         chapter.setStatus(baseChapterRequest.getStatus());
         return chapterMapper.updateById(chapter) > 0;
     }
-
 }
