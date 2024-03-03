@@ -12,6 +12,7 @@ import com.mingink.system.api.domain.vo.UserSafeInfo;
 import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.mapper.UserMapper;
 import com.mingink.system.service.IUserService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,8 +77,8 @@ public class UserService implements IUserService {
         return R.fail("更新密码失败");
     }
 
-    // TODO seata 事务管理
     @Override
+    @GlobalTransactional
     public R<?> registerUser(User user) {
         log.info("Begin Register: 【{}】", user.getUserName());
 
@@ -135,13 +136,13 @@ public class UserService implements IUserService {
         user.setUpdateTime(new Date()); // 当前时间
         boolean isInsertSuccess = userMapper.insert(user) > 0;  // 返回值int代表插入成功条数，大于0表示插入成功条数，等于0则代表插入失败
 
-        // 设置默认权限
-        roleService.addUserRole(user.getUserId(), 3L);
-
         if (!isInsertSuccess) {
             log.info("用户[{}]注册失败：", user.getUserName());
             return R.fail("用户注册失败");
         }
+
+        // 设置默认权限
+        roleService.addUserRole(user.getUserId(), 3L);
 
         // 注册Gorse User
         GorseUserRequest gorseUserRequest = new GorseUserRequest();
@@ -160,7 +161,9 @@ public class UserService implements IUserService {
     @Override
     public R<Boolean> updateUserInfo(UserInfoUptReq userInfo, UserSafeInfo loginUser) {
         String userId = userInfo.getUserId();
-        if(StringUtils.isBlank(userId)) return R.fail("用户信息异常");
+        if (StringUtils.isBlank(userId)) {
+            return R.fail("用户信息异常");
+        }
         //仅管理员和自己可以修改
         //管理员 允许更新任意用户
         //非管理员 只允许更新当前(自己的)信息
@@ -199,7 +202,9 @@ public class UserService implements IUserService {
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_name", username);
         User user = userMapper.selectOne(queryWrapper);
-        if(user == null) return null;
+        if (user == null) {
+            return null;
+        }
         return getSafeUser(user);
     }
 
@@ -219,7 +224,9 @@ public class UserService implements IUserService {
 
     @Override
     public boolean isAdmin(UserSafeInfo loginUser) {
-        if(loginUser == null) return false;
+        if (loginUser == null) {
+            return false;
+        }
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_name", loginUser.getUserName());
         User user = userMapper.selectOne(queryWrapper);
@@ -232,7 +239,9 @@ public class UserService implements IUserService {
 
     @Override
     public R<List<UserSafeInfo>> searchUserByName(String username) {
-        if(StringUtils.isBlank(username)) return R.fail("用户名为空");
+        if (StringUtils.isBlank(username)) {
+            return R.fail("用户名为空");
+        }
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.like("user_name", username);
         List<User> users = userMapper.selectList(queryWrapper);
@@ -260,6 +269,7 @@ public class UserService implements IUserService {
     }
 
     @Override
+    @GlobalTransactional
     public boolean removeUser(String userId) {
         // TODO 移除之前与其管理表的数据
 

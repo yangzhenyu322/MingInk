@@ -5,6 +5,7 @@ import com.mingink.system.api.domain.entiry.UserRole;
 import com.mingink.system.mapper.RoleMapper;
 import com.mingink.system.mapper.UserRoleMapper;
 import com.mingink.system.service.IRoleService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,6 +49,7 @@ public class RoleService implements IRoleService {
     }
 
     @Override
+    @GlobalTransactional
     public Boolean addUserRole(String userId, Long roleId) {
         UserRole userRole = new UserRole();
         userRole.setUserId(userId);
