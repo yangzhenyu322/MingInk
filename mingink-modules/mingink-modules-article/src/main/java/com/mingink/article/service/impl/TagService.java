@@ -5,6 +5,7 @@ import com.mingink.article.api.domain.entity.Tag;
 import com.mingink.article.mapper.TagMapper;
 import com.mingink.article.service.ITagService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,5 +16,11 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class TagService extends ServiceImpl<TagMapper, Tag> implements ITagService {
+    @Autowired
+    private TagMapper tagMapper;
 
+    @Override
+    public String getTagNameById(Long tagId) {
+        return tagMapper.selectById(tagId).getName();
+    }
 }

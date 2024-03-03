@@ -22,7 +22,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/gorse")
-@Api(value = "Gorse推荐接口功能", tags = "ChapterController", description = "Gorse推荐接口相关介绍")
+@Api(value = "Gorse推荐接口功能", tags = "GorseController", description = "Gorse推荐接口相关介绍")
 public class GorseController {
     @Autowired
     private IGorseService gorseService;
@@ -176,7 +176,6 @@ public class GorseController {
      * @return
      */
     @PostMapping("/feedback")
-    @ApiOperation("新增用户反馈")
     public R<String> addNewFeedBack(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
         if (!gorseService.addNewFeedBack(gorseFeedbackRequest)) {
             return R.fail("新增反馈失败");
@@ -191,7 +190,6 @@ public class GorseController {
      * @return
      */
     @DeleteMapping("/feedback")
-    @ApiOperation("删除用户反馈")
     public R<String> removeFeedBack(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
         if (!gorseService.removeFeedBack(gorseFeedbackRequest)) {
             return R.fail("删除反馈失败");

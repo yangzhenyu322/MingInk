@@ -14,4 +14,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/author")
 @Api(value = "作家接口功能", tags = "AuthorController", description = "作家接口相关介绍")
 public class AuthorController {
+
 }

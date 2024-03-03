@@ -2,10 +2,12 @@ package com.mingink.article.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mingink.article.api.domain.entity.Book;
 import com.mingink.article.api.domain.dto.BookRequest;
+import com.mingink.article.api.domain.dto.GorseFeedbackRequest;
+import com.mingink.article.api.domain.entity.Book;
 
 import java.util.List;
+
 
 /**
  * Book 服务类
@@ -19,9 +21,11 @@ public interface IBookService extends IService<Book> {
 
     Boolean updateBookInfo(BookRequest bookRequest, Long bookId);
 
-    Boolean updateBookStatus(Long bookId, int status);
+    boolean updateBookStatus(Long bookId, int status);
 
-    Boolean updateBookVisitCount(Long bookId);
+    Boolean addBookRead(GorseFeedbackRequest gorseFeedbackRequest);
 
+    Boolean substrateBookRead(GorseFeedbackRequest gorseFeedbackRequest);
 
+    Boolean removeBookById(Long bookId);
 }

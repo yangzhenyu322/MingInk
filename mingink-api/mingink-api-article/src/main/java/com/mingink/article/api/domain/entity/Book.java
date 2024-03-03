@@ -47,13 +47,17 @@ public class Book implements Serializable {
     @TableField("status")
     private int status;
 
-    @ApiModelProperty(value = "点击量")
-    @TableField("visit_count")
-    private Long visitCount;
+    @ApiModelProperty(value = "阅读量")
+    @TableField("read_count")
+    private Long readCount;
+
+    @ApiModelProperty(value = "喜欢量")
+    @TableField("like_count")
+    private Long likeCount;
 
     @ApiModelProperty(value = "收藏量")
-    @TableField("collect_count")
-    private Long collectCount;
+    @TableField("star_count")
+    private Long starCount;
 
     @ApiModelProperty(value = "总字数")
     @TableField("word_count")
