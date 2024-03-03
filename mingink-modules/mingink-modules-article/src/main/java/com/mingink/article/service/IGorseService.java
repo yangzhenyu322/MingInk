@@ -41,6 +41,8 @@ public interface IGorseService {
 
     boolean updateGorseItem(GorseItem gorseItem);
 
+    boolean updateGorseItemHidden(String itemId, boolean isHidden);
+
     boolean addNewFeedBack(GorseFeedbackRequest gorseFeedbackRequest);
 
     boolean removeFeedBack(GorseFeedbackRequest gorseFeedbackRequest);

@@ -1,10 +1,9 @@
 package com.mingink.article.controller;
 
 
-import com.mingink.article.api.domain.dto.BaseChapterRequest;
 import com.mingink.article.api.domain.dto.AddChapterRequest;
+import com.mingink.article.api.domain.dto.BaseChapterRequest;
 import com.mingink.article.service.IChapterService;
-import com.mingink.article.service.impl.ChapterService;
 import com.mingink.common.core.domain.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;

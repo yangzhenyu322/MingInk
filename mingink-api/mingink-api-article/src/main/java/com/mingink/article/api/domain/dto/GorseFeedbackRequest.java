@@ -13,7 +13,7 @@ import lombok.Data;
 public class GorseFeedbackRequest {
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "反馈类型，包含like、star、read等")
+    @ApiModelProperty(value = "反馈类型，包含like、star、read")
     private String feedbackType;
 
     @ApiModelProperty(value = "用户ID")

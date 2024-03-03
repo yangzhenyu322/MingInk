@@ -9,5 +9,5 @@ import com.mingink.article.api.domain.entity.Tag;
  * @since 2024-02-27
  */
 public interface ITagService extends IService<Tag> {
-
+    public String getTagNameById(Long tagId);
 }

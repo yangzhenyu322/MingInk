@@ -1,15 +1,13 @@
 package com.mingink.article.controller;
 
 
-import com.mingink.article.api.domain.entity.Book;
 import com.mingink.article.api.domain.dto.BookRequest;
+import com.mingink.article.api.domain.dto.GorseFeedbackRequest;
+import com.mingink.article.api.domain.entity.Book;
 import com.mingink.article.service.IBookService;
 import com.mingink.common.core.domain.R;
-import io.gorse.gorse4j.Feedback;
-import io.gorse.gorse4j.Gorse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import lombok.SneakyThrows;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -77,33 +75,12 @@ public class BookController {
         return R.ok(books);
     }
 
-
-    @SneakyThrows
-    @GetMapping("/recommend")
-    public R<?> getRecommend() {
-        // 创建Gorse连接客户端
-        Gorse client = new Gorse("http://223.82.75.76:8088", "");
-
-        // 插入feedback
-        List<Feedback> feedbacks = List.of(
-                // String feedbackType, String userId, String itemId, String timestamp
-                new Feedback("star", "106", "300", "2022-11-20T13:55:28Z"),
-                new Feedback("star", "106", "401", "2022-11-20T13:55:28Z")
-        );
-        client.insertFeedback(feedbacks);
-
-        // 获取推荐
-        List<String> recommends = client.getRecommend("100");
-
-        return R.ok(recommends);
-    }
-
     /**
      * 新增小说
      * @param bookRequest
      * @return
      */
-    @PostMapping("/add")
+    @PostMapping("/new")
     @ApiOperation("新增小说")
     public R<String> addNewBook(@RequestBody BookRequest bookRequest) {
         Boolean isSuccess = bookService.insertBook(bookRequest);
@@ -118,7 +95,7 @@ public class BookController {
      * @param bookRequest
      * @return
      */
-    @PutMapping("/update/info/bookId/{bookId}")
+    @PutMapping("/bookId/{bookId}")
     @ApiOperation("更新小说基本信息")
     public R<String> updateBookInfo(@RequestBody BookRequest bookRequest, @PathVariable("bookId") Long bookId) {
         Boolean isSuccess = bookService.updateBookInfo(bookRequest, bookId);
@@ -134,11 +111,11 @@ public class BookController {
      * @param status
      * @return
      */
-    @PutMapping("/update/bookId/{bookId}/status/{status}")
+    @PutMapping("/bookId/{bookId}/status/{status}")
     @ApiOperation("更新小说状态：0-连载(默认)、1-已完结、2-下架")
     public R<String> updateBookStatus(@PathVariable("bookId") Long bookId,
                                       @PathVariable("status") int status) {
-        Boolean isSuccess = bookService.updateBookStatus(bookId, status);
+        boolean isSuccess = bookService.updateBookStatus(bookId, status);
         if (!isSuccess) {
             return R.fail("更新小说状态失败");
         }
@@ -147,19 +124,37 @@ public class BookController {
 
     /**
      * 更新小说阅读量
-     * @param bookId
+     * @param gorseFeedbackRequest
      * @return
      */
-    @PutMapping("/update/visitCount/bookId/{bookId}")
-    @ApiOperation("小说阅读量加一")
-    public R<String> updateBookVisitCount(@PathVariable("bookId") Long bookId) {
-        Boolean isSuccess = bookService.updateBookVisitCount(bookId);
+    @PostMapping("/feedback")
+    @ApiOperation("小说反馈(包含read,like,star类型)加一")
+    public R<String> addBookRead(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
+        Boolean isSuccess = bookService.addBookRead(gorseFeedbackRequest);
         if (!isSuccess) {
-            return R.fail("更新小说阅读量失败");
+            return R.fail("增加小说反馈失败");
         }
-        return R.ok("更新小说阅读量成功");
+        return R.ok("增加小说反馈成功");
     }
 
+    @DeleteMapping("/feedback")
+    @ApiOperation("小说反馈减一")
+    public R<String> substrateBookRead(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
+        Boolean isSuccess = bookService.substrateBookRead(gorseFeedbackRequest);
+        if (!isSuccess) {
+            return R.fail("减少小说阅读量失败");
+        }
+        return R.ok("减少小说阅读量成功");
+    }
 
-
+    @DeleteMapping("/bookId/{bookId}")
+//    @ApiOperation("删除小说")
+    // TODO
+    public R<String> removeBook(@PathVariable("bookId") Long bookId) {
+        Boolean isSuccess = bookService.removeBookById(bookId);
+        if (!isSuccess) {
+            return R.fail("删除小说失败");
+        }
+        return R.ok("删除小说成功");
+    }
 }
