@@ -23,9 +23,9 @@ public interface IBookService extends IService<Book> {
 
     boolean updateBookStatus(Long bookId, int status);
 
-    Boolean addBookRead(GorseFeedbackRequest gorseFeedbackRequest);
+    Boolean addBookFeedback(GorseFeedbackRequest gorseFeedbackRequest);
 
-    Boolean substrateBookRead(GorseFeedbackRequest gorseFeedbackRequest);
+    Boolean substrateBookFeedback(GorseFeedbackRequest gorseFeedbackRequest);
 
     Boolean removeBookById(Long bookId);
 }

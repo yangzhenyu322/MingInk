@@ -10,4 +10,6 @@ import com.mingink.article.api.domain.entity.Tag;
  */
 public interface ITagService extends IService<Tag> {
     public String getTagNameById(Long tagId);
+
+    Tag getTagById(Long tagId);
 }

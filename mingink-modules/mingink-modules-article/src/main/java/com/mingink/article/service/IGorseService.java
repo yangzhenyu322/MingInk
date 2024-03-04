@@ -35,6 +35,8 @@ public interface IGorseService {
 
     boolean updateGorseUser(GorseUserRequest gorseUserRequest);
 
+    GorseItem getGorseItemById(String itemId);
+
     boolean addNewItem(GorseItemRequest gorseItemRequest);
 
     boolean removeItem(String bookId);
