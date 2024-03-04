@@ -8,6 +8,7 @@ import com.mingink.article.mapper.BookTagMapper;
 import com.mingink.article.service.IBookTagService;
 import com.mingink.article.service.IGorseService;
 import com.mingink.article.service.ITagService;
+import com.mingink.article.utils.GorseUtils;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +49,7 @@ public class BookTagService extends ServiceImpl<BookTagMapper, BookTag> implemen
             return tagService.getTagNameById(bookTag.getTagId());
         }).collect(Collectors.toList());
 
-        return String.valueOf(tagNamesToStr(tagNames));
+        return String.valueOf(GorseUtils.tagNamesToStr(tagNames));
     }
 
     /**
@@ -80,7 +81,7 @@ public class BookTagService extends ServiceImpl<BookTagMapper, BookTag> implemen
         List<String> tagNames = bookTagMapper.selectByMap(map).stream().map(bookTagItem -> {
             return tagService.getTagNameById(bookTagItem.getTagId());
         }).collect(Collectors.toList());
-        String tagNamesStr = tagNamesToStr(tagNames);
+        String tagNamesStr = GorseUtils.tagNamesToStr(tagNames);
         gorseItem.setLabels(tagNamesStr);
         gorseItem.setCategories(tagNamesStr);
         gorseService.updateGorseItem(gorseItem);
@@ -104,24 +105,11 @@ public class BookTagService extends ServiceImpl<BookTagMapper, BookTag> implemen
         List<String> tagNames = bookTagMapper.selectByMap(updateGorseItemMap).stream().map(bookTagItem -> {
             return tagService.getTagNameById(bookTagItem.getTagId());
         }).collect(Collectors.toList());
-        String tagNamesStr = tagNamesToStr(tagNames);
+        String tagNamesStr = GorseUtils.tagNamesToStr(tagNames);
         gorseItem.setLabels(tagNamesStr);
         gorseItem.setCategories(tagNamesStr);
         gorseService.updateGorseItem(gorseItem);
 
         return isRemoveBookTagSuccess;
-    }
-
-    public static String tagNamesToStr(List<String> tagNames) {
-        StringBuilder tagNamesStr = new StringBuilder("[");
-        for (int i = 0; i < tagNames.size(); i++) {
-            tagNamesStr.append("\"").append(tagNames.get(i)).append("\"");
-            if (i != tagNames.size() - 1) {
-                tagNamesStr.append(",");
-            }
-        }
-        tagNamesStr.append("]");
-
-        return String.valueOf(tagNamesStr);
     }
 }

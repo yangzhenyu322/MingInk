@@ -1,10 +1,15 @@
 package com.mingink.article.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mingink.article.api.domain.entity.GorseUser;
+import com.mingink.article.api.domain.entity.Tag;
 import com.mingink.article.api.domain.entity.UserTag;
-import com.mingink.article.mapper.TagMapper;
 import com.mingink.article.mapper.UserTagMapper;
+import com.mingink.article.service.IGorseService;
+import com.mingink.article.service.ITagService;
 import com.mingink.article.service.IUserTagService;
+import com.mingink.article.utils.GorseUtils;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,31 +28,62 @@ public class UserTagService extends ServiceImpl<UserTagMapper, UserTag> implemen
     private UserTagMapper userTagMapper;
 
     @Autowired
-    private TagMapper tagMapper;
+    private ITagService tagService;
+
+    @Autowired
+    private IGorseService gorseService;
 
     @Override
-    public List<String> getTagKeysByUserId(String userId) {
+    public List<Tag> getUserTagsById(String userId) {
         Map<String, Object> map = new HashMap<>();
         map.put("user_id", userId);
-        List<UserTag> userTags = userTagMapper.selectByMap(map);
-        List<Long> tagIds = userTags.stream().map(userTag -> {
-            return userTag.getTagId();
+        List<Tag> tags = userTagMapper.selectByMap(map).stream().map(userTag -> {
+            return tagService.getTagById(userTag.getTagId());
         }).collect(Collectors.toList());
 
-        List<String> tagKeys = tagMapper.selectBatchIds(tagIds).stream()
-                .map(tag -> {
-                    return tag.getName();
-                }).collect(Collectors.toList());
+        return tags;
+    }
 
-        return tagKeys;
+    @Override
+    @GlobalTransactional
+    public Boolean addNewUserTag(UserTag userTag) {
+        Boolean isInsertUserTagSuccess = userTagMapper.insert(userTag) > 0;
+
+        // 更新Gorse Items
+        GorseUser gorseUser = gorseService.getGorseUserById(userTag.getUserId());
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("user_id", userTag.getUserId());
+        List<String> tagNames = userTagMapper.selectByMap(map).stream().map(userTagItem -> {
+            return tagService.getTagNameById(userTagItem.getTagId());
+        }).collect(Collectors.toList());
+        String tagNamesStr = GorseUtils.tagNamesToStr(tagNames);
+        gorseUser.setLabels(tagNamesStr);
+
+        gorseService.updateGorseUser(gorseUser);
+
+        return isInsertUserTagSuccess;
     }
 
     @Override
     public Boolean removeUserTag(UserTag userTag) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("user_id", userTag.getUserId());
-        map.put("tag_id", userTag.getTagId());
+        Map<String, Object> deleteUserTagMap = new HashMap<>();
+        deleteUserTagMap.put("user_id", userTag.getUserId());
+        deleteUserTagMap.put("tag_id", userTag.getTagId());
+        Boolean isRemoveUserTagSuccess = userTagMapper.deleteByMap(deleteUserTagMap) > 0;
 
-        return userTagMapper.deleteByMap(map) > 0;
+        // 更新Gorse User
+        GorseUser gorseUser = gorseService.getGorseUserById(userTag.getUserId());
+
+        Map<String, Object> updateGorseUserMap = new HashMap<>();
+        updateGorseUserMap.put("user_id", userTag.getUserId());
+        List<String> tagNames = userTagMapper.selectByMap(updateGorseUserMap).stream().map(userTagItem -> {
+            return tagService.getTagNameById(userTagItem.getTagId());
+        }).collect(Collectors.toList());
+        String tagNamesStr = GorseUtils.tagNamesToStr(tagNames);
+        gorseUser.setLabels(tagNamesStr);
+        gorseService.updateGorseUser(gorseUser);
+
+        return isRemoveUserTagSuccess;
     }
 }
