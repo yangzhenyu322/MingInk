@@ -94,6 +94,11 @@ public class GorseService implements IGorseService {
     }
 
     @Override
+    public GorseUser getGorseUserById(String userId) {
+        return gorseUsersMapper.selectById(userId);
+    }
+
+    @Override
     @GlobalTransactional
     public boolean addNewGorseUser(GorseUserRequest gorseUserRequest) {
         GorseUser gorseUser = new GorseUser();
@@ -113,13 +118,7 @@ public class GorseService implements IGorseService {
 
     @Override
     @GlobalTransactional
-    public boolean updateGorseUser(GorseUserRequest gorseUserRequest) {
-        GorseUser gorseUser = new GorseUser();
-        gorseUser.setUserId(gorseUserRequest.getUserId());
-        gorseUser.setLabels(gorseUserRequest.getLabels());
-        gorseUser.setComment("");
-        gorseUser.setSubscribe("[]");
-
+    public boolean updateGorseUser(GorseUser gorseUser) {
         return gorseUsersMapper.updateById(gorseUser) > 0;
     }
 
