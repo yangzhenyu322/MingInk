@@ -129,8 +129,8 @@ public class BookController {
      */
     @PostMapping("/feedback")
     @ApiOperation("小说反馈(包含read,like,star类型)加一")
-    public R<String> addBookRead(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
-        Boolean isSuccess = bookService.addBookRead(gorseFeedbackRequest);
+    public R<String> addBookFeedback(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
+        Boolean isSuccess = bookService.addBookFeedback(gorseFeedbackRequest);
         if (!isSuccess) {
             return R.fail("增加小说反馈失败");
         }
@@ -139,8 +139,8 @@ public class BookController {
 
     @DeleteMapping("/feedback")
     @ApiOperation("小说反馈减一")
-    public R<String> substrateBookRead(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
-        Boolean isSuccess = bookService.substrateBookRead(gorseFeedbackRequest);
+    public R<String> substrateBookFeedback(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
+        Boolean isSuccess = bookService.substrateBookFeedback(gorseFeedbackRequest);
         if (!isSuccess) {
             return R.fail("减少小说阅读量失败");
         }

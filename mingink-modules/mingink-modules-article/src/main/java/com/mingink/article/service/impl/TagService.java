@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mingink.article.api.domain.entity.Tag;
 import com.mingink.article.mapper.TagMapper;
 import com.mingink.article.service.ITagService;
+import com.mingink.common.core.exception.BusinessException;
+import com.mingink.common.core.exception.ErrorCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +23,21 @@ public class TagService extends ServiceImpl<TagMapper, Tag> implements ITagServi
 
     @Override
     public String getTagNameById(Long tagId) {
-        return tagMapper.selectById(tagId).getName();
+        Tag tag = tagMapper.selectById(tagId);
+        if (tag == null) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "tagId[" + tagId +"]有误，不存在");
+        }
+
+        return tag.getName();
+    }
+
+    @Override
+    public Tag getTagById(Long tagId) {
+        Tag tag = tagMapper.selectById(tagId);
+        if (tag == null) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "tagId[" + tagId +"]有误，不存在");
+        }
+
+        return tag;
     }
 }

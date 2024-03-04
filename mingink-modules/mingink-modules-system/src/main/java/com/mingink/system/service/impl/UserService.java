@@ -55,6 +55,11 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public User getUserByUserId(String userId) {
+        return userMapper.selectById(userId);
+    }
+
+    @Override
     public R<?> changeUserPassword(User user) {
         String password = user.getPassword();
         String repeatPassword = user.getRepeatPassword();
