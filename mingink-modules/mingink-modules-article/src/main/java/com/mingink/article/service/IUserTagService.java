@@ -1,6 +1,7 @@
 package com.mingink.article.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.mingink.article.api.domain.entity.Tag;
 import com.mingink.article.api.domain.entity.UserTag;
 
 import java.util.List;
@@ -11,7 +12,9 @@ import java.util.List;
  */
 public interface IUserTagService extends IService<UserTag> {
 
-    List<String> getTagKeysByUserId(String userId);
+    List<Tag> getUserTagsById(String userId);
 
     Boolean removeUserTag(UserTag userTag);
+
+    Boolean addNewUserTag(UserTag userTag);
 }

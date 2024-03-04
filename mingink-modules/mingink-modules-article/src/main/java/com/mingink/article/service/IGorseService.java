@@ -5,6 +5,7 @@ import com.mingink.article.api.domain.dto.GorseFeedbackRequest;
 import com.mingink.article.api.domain.dto.GorseItemRequest;
 import com.mingink.article.api.domain.dto.GorseUserRequest;
 import com.mingink.article.api.domain.entity.GorseItem;
+import com.mingink.article.api.domain.entity.GorseUser;
 
 import java.util.List;
 
@@ -33,7 +34,7 @@ public interface IGorseService {
 
     boolean removeGorseUser(String userId);
 
-    boolean updateGorseUser(GorseUserRequest gorseUserRequest);
+    boolean updateGorseUser(GorseUser gorUser);
 
     GorseItem getGorseItemById(String itemId);
 
@@ -48,4 +49,6 @@ public interface IGorseService {
     boolean addNewFeedBack(GorseFeedbackRequest gorseFeedbackRequest);
 
     boolean removeFeedBack(GorseFeedbackRequest gorseFeedbackRequest);
+
+    GorseUser getGorseUserById(String userId);
 }

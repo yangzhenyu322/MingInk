@@ -6,6 +6,7 @@ import com.mingink.article.api.domain.dto.GorseFeedbackRequest;
 import com.mingink.article.api.domain.dto.GorseItemRequest;
 import com.mingink.article.api.domain.dto.GorseUserRequest;
 import com.mingink.article.api.domain.entity.GorseItem;
+import com.mingink.article.api.domain.entity.GorseUser;
 import com.mingink.article.service.IGorseService;
 import com.mingink.common.core.domain.R;
 import io.swagger.annotations.Api;
@@ -137,12 +138,12 @@ public class GorseController {
 
     /**
      * 更新Gorse User 信息
-     * @param gorseUserRequest
+     * @param gorseUser
      * @return
      */
     @PutMapping("/user")
-    public Boolean updateGorseUser(@RequestBody GorseUserRequest gorseUserRequest) {
-        return gorseService.updateGorseUser(gorseUserRequest);
+    public Boolean updateGorseUser(@RequestBody GorseUser gorseUser) {
+        return gorseService.updateGorseUser(gorseUser);
     }
 
     /**

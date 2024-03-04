@@ -138,7 +138,7 @@ public class BookController {
     }
 
     @DeleteMapping("/feedback")
-    @ApiOperation("小说反馈减一")
+    @ApiOperation("小说反馈(包含read,like,star类型)减一")
     public R<String> substrateBookFeedback(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
         Boolean isSuccess = bookService.substrateBookFeedback(gorseFeedbackRequest);
         if (!isSuccess) {
