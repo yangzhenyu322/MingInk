@@ -124,6 +124,11 @@ public class GorseService implements IGorseService {
     }
 
     @Override
+    public GorseItem getGorseItemById(String itemId) {
+        return gorseItemsMapper.selectById(itemId);
+    }
+
+    @Override
     @GlobalTransactional
     public boolean addNewItem(GorseItemRequest gorseItemRequest) {
         GorseItem gorseItem = new GorseItem();

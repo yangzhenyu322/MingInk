@@ -2,6 +2,7 @@ package com.mingink.article.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.mingink.article.api.domain.entity.BookTag;
+import com.mingink.article.api.domain.entity.Tag;
 
 import java.util.List;
 
@@ -11,7 +12,12 @@ import java.util.List;
  * @since 2024-02-27
  */
 public interface IBookTagService extends IService<BookTag> {
-    List<String> getTagNamesByBookId(Long bookId);
 
     String getTagNamesStrByBookId(Long bookId);
+
+    List<Tag> getBookTagsById(Long bookId);
+
+    Boolean addNewBookTag(BookTag bookTag);
+
+    Boolean removeBookTag(BookTag bookTag);
 }

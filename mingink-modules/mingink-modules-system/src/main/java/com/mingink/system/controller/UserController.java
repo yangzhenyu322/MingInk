@@ -27,16 +27,6 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @GetMapping("/vip")
-    public R<String> getVIP() {
-        return R.ok("vip");
-    }
-
-    @GetMapping("/admin")
-    public R<String> getAdmin() {
-        return R.ok("admin");
-    }
-
     /**
      * 获取所有用户
      * @return
@@ -66,6 +56,11 @@ public class UserController {
     @GetMapping("/username/{username}")
     public User getUserByUserName(@PathVariable("username") String username) {
         return userService.getUserByName(username);
+    }
+
+    @GetMapping("/userId/{userId}")
+    public User getUserByUserId(@PathVariable("userId") String userId) {
+        return userService.getUserByUserId(userId);
     }
 
     /**

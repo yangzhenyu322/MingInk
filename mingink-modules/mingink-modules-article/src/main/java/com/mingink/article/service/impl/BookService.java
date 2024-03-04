@@ -178,7 +178,7 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
 
     @Override
     @GlobalTransactional
-    public Boolean addBookRead(GorseFeedbackRequest gorseFeedbackRequest) {
+    public Boolean addBookFeedback(GorseFeedbackRequest gorseFeedbackRequest) {
         if (!Arrays.stream(GorseFeedback.FEEDBACK_TYPES).toList().contains(gorseFeedbackRequest.getFeedbackType())) {
             // 非法反馈类型
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "非法反馈类型(不是read,like或star):" + gorseFeedbackRequest);
@@ -203,7 +203,7 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
 
     @Override
     @GlobalTransactional
-    public Boolean substrateBookRead(GorseFeedbackRequest gorseFeedbackRequest) {
+    public Boolean substrateBookFeedback(GorseFeedbackRequest gorseFeedbackRequest) {
         // 减少Gorse Feedback
         gorseService.removeFeedBack(gorseFeedbackRequest);
 
