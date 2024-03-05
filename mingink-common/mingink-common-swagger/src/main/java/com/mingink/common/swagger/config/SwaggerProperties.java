@@ -1,7 +1,6 @@
 package com.mingink.common.swagger.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,12 +35,12 @@ public class SwaggerProperties
     /**
      * 标题
      **/
-    private String title = "接口文档";
+    private String title = "爱荧开放平台（测试版）";
 
     /**
      * 描述
      **/
-    private String description = "萤墨轩的swagger接口文档";
+    private String description = "荧墨轩提供的Swagger接口文档，供开发人员参阅";
 
     /**
      * 版本
@@ -66,7 +65,7 @@ public class SwaggerProperties
     /**
      * host信息
      **/
-    private String host = "223.82.75.76:8081/api/v1";
+    private String host = "one.lumoxuan.com:8081/api/v1";
 
     /**
      * 联系人信息

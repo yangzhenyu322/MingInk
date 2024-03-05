@@ -59,7 +59,7 @@ public class Book implements Serializable {
     @TableField("star_count")
     private Long starCount;
 
-    @ApiModelProperty(value = "总字数")
+    @ApiModelProperty(value = "总字数(已发布)")
     @TableField("word_count")
     private Integer wordCount;
 
