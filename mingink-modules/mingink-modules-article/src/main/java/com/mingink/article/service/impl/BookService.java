@@ -175,6 +175,19 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
         return isUpdateBookSuccess;
     }
 
+    /**
+     * 修改小说总字数
+     * @param increment
+     * @param bookId
+     */
+    @Override
+    @GlobalTransactional
+    public void updateBookWordCount(Integer increment, Long bookId) {
+        Book book = bookMapper.selectById(bookId);
+        book.setWordCount(book.getWordCount() + increment);
+        bookMapper.updateById(book);
+    }
+
 
     @Override
     @GlobalTransactional

@@ -1,10 +1,13 @@
 package com.mingink.article.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mingink.article.api.domain.dto.BaseChapterRequest;
-import com.mingink.article.api.domain.dto.AddChapterRequest;
+import com.mingink.article.api.domain.dto.ChapterRequest;
+import com.mingink.article.api.domain.dto.PageChapterCatalogRequest;
 import com.mingink.article.api.domain.entity.Chapter;
-import com.mingink.common.core.domain.R;
+import com.mingink.article.api.domain.vo.ChapterCatalog;
+import com.mingink.article.api.domain.vo.PageChapterCatalog;
+
+import java.util.List;
 
 /**
  * Chapter 服务类
@@ -12,18 +15,16 @@ import com.mingink.common.core.domain.R;
  * @since 2024-02-27
  */
 public interface IChapterService extends IService<Chapter> {
-    /**
-     * 添加小说章节
-     * @param addChapterRequest
-     * @return
-     */
-    Boolean addChapter(AddChapterRequest addChapterRequest);
+    List<ChapterCatalog> getChapterCatalogsByBookIdAndStatus(Long bookId, Integer status);
 
-    /**
-     * 修改小说章节状态信息
-     * @param baseChapterRequest
-     * @return
-     */
-    Boolean updateChapterStatus(BaseChapterRequest baseChapterRequest);
+    PageChapterCatalog getPageChapterCatalogsByBookId(PageChapterCatalogRequest pageChapterCatalogRequest);
 
+    Chapter getChapterById(Long chapterId);
+
+    Boolean addChapter(ChapterRequest chapterRequest);
+
+    Boolean updateChapter(ChapterRequest chapterRequest, Long chapterId);
+
+
+    Boolean updateChapterStatus(Long chapterId, Integer status);
 }
