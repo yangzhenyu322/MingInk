@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.mingink.common.core.handler.MyBatisTypeHandler;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -31,7 +32,7 @@ public class Chapter implements Serializable {
     @TableField("book_id")
     private Long bookId;
 
-    @ApiModelProperty(value = "序号")
+    @ApiModelProperty(value = "序号(序号越小说明创建时间越早，不一定是连续的)")
     @TableField("serial_number")
     private Integer serialNumber;
 
@@ -40,7 +41,7 @@ public class Chapter implements Serializable {
     private String title;
 
     @ApiModelProperty(value = "内容")
-    @TableField("content")
+    @TableField(value = "content", typeHandler = MyBatisTypeHandler.class)
     private String content;
 
     @ApiModelProperty(value = "总字数")

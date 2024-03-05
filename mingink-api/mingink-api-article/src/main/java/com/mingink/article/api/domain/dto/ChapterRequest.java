@@ -5,7 +5,6 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
  * @author hulx
@@ -15,17 +14,11 @@ import java.time.LocalDateTime;
  */
 @Data
 @ApiModel(value="PublishChapter Request对象", description="PublishChapter Request实体对象")
-public class AddChapterRequest extends BaseChapterRequest implements Serializable {
+public class ChapterRequest implements Serializable {
     private static final long serialVersionUID = 4381327608707544303L;
-
-    @ApiModelProperty(value = "作家id")
-    private String authorId;
 
     @ApiModelProperty(value = "小说id")
     private Long bookId;
-
-    @ApiModelProperty(value = "章节序号")
-    private Integer serialNumber;
 
     @ApiModelProperty(value = "标题")
     private String title;
@@ -33,12 +26,9 @@ public class AddChapterRequest extends BaseChapterRequest implements Serializabl
     @ApiModelProperty(value = "内容")
     private String content;
 
-    @ApiModelProperty(value = "总字数")
-    private Integer wordCount;
+    @ApiModelProperty(value = "章节状态：0-创建（草稿）、1-发布、2-下架")
+    private int status;
 
-    @ApiModelProperty(value = "是否VIP专属：0-否、1-是")
+    @ApiModelProperty(value = "是否VIP专属阅读：0-否、1-是")
     private int isVip;
-
-    @ApiModelProperty(value = "发布时间")
-    private LocalDateTime publishTime;
 }
