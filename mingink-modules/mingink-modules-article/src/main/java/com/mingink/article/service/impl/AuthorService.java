@@ -5,12 +5,15 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mingink.article.api.domain.dto.AuthorRequest;
 import com.mingink.article.api.domain.entity.Author;
+import com.mingink.article.api.domain.entity.Book;
 import com.mingink.article.mapper.AuthorMapper;
 import com.mingink.article.service.IAuthorService;
+import com.mingink.article.service.IBookService;
 import com.mingink.common.core.exception.BusinessException;
 import com.mingink.common.core.exception.ErrorCode;
 import com.mingink.common.core.utils.id.SnowFlakeFactory;
 import com.mingink.system.api.RemoteUserService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +36,9 @@ public class AuthorService extends ServiceImpl<AuthorMapper, Author> implements 
 
     @Autowired
     private RemoteUserService remoteUserService;
+
+    @Autowired
+    private IBookService bookService;
 
     @Override
     public Author getAuthorByUserId(String userId) {
@@ -100,9 +106,34 @@ public class AuthorService extends ServiceImpl<AuthorMapper, Author> implements 
     }
 
     @Override
+    @GlobalTransactional
     public Boolean removeAuthor(String authorId) {
-        // TODO:删除与作者相关信息
+        // 删除与作者相关的小说
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("author_id", authorId);
+        List<Book> books = bookService.list(queryWrapper);
+        books.stream().forEach(book -> {
+            bookService.removeBookById(book.getId());
+        });
 
         return authorMapper.deleteById(authorId) > 0;
+    }
+
+    @Override
+    @GlobalTransactional
+    public Boolean removeAuthorByUserId(String userId) {
+        QueryWrapper queryAuthorWrapper = new QueryWrapper();
+        queryAuthorWrapper.eq("user_id", userId);
+        Author author = authorMapper.selectOne(queryAuthorWrapper); // 设定一个用户只能注册一个作者
+
+        // 删除与作者相关的小说
+        QueryWrapper queryBookWrapper = new QueryWrapper();
+        queryBookWrapper.eq("author_id", author.getId());
+        List<Book> books = bookService.list(queryBookWrapper);
+        books.stream().forEach(book -> {
+            bookService.removeBookById(book.getId());
+        });
+
+        return authorMapper.deleteById(author.getId()) > 0;
     }
 }

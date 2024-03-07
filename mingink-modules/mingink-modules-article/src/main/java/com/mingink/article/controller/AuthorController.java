@@ -69,13 +69,17 @@ public class AuthorController {
     }
 
     @DeleteMapping("/authorId/{authorId}")
-//    @ApiOperation("注销作者账户")
-    // TODO
+    @ApiOperation("注销作者账户")
     public R<String> removeAuthor(@PathVariable("authorId") String authorId) {
         if (!authorService.removeAuthor(authorId)) {
             return R.fail("注销作者账户失败");
         }
 
         return R.ok("注销作者账户成功");
+    }
+
+    @DeleteMapping("/userId/{userId}")
+    public Boolean removeAuthorByUserId(@PathVariable("userId") String userId) {
+        return authorService.removeAuthorByUserId(userId);
     }
 }

@@ -28,6 +28,4 @@ public interface IBookService extends IService<Book> {
     Boolean substrateBookFeedback(GorseFeedbackRequest gorseFeedbackRequest);
 
     Boolean removeBookById(Long bookId);
-
-    void updateBookWordCount(Integer increment, Long bookId);
 }

@@ -1,5 +1,6 @@
 package com.mingink.article.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mingink.article.api.domain.entity.GorseUser;
 import com.mingink.article.api.domain.entity.Tag;
@@ -49,7 +50,7 @@ public class UserTagService extends ServiceImpl<UserTagMapper, UserTag> implemen
     public Boolean addNewUserTag(UserTag userTag) {
         Boolean isInsertUserTagSuccess = userTagMapper.insert(userTag) > 0;
 
-        // 更新Gorse Items
+        // 更新Gorse User
         GorseUser gorseUser = gorseService.getGorseUserById(userTag.getUserId());
 
         Map<String, Object> map = new HashMap<>();
@@ -59,7 +60,6 @@ public class UserTagService extends ServiceImpl<UserTagMapper, UserTag> implemen
         }).collect(Collectors.toList());
         String tagNamesStr = GorseUtils.tagNamesToStr(tagNames);
         gorseUser.setLabels(tagNamesStr);
-
         gorseService.updateGorseUser(gorseUser);
 
         return isInsertUserTagSuccess;
@@ -85,5 +85,13 @@ public class UserTagService extends ServiceImpl<UserTagMapper, UserTag> implemen
         gorseService.updateGorseUser(gorseUser);
 
         return isRemoveUserTagSuccess;
+    }
+
+    @Override
+    @GlobalTransactional
+    public Boolean removeUserTagByUserId(String userId) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("user_id", userId);
+        return userTagMapper.delete(queryWrapper) > 0;
     }
 }

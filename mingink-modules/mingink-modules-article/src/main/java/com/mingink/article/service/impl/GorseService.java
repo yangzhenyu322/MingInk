@@ -1,6 +1,7 @@
 package com.mingink.article.service.impl;
 
 import com.alibaba.fastjson2.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.mingink.article.api.domain.dto.GorseFeedbackRequest;
 import com.mingink.article.api.domain.dto.GorseItemRequest;
@@ -94,6 +95,7 @@ public class GorseService implements IGorseService {
     }
 
     @Override
+    @GlobalTransactional
     public GorseUser getGorseUserById(String userId) {
         return gorseUsersMapper.selectById(userId);
     }
@@ -113,6 +115,7 @@ public class GorseService implements IGorseService {
     @Override
     @GlobalTransactional
     public boolean removeGorseUser(String userId) {
+
         return gorseUsersMapper.deleteById(userId) > 0;
     }
 
@@ -193,4 +196,22 @@ public class GorseService implements IGorseService {
 
         return gorseFeedbackMapper.deleteByMap(map) > 0;
     }
+
+    @Override
+    @GlobalTransactional
+    public Boolean removeFeedBackByItemId(String itemId) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("item_id", itemId);
+
+        return gorseFeedbackMapper.delete(queryWrapper) > 0;
+    }
+
+    @Override
+    public Boolean removeFeedBackByUserId(String userId) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("user_id", userId);
+        return gorseFeedbackMapper.delete(queryWrapper) > 0;
+    }
+
+
 }

@@ -17,4 +17,6 @@ public interface IUserTagService extends IService<UserTag> {
     Boolean removeUserTag(UserTag userTag);
 
     Boolean addNewUserTag(UserTag userTag);
+
+    Boolean removeUserTagByUserId(String userId);
 }
