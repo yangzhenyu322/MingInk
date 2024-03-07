@@ -1,5 +1,6 @@
 package com.mingink.system.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mingink.system.api.domain.entiry.Role;
 import com.mingink.system.api.domain.entiry.UserRole;
 import com.mingink.system.mapper.RoleMapper;
@@ -56,5 +57,13 @@ public class RoleService implements IRoleService {
         userRole.setRoleId(roleId);
 
         return userRoleMapper.insert(userRole) > 0;
+    }
+
+    @Override
+    @GlobalTransactional
+    public Boolean removeUserRoleByUserId(String userId) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("user_id", userId);
+        return userRoleMapper.delete(queryWrapper) > 0;
     }
 }

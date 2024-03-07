@@ -10,4 +10,5 @@ import com.mingink.article.api.domain.entity.BookComment;
  */
 public interface IBookCommentService extends IService<BookComment> {
 
+    Boolean removeAllComment(Long bookId);
 }

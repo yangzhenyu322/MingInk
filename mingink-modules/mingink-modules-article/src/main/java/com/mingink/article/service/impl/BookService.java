@@ -11,10 +11,7 @@ import com.mingink.article.api.domain.entity.GorseFeedback;
 import com.mingink.article.api.domain.entity.GorseItem;
 import com.mingink.article.mapper.AuthorMapper;
 import com.mingink.article.mapper.BookMapper;
-import com.mingink.article.mapper.BookTagMapper;
-import com.mingink.article.service.IBookService;
-import com.mingink.article.service.IBookTagService;
-import com.mingink.article.service.IGorseService;
+import com.mingink.article.service.*;
 import com.mingink.common.core.exception.BusinessException;
 import com.mingink.common.core.exception.ErrorCode;
 import io.seata.spring.annotation.GlobalTransactional;
@@ -44,13 +41,17 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
     private AuthorMapper authorMapper;
 
     @Autowired
-    private BookTagMapper bookTagMapper;
-
-    @Autowired
     private IGorseService gorseService;
 
     @Autowired
     private IBookTagService bookTagService;
+
+    @Autowired
+    private IChapterService chapterService;
+
+    @Autowired
+    private IBookCommentService bookCommentService;
+
 
     @Override
     @GlobalTransactional
@@ -101,6 +102,7 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
         boolean isAddBookSuccess = bookMapper.insert(book) > 0;
         book = bookMapper.selectByMap(bookNameSelectMap).get(0);
 
+        // 新增Gorse Item
         GorseItemRequest gorseItemRequest = new GorseItemRequest();
         gorseItemRequest.setItemId(String.valueOf(book.getId()));
         gorseItemRequest.setLabels("[]");
@@ -144,10 +146,8 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
         boolean isUpdateBookSuccess = bookMapper.updateById(book) > 0;
 
         // 同时更新GorseItem的信息
-        GorseItem gorseItem = new GorseItem();
-        gorseItem.setItemId(String.valueOf(book.getId()));
+        GorseItem gorseItem = gorseService.getGorseItemById(String.valueOf(book.getId()));
         // 从book_tag查找tags
-        bookTagMapper.selectById(book.getId());
         gorseItem.setLabels(bookTagService.getTagNamesStrByBookId(book.getId()));
         gorseItem.setCategories(gorseItem.getLabels());
         gorseItem.setIsHidden(false);
@@ -174,20 +174,6 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
 
         return isUpdateBookSuccess;
     }
-
-    /**
-     * 修改小说总字数
-     * @param increment
-     * @param bookId
-     */
-    @Override
-    @GlobalTransactional
-    public void updateBookWordCount(Integer increment, Long bookId) {
-        Book book = bookMapper.selectById(bookId);
-        book.setWordCount(book.getWordCount() + increment);
-        bookMapper.updateById(book);
-    }
-
 
     @Override
     @GlobalTransactional
@@ -244,10 +230,22 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
     }
 
     @Override
+    @GlobalTransactional
     public Boolean removeBookById(Long bookId) {
-        // 删除book_tag
+        // 删除GorseFeedback
+        gorseService.removeFeedBackByItemId(String.valueOf(bookId));
 
-        // TODO删除book_comment
+        // 删除GorseItem
+        gorseService.removeItem(String.valueOf(bookId));
+
+        // 删除book_tag
+        bookTagService.removeAllBookTagByBookId(bookId);
+
+        // 删除chapters
+        chapterService.removeAllChapterByBookId(bookId);
+
+        // 删除book_comment
+        bookCommentService.removeAllComment(bookId);
 
         return bookMapper.deleteById(bookId) > 0;
     }

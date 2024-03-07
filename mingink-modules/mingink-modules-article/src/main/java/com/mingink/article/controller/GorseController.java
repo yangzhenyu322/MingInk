@@ -198,4 +198,9 @@ public class GorseController {
 
         return R.ok("删除反馈成功");
     }
+
+    @DeleteMapping("/feedback/userId/{userId}")
+    public Boolean removeFeedBackByUserId(@PathVariable("userId") String userId) {
+        return gorseService.removeFeedBackByUserId(userId);
+    }
 }

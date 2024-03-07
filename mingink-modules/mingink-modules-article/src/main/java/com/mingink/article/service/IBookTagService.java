@@ -20,4 +20,6 @@ public interface IBookTagService extends IService<BookTag> {
     Boolean addNewBookTag(BookTag bookTag);
 
     Boolean removeBookTag(BookTag bookTag);
+
+    Boolean removeAllBookTagByBookId(Long bookId);
 }

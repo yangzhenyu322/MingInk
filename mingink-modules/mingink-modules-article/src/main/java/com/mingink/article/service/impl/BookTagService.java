@@ -1,5 +1,6 @@
 package com.mingink.article.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mingink.article.api.domain.entity.BookTag;
 import com.mingink.article.api.domain.entity.GorseItem;
@@ -99,7 +100,6 @@ public class BookTagService extends ServiceImpl<BookTagMapper, BookTag> implemen
 
         // 更新Gorse Item
         GorseItem gorseItem = gorseService.getGorseItemById(String.valueOf(bookTag.getBookId()));
-
         Map<String, Object> updateGorseItemMap = new HashMap<>();
         updateGorseItemMap.put("book_id", bookTag.getBookId());
         List<String> tagNames = bookTagMapper.selectByMap(updateGorseItemMap).stream().map(bookTagItem -> {
@@ -111,5 +111,13 @@ public class BookTagService extends ServiceImpl<BookTagMapper, BookTag> implemen
         gorseService.updateGorseItem(gorseItem);
 
         return isRemoveBookTagSuccess;
+    }
+
+    @Override
+    @GlobalTransactional
+    public Boolean removeAllBookTagByBookId(Long bookId) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("book_id", bookId);
+        return bookTagMapper.delete(queryWrapper) > 0;
     }
 }
