@@ -103,9 +103,9 @@ public class UserController {
      * @return
      */
     @DeleteMapping("/userId/{userId}")
-//    @ApiOperation("注销用户")
+    @ApiOperation("注销用户")
     public R<String> removeUser(@PathVariable("userId") String userId) {
-        if (userService.removeUser(userId)) {
+        if (!userService.removeUser(userId)) {
             log.info("用户[{}]注销失败", userId);
             return R.fail("用户注销失败");
         }

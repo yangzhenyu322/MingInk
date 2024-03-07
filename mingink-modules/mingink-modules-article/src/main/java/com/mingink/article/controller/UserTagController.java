@@ -57,4 +57,12 @@ public class UserTagController {
 
         return R.ok("删除UserTag成功");
     }
+
+    /**
+     * 通过用户ID移除其所有Tag
+     */
+    @DeleteMapping("/userId/{userId}")
+    public Boolean removeUserTagByUserId(@PathVariable("userId") String userId) {
+        return userTagService.removeUserTagByUserId(userId);
+    }
 }

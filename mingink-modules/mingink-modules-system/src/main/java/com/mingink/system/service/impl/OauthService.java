@@ -45,5 +45,4 @@ public class OauthService implements IOauthService {
     public int updateUser(User user) {
         return userMapper.updateById(user);
     }
-
 }

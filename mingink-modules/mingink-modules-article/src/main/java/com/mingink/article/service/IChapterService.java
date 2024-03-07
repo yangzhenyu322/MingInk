@@ -27,4 +27,8 @@ public interface IChapterService extends IService<Chapter> {
 
 
     Boolean updateChapterStatus(Long chapterId, Integer status);
+
+    Boolean removeChapterById(Long chapterId);
+
+    Boolean removeAllChapterByBookId(Long bookId);
 }

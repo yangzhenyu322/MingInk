@@ -12,4 +12,6 @@ public interface IRoleService {
     List<Role> getRolesByUserId(String userId);
 
     Boolean addUserRole(String userId, Long roleId);
+
+    Boolean removeUserRoleByUserId(String userId);
 }

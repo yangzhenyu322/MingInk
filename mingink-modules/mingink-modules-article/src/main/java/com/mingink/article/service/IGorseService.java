@@ -51,4 +51,8 @@ public interface IGorseService {
     boolean removeFeedBack(GorseFeedbackRequest gorseFeedbackRequest);
 
     GorseUser getGorseUserById(String userId);
+
+    Boolean removeFeedBackByItemId(String itemId);
+
+    Boolean removeFeedBackByUserId(String userId);
 }

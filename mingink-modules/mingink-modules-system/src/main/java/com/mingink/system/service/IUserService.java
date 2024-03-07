@@ -49,7 +49,7 @@ public interface IUserService {
 
     User getUserByName(String username);
 
-    boolean removeUser(String userId);
+    Boolean removeUser(String userId);
 
     User getUserByUserId(String userId);
 }

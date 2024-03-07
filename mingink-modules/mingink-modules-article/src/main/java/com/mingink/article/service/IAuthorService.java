@@ -26,4 +26,6 @@ public interface IAuthorService extends IService<Author> {
     Boolean updateStatusById(String authorId, int status);
 
     Boolean removeAuthor(String authorId);
+
+    Boolean removeAuthorByUserId(String userId);
 }

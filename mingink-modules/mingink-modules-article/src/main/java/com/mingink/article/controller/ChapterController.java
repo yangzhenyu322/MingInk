@@ -72,11 +72,20 @@ public class ChapterController {
      */
     @PutMapping("/chapterId/{chapterId}/status/{status}")
     @ApiOperation("修改小说章节状态 status: 0-草稿 1-发布 2-下架")
-    public R<?> updateChapterStatus(@PathVariable("chapterId") Long chapterId,
+    public R<String> updateChapterStatus(@PathVariable("chapterId") Long chapterId,
                                     @PathVariable("status") Integer status) {
         if (!chapterService.updateChapterStatus(chapterId, status)) {
             return R.fail("修改小说章节状态失败");
         }
         return R.ok("修改小说章节状态成功");
+    }
+
+    @DeleteMapping("/chapterId/{chapterId}")
+    @ApiOperation("通过章节ID删除小说章节")
+    public R<String> removeChapterById(@PathVariable("chapterId") Long chapterId) {
+        if (!chapterService.removeChapterById(chapterId)) {
+            return R.fail("删除小说章节失败");
+        }
+        return R.ok("删除小说章节成功");
     }
 }

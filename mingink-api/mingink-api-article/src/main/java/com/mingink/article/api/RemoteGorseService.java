@@ -17,4 +17,6 @@ public interface RemoteGorseService {
     @DeleteMapping("/gorse/user/userId/{userId}")
     public Boolean removeGorseUser(@PathVariable("userId") String userId);
 
+    @DeleteMapping("/gorse/feedback/userId/{userId}")
+    public Boolean removeFeedBackByUserId(@PathVariable("userId") String userId);
 }

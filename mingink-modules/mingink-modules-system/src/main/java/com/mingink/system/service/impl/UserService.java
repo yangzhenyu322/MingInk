@@ -2,15 +2,18 @@ package com.mingink.system.service.impl;
 
 import com.alibaba.fastjson2.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.mingink.article.api.RemoteAuthorService;
 import com.mingink.article.api.RemoteGorseService;
+import com.mingink.article.api.RemoteUserTagService;
 import com.mingink.article.api.domain.dto.GorseUserRequest;
 import com.mingink.common.core.domain.R;
 import com.mingink.common.core.utils.id.SnowFlakeFactory;
 import com.mingink.common.core.utils.jwt.JWTUtils;
+import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.api.domain.entiry.User;
 import com.mingink.system.api.domain.vo.UserSafeInfo;
-import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.mapper.UserMapper;
+import com.mingink.system.service.IUserOauthService;
 import com.mingink.system.service.IUserService;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
@@ -41,7 +44,16 @@ public class UserService implements IUserService {
     private RoleService roleService;
 
     @Autowired
+    private IUserOauthService userOauthService;
+
+    @Autowired
     private RemoteGorseService remoteGorseService;
+
+    @Autowired
+    private RemoteUserTagService remoteUserTagService;
+
+    @Autowired
+    private RemoteAuthorService remoteAuthorService;
 
     @Override
     public R<List<UserSafeInfo>> getUserList() {
@@ -275,19 +287,26 @@ public class UserService implements IUserService {
 
     @Override
     @GlobalTransactional
-    public boolean removeUser(String userId) {
-        // TODO 移除之前与其管理表的数据
+    public Boolean removeUser(String userId) {
+        // 删除User Tag
+        remoteUserTagService.removeUserTagByUserId(userId);
+
+        // 删除User OAuth
+        userOauthService.removeUserOauthByUserId(userId);
+
+        // 删除User Role
+        roleService.removeUserRoleByUserId(userId);
+
+        // 删除Gorse Feedback
+        remoteGorseService.removeFeedBackByUserId(userId);
+
+        // 删除Gorse User
+        remoteGorseService.removeGorseUser(userId);
+
+        // 删除Author
+        remoteAuthorService.removeAuthorByUserId(userId);
 
         boolean isRemoveSucess = userMapper.deleteById(userId) > 0;
-
-        if (isRemoveSucess) {
-            if (remoteGorseService.removeGorseUser(userId)) {
-                // 注销Gorse User成功
-                log.info("注销Gorse User成功");
-            } else {
-                log.info("注销Gorse User失败");
-            }
-        }
 
         return isRemoveSucess;
     }

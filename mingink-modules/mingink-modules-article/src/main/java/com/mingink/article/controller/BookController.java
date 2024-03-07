@@ -148,11 +148,9 @@ public class BookController {
     }
 
     @DeleteMapping("/bookId/{bookId}")
-//    @ApiOperation("删除小说")
-    // TODO
+    @ApiOperation("删除小说")
     public R<String> removeBook(@PathVariable("bookId") Long bookId) {
-        Boolean isSuccess = bookService.removeBookById(bookId);
-        if (!isSuccess) {
+        if (!bookService.removeBookById(bookId)) {
             return R.fail("删除小说失败");
         }
         return R.ok("删除小说成功");
