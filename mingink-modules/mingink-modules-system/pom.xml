@@ -105,6 +105,12 @@
             <groupId>com.mingink</groupId>
             <artifactId>mingink-common-swagger</artifactId>
         </dependency>
+
+        <!-- minio模块 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-oss</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

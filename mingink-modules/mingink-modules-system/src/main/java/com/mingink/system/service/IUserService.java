@@ -1,9 +1,10 @@
 package com.mingink.system.service;
 
 import com.mingink.common.core.domain.R;
+import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.api.domain.entiry.User;
 import com.mingink.system.api.domain.vo.UserSafeInfo;
-import com.mingink.system.api.domain.dto.UserInfoUptReq;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -20,10 +21,8 @@ public interface IUserService {
 
     R<?> registerUser(User user);
 
-    /**
-     * 更新用户信息
-     * @param userInfo
-     */
+    Boolean updateUserAvatar(MultipartFile file, String userId);
+
     R<Boolean> updateUserInfo(UserInfoUptReq userInfo, UserSafeInfo loginUser);
 
     /**

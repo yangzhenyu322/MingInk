@@ -1,4 +1,4 @@
-package com.mingink.common.core.annotaion;
+package com.mingink.common.core.annotation;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;

@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.HashMap;
 import java.util.List;
@@ -73,6 +74,12 @@ public class BookController {
 
         List<Book> books = bookService.searchBooksByName(name);
         return R.ok(books);
+    }
+
+    @PostMapping("/pic/upload")
+    @ApiOperation("上传小说封面")
+    public R<String> uploadPic(@RequestPart("file") MultipartFile file, @RequestParam("userId") String userId) {
+        return R.ok(bookService.uploadPic(file, userId));
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.mingink.common.swagger.annotaion;
+package com.mingink.common.swagger.annotation;
 
 import com.mingink.common.swagger.config.SwaggerConfiguration;
 import org.springframework.context.annotation.Import;

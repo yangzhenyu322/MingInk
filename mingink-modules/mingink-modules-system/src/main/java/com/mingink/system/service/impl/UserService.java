@@ -13,6 +13,7 @@ import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.api.domain.entiry.User;
 import com.mingink.system.api.domain.vo.UserSafeInfo;
 import com.mingink.system.mapper.UserMapper;
+import com.mingink.system.service.IOSSService;
 import com.mingink.system.service.IUserOauthService;
 import com.mingink.system.service.IUserService;
 import io.seata.spring.annotation.GlobalTransactional;
@@ -21,6 +22,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -39,6 +41,9 @@ import java.util.stream.Collectors;
 public class UserService implements IUserService {
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private IOSSService oSSService;
 
     @Autowired
     private RoleService roleService;
@@ -69,6 +74,15 @@ public class UserService implements IUserService {
     @Override
     public User getUserByUserId(String userId) {
         return userMapper.selectById(userId);
+    }
+
+    @Override
+    public Boolean updateUserAvatar(MultipartFile file, String userId) {
+        String fileUrl = oSSService.uploadFile(file, userId + "/avatar/");
+        User user = userMapper.selectById(userId);
+        user.setAvatar(fileUrl);
+
+        return userMapper.updateById(user) > 0;
     }
 
     @Override
@@ -145,7 +159,7 @@ public class UserService implements IUserService {
         user.setUserId(SnowFlakeFactory.getSnowFlakeFromCache().nextId()); // 雪花算法设置用户Id
         user.setUid((String.valueOf(userMapper.selectList(null).size() + 100001))); // 设置用户Uid
         user.setNickName(user.getUserName()); // 默认新用户昵称为用户（账户）名
-        user.setAvatar("null"); // 设置用户默认头像
+        user.setAvatar("http://223.82.75.76:9100/mingink/2024/03/09/7db9007b-2257-44e0-bb7e-6d9e307558f2.jpg"); // 设置用户默认头像
         user.setBirthday(new Date());
         user.setStatus(0); // 默认用户状态为正常——0
         user.setLoginDate(new Date()); // 最近登录时间
@@ -192,7 +206,6 @@ public class UserService implements IUserService {
             return R.fail("用户不存在");
         }
         oldUser.setNickName(userInfo.getNickName());
-        oldUser.setAvatar(userInfo.getAvatar());
         oldUser.setEmail(userInfo.getEmail());
         oldUser.setRemark(userInfo.getRemark());
         oldUser.setCountry(userInfo.getCountry());
