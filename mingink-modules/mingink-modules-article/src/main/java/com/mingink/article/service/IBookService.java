@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.mingink.article.api.domain.dto.BookRequest;
 import com.mingink.article.api.domain.dto.GorseFeedbackRequest;
 import com.mingink.article.api.domain.entity.Book;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -16,6 +17,8 @@ import java.util.List;
  */
 public interface IBookService extends IService<Book> {
     List<Book> searchBooksByName(String name);
+
+    String uploadPic(MultipartFile file, String userId);
 
     Boolean insertBook(BookRequest bookRequest);
 

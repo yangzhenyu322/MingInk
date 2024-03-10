@@ -36,11 +36,6 @@ public class UserInfoUptReq implements Serializable {
     private String nickName;
 
     /**
-     * 用户头像（有默认头像）
-     */
-    private String avatar;
-
-    /**
      * 个人简介
      */
     private String remark;

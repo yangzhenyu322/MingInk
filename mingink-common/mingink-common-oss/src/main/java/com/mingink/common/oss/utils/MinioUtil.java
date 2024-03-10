@@ -1,16 +1,15 @@
-package com.mingink.common.oss.impl;
+package com.mingink.common.oss.utils;
 
 import cn.hutool.core.io.FastByteArrayOutputStream;
-import com.mingink.common.oss.MinioService;
 import com.mingink.common.oss.model.ObjectItem;
-import com.mingink.common.oss.utils.IdHelper;
 import io.minio.*;
 import io.minio.messages.Item;
+import lombok.Data;
 import lombok.SneakyThrows;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,39 +25,77 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * @author hulx
- * @version 1.0.0
- * @date 2024/2/4 15:41
- * @description
+ * @Author: ZenSheep
+ * @Date: 2024/3/8 22:03
  */
-@Service
-public class MinioServiceImpl implements MinioService {
+@Data
+@Component
+public class MinioUtil {
     @Autowired
     private MinioClient minioClient;
+
+    /**
+     * 默认桶名
+     */
     @Value("${minio.bucketName}")
     private String bucketName;
+
     @Value("${minio.url}")
     private String url;
 
+    /**
+     * 判断bucket是否存在
+     * @param bucketName
+     */
+    @SneakyThrows
+    public boolean existBucket(String bucketName) {
+        return minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build());
+    }
+
+    /**
+     * 创建存储bucket
+     * @param bucketName
+     * @return boolean
+     */
+    public boolean makeBucket(String bucketName) {
+        try {
+            minioClient.makeBucket(MakeBucketArgs.builder().bucket(bucketName).build());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     *  删除存储bucket
+     * @param bucketName
+     * @return boolean
+     */
+    public boolean removeBucket(String bucketName) {
+        try {
+            minioClient.removeBucket(RemoveBucketArgs.builder().bucket(bucketName).build());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 
     /**
      * 创建文件路径
-     *
      * @param fileName 原始文件名称
      * @return FilePath
      */
-    @Override
     public String createFilePath(String fileName) {
         return new SimpleDateFormat("yyyy/MM/dd").format(new Date()) + "/" + fileName;
     }
 
     /**
      * 根据文件路径获取文件名称
-     *
      * @param filePath 文件路径
      * @return 文件名
      */
-    @Override
     public String getFileNameByPath(String filePath) {
         String[] split = StringUtils.split(filePath, "/");
         return split[split.length - 1];
@@ -66,11 +103,9 @@ public class MinioServiceImpl implements MinioService {
 
     /**
      * 查看桶内文件信息
-     *
      * @param bucketName 可为空
      * @return List
      */
-    @Override
     @SneakyThrows
     public List<ObjectItem> queryFileListInBucket(String bucketName) {
         // 桶选择
@@ -80,34 +115,69 @@ public class MinioServiceImpl implements MinioService {
         for (Result<Item> result : results) {
             Item item = result.get();
             // 不为目录时添加
-            if (!item.isDir())
+            if (!item.isDir()) {
                 objectItemList.add(new ObjectItem().setObjectName(item.objectName()).setSize(String.valueOf(item.size())));
+            }
         }
         return objectItemList;
     }
 
     /**
      * 判断桶内是否包含该文件
-     *
      * @param fileName
      * @param bucketName 可为空
      * @return boolean
      */
-    @Override
     public boolean isContainInBucketByFile(String fileName, String bucketName) {
         List<ObjectItem> objectItemList = queryFileListInBucket(bucketName);
-        for (ObjectItem item : objectItemList) if (item.getObjectName().equals(fileName)) return true;
+        for (ObjectItem item : objectItemList) {
+            if (item.getObjectName().equals(fileName)) {
+                return true;
+            }
+        }
         return false;
     }
 
     /**
-     * 单文件上传
-     *
+     * 单文件上传(含自定义路径)
      * @param file
      * @param bucketName 可为空
      * @return String
      */
-    @Override
+    @SneakyThrows
+    public String upload(MultipartFile file, String bucketName, String customFilePath) {
+        // 桶名
+        String thisBucketName = bucketName == null || bucketName.equals("") ? this.bucketName : bucketName;
+        // 文件名
+        String fileName = file.getOriginalFilename();
+        String id = IdHelper.randomUUID();
+        String fileExt = fileName.substring(fileName.lastIndexOf(".")).toLowerCase();
+        fileName = id + fileExt;
+        // 文件流
+        InputStream inputStream = file.getInputStream();
+        // 文件大小
+        long size = file.getSize();
+        // 文件路径
+        String filePath = customFilePath + createFilePath(fileName);
+        System.out.println(fileName + "的文件路径为：" + filePath);
+        // 存储到Minio
+        minioClient.putObject(PutObjectArgs.builder()
+                .bucket(thisBucketName)
+                .object(filePath)
+                .stream(inputStream, size, -1)
+                .contentType(file.getContentType())
+                .build());
+        inputStream.close();
+
+        return  url +"/"+ bucketName + "/" + filePath;
+    }
+
+    /**
+     * 单文件上传
+     * @param file
+     * @param bucketName 可为空
+     * @return String
+     */
     @SneakyThrows
     public String upload(MultipartFile file, String bucketName) {
         // 桶名
@@ -131,54 +201,31 @@ public class MinioServiceImpl implements MinioService {
                 .stream(inputStream, size, -1)
                 .contentType(file.getContentType())
                 .build());
+        inputStream.close();
 
-        return url + "/" + bucketName + "/" + filePath;
-    }
-
-    @Override
-    @SneakyThrows
-    public String upload(MultipartFile file) {
-        // 文件名
-        String fileName = file.getOriginalFilename();
-        String id = IdHelper.randomUUID();
-        String fileExt = fileName.substring(fileName.lastIndexOf(".")).toLowerCase();
-        fileName = id + fileExt;
-        // 文件流
-        InputStream inputStream = file.getInputStream();
-        // 文件大小
-        long size = file.getSize();
-        // 文件路径
-        String filePath = createFilePath(fileName);
-        System.out.println(fileName + "的文件路径为：" + filePath);
-        // 存储到Minio
-        minioClient.putObject(PutObjectArgs.builder()
-                .bucket(bucketName)
-                .object(filePath)
-                .stream(inputStream, size, -1)
-                .contentType(file.getContentType())
-                .build());
-
-        return url + "/" + bucketName + "/" + filePath;
+        return  url +"/"+ bucketName + "/" + filePath;
     }
 
     /**
      * 批量文件上传
-     *
-     * @param file       数组
+     * @param file 数组
      * @param bucketName 可为空
      * @return Map key-文件名 value-文件路径
      */
-    @Override
     @SneakyThrows
     public Map<String, String> upload(MultipartFile[] file, String bucketName) {
         Map<String, String> filePaths = new HashMap<>();
         String thisBucketName = bucketName == null || bucketName.equals("") ? this.bucketName : bucketName;
         for (MultipartFile item : file) {
             String fileName = item.getOriginalFilename();
+            String id = IdHelper.randomUUID();
+            String fileExt = fileName.substring(fileName.lastIndexOf(".")).toLowerCase();
+            fileName = id + fileExt;
+
             InputStream inputStream = item.getInputStream();
             long size = item.getSize();
             String filePath = createFilePath(fileName);
-            filePaths.put(fileName, filePath);
+            filePaths.put(fileName, url +"/"+ bucketName + "/" + filePath);
             System.out.println(fileName + "的文件路径为：" + filePath);
             minioClient.putObject(PutObjectArgs.builder()
                     .bucket(thisBucketName)
@@ -186,18 +233,17 @@ public class MinioServiceImpl implements MinioService {
                     .stream(inputStream, size, -1)
                     .contentType(item.getContentType())
                     .build());
+            inputStream.close();
         }
         return filePaths;
     }
 
     /**
      * 单文件下载（因为存在多级目录，通过文件路径）
-     *
      * @param response
      * @param request
      * @param filePath
      */
-    @Override
     @SneakyThrows
     public void download(HttpServletResponse response, HttpServletRequest request, String filePath) {
         String fileName = getFileNameByPath(filePath);
@@ -216,7 +262,9 @@ public class MinioServiceImpl implements MinioService {
         int len = -1;
         byte[] buffer = new byte[1024];
         FastByteArrayOutputStream outputStream = new FastByteArrayOutputStream();
-        while ((len = getObjectResponse.read(buffer)) != -1) outputStream.write(buffer, 0, len);
+        while ((len = getObjectResponse.read(buffer)) != -1) {
+            outputStream.write(buffer, 0, len);
+        }
         outputStream.flush();
         byte[] bytes = outputStream.toByteArray();
         ServletOutputStream stream = response.getOutputStream();
@@ -226,12 +274,10 @@ public class MinioServiceImpl implements MinioService {
 
     /**
      * 批量文件下载，打包成压缩包（通过文件路径）
-     *
      * @param response
      * @param request
-     * @param zipName  可为空
+     * @param zipName 可为空
      */
-    @Override
     @SneakyThrows
     public void download(HttpServletResponse response, HttpServletRequest request, List<String> filePaths, String zipName) {
         String thisZipName = zipName.equals("") ? "default" : zipName;
@@ -257,7 +303,10 @@ public class MinioServiceImpl implements MinioService {
             byte[] buffer = new byte[1024];
             int len = 0;
             zipOS.putNextEntry(new ZipEntry(fileName));
-            while ((len = inputStream.read(buffer)) > 0) zipOS.write(buffer, 0, len);
+            while ((len = inputStream.read(buffer)) > 0) {
+                zipOS.write(buffer, 0, len);
+            }
+            inputStream.close();
         }
         bufferedOS.close();
         zipOS.close();
@@ -265,11 +314,9 @@ public class MinioServiceImpl implements MinioService {
 
     /**
      * 单文件删除（多级目录，使用文件路径）
-     *
      * @param filePath
      * @return boolean
      */
-    @Override
     public boolean removeFile(String filePath) {
         String bucketName = StringUtils.split(filePath, "/")[0];
         String thisFilePath = StringUtils.split(filePath, "/")[1];
@@ -284,13 +331,11 @@ public class MinioServiceImpl implements MinioService {
 
     /**
      * 批量文件删除
-     *
      * @param filePaths
      * @return Map
      */
-    @Override
     public Map<String, String> removeFile(List<String> filePaths) {
-        Map<String, String> result = new HashMap<>();
+        Map<String,String > result = new HashMap<>();
         for (String path : filePaths) {
             String bucketName = StringUtils.split(path, "/")[0];
             String fileName = StringUtils.split(path, "/")[1];
@@ -308,7 +353,6 @@ public class MinioServiceImpl implements MinioService {
 
     /**
      * 设置不同浏览器编码
-     *
      * @param fileName
      * @param request
      */

@@ -1,6 +1,6 @@
 package com.mingink.gateway;
 
-import com.mingink.common.core.annotaion.EnableMIFeignClients;
+import com.mingink.common.core.annotation.EnableMIFeignClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableAsync;

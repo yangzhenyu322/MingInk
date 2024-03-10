@@ -33,6 +33,9 @@ spring:
         extension-configs[1]:
           data-id: mingink-redis.yml
           refresh: true
+        extension-configs[2]:
+          data‐id: mingink-minio.yml
+          refresh: true
         # 共享配置
         shared-configs:
 
