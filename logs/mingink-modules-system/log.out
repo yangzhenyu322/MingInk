@@ -3,9 +3,9 @@ SLF4J: Found binding in [jar:file:/app/mingink-modules-system.jar!/BOOT-INF/lib/
 SLF4J: Found binding in [jar:file:/app/mingink-modules-system.jar!/BOOT-INF/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
-2024-03-05 15:45:28.182  INFO 1 --- [           main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
-2024-03-05 15:45:29.701  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2024-03-05 15:45:29.701  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-03-08 10:41:21.441  INFO 1 --- [           main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2024-03-08 10:41:22.894  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-03-08 10:41:22.894  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -15,80 +15,84 @@ SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorSta
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.13)
 
-2024-03-05 15:45:32.099  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system] & group[DEFAULT_GROUP]
-2024-03-05 15:45:32.107  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system.yml] & group[DEFAULT_GROUP]
-2024-03-05 15:45:32.115  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system-dev.yml] & group[DEFAULT_GROUP]
-2024-03-05 15:45:32.116  INFO 1 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-mingink-system-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-mysql.yml,DEFAULT_GROUP'}]
-2024-03-05 15:45:32.152  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : The following 1 profile is active: "dev"
-2024-03-05 15:45:35.266  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-03-05 15:45:35.289  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-03-05 15:45:35.355  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
-2024-03-05 15:45:36.309  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=26d4d73e-ac3e-3f17-92e2-5a5f96d380dd
-2024-03-05 15:45:36.641  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.642  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.643  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.761  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.781  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.790  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.791  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$552/0x000000080116ea00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.797  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.808  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.819  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:36.834  INFO 1 --- [           main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-2024-03-05 15:45:37.100  INFO 1 --- [           main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
-2024-03-05 15:45:37.174  INFO 1 --- [           main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
-2024-03-05 15:45:38.282  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
-2024-03-05 15:45:38.453  INFO 1 --- [           main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2024-03-05 15:45:38.454  INFO 1 --- [           main] i.s.discovery.registry.RegistryFactory   : use registry center type: nacos
-2024-03-05 15:45:38.526  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2024-03-05 15:45:38.526  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2024-03-05 15:45:38.828  INFO 1 --- [           main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 223.82.75.76:8092
-2024-03-05 15:45:38.833  INFO 1 --- [           main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:223.82.75.76:8092,msg:< RegisterTMRequest{version='2.0.0', applicationId='mingink-system', transactionServiceGroup='seata-group', extraData='ak=null
-digest=seata-group,172.19.0.4,1709624738830
-timestamp=1709624738830
+2024-03-08 10:41:25.285  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system] & group[DEFAULT_GROUP]
+2024-03-08 10:41:25.292  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system.yml] & group[DEFAULT_GROUP]
+2024-03-08 10:41:25.301  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-system-dev.yml] & group[DEFAULT_GROUP]
+2024-03-08 10:41:25.302  INFO 1 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-mingink-system-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-system,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-mysql.yml,DEFAULT_GROUP'}]
+2024-03-08 10:41:25.354  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : The following 1 profile is active: "dev"
+2024-03-08 10:41:29.022  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-08 10:41:29.032  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-08 10:41:29.203  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2024-03-08 10:41:30.273  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=621ae864-6baf-35b8-83da-c8a6b1701cd8
+2024-03-08 10:41:30.618  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.619  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.619  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.797  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.821  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.834  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.835  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$552/0x00000008011704b0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.842  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.849  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.855  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:30.863  INFO 1 --- [           main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+2024-03-08 10:41:31.189  INFO 1 --- [           main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+2024-03-08 10:41:31.227  INFO 1 --- [           main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+2024-03-08 10:41:32.395  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+2024-03-08 10:41:32.609  INFO 1 --- [           main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2024-03-08 10:41:32.611  INFO 1 --- [           main] i.s.discovery.registry.RegistryFactory   : use registry center type: nacos
+2024-03-08 10:41:32.704  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-03-08 10:41:32.705  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-03-08 10:41:33.054  INFO 1 --- [           main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 223.82.75.76:8092
+2024-03-08 10:41:33.067  INFO 1 --- [           main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:223.82.75.76:8092,msg:< RegisterTMRequest{version='2.0.0', applicationId='mingink-system', transactionServiceGroup='seata-group', extraData='ak=null
+digest=seata-group,172.19.0.3,1709865693064
+timestamp=1709865693064
 authVersion=V4
 vgroup=seata-group
-ip=172.19.0.4
+ip=172.19.0.3
 '} >
-2024-03-05 15:45:39.007  WARN 1 --- [ctor_TMROLE_1_1] ServiceLoader$InnerEnhancedServiceLoader : Load [io.seata.serializer.hessian.HessianSerializer] class fail: com/caucho/hessian/io/AbstractHessianOutput
-2024-03-05 15:45:39.037  INFO 1 --- [           main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:2.0.0, server version:2.0.0,channel:[id: 0xa9895211, L:/172.19.0.4:50296 - R:/223.82.75.76:8092]
-2024-03-05 15:45:39.051  INFO 1 --- [           main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 92 ms, version:2.0.0,role:TMROLE,channel:[id: 0xa9895211, L:/172.19.0.4:50296 - R:/223.82.75.76:8092]
-2024-03-05 15:45:39.052  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[mingink-system] txServiceGroup[seata-group]
-2024-03-05 15:45:39.075  INFO 1 --- [           main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
-2024-03-05 15:45:39.076  INFO 1 --- [           main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
-2024-03-05 15:45:39.097  INFO 1 --- [           main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2024-03-05 15:45:39.097  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[mingink-system] txServiceGroup[seata-group]
-2024-03-05 15:45:39.097  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
-2024-03-05 15:45:40.750  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2024-03-05 15:45:40.772  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-05 15:45:40.773  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.76]
-2024-03-05 15:45:41.058  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-05 15:45:41.058  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8828 ms
-2024-03-05 15:45:41.847  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-05 15:45:42.518  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-05 15:45:42.653  INFO 1 --- [           main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 223.82.75.76:8092
-2024-03-05 15:45:42.654  INFO 1 --- [           main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://223.82.75.76:3306/mingink
-2024-03-05 15:45:42.654  INFO 1 --- [           main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:223.82.75.76:8092,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://223.82.75.76:3306/mingink', version='2.0.0', applicationId='mingink-system', transactionServiceGroup='seata-group', extraData='null'} >
-2024-03-05 15:45:42.661  INFO 1 --- [           main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:2.0.0, server version:2.0.0,channel:[id: 0x81789513, L:/172.19.0.4:50324 - R:/223.82.75.76:8092]
-2024-03-05 15:45:42.662  INFO 1 --- [           main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 6 ms, version:2.0.0,role:RMROLE,channel:[id: 0x81789513, L:/172.19.0.4:50324 - R:/223.82.75.76:8092]
-2024-03-05 15:45:42.665  INFO 1 --- [           main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy data source 'dataSource' by 'AT' mode.
+2024-03-08 10:41:33.226  WARN 1 --- [ctor_TMROLE_1_1] ServiceLoader$InnerEnhancedServiceLoader : Load [io.seata.serializer.hessian.HessianSerializer] class fail: com/caucho/hessian/io/AbstractHessianOutput
+2024-03-08 10:41:33.257  INFO 1 --- [           main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:2.0.0, server version:2.0.0,channel:[id: 0xfe59e825, L:/172.19.0.3:60636 - R:/223.82.75.76:8092]
+2024-03-08 10:41:33.267  INFO 1 --- [           main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 74 ms, version:2.0.0,role:TMROLE,channel:[id: 0xfe59e825, L:/172.19.0.3:60636 - R:/223.82.75.76:8092]
+2024-03-08 10:41:33.268  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[mingink-system] txServiceGroup[seata-group]
+2024-03-08 10:41:33.296  INFO 1 --- [           main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+2024-03-08 10:41:33.301  INFO 1 --- [           main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+2024-03-08 10:41:33.311  INFO 1 --- [           main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2024-03-08 10:41:33.311  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[mingink-system] txServiceGroup[seata-group]
+2024-03-08 10:41:33.311  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+2024-03-08 10:41:34.829  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2024-03-08 10:41:34.899  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-08 10:41:34.900  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-03-08 10:41:35.188  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-08 10:41:35.188  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9762 ms
+2024-03-08 10:41:35.916  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-08 10:41:36.620  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-08 10:41:36.796  INFO 1 --- [           main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 223.82.75.76:8092
+2024-03-08 10:41:36.796  INFO 1 --- [           main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://223.82.75.76:3306/mingink
+2024-03-08 10:41:36.796  INFO 1 --- [           main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:223.82.75.76:8092,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://223.82.75.76:3306/mingink', version='2.0.0', applicationId='mingink-system', transactionServiceGroup='seata-group', extraData='null'} >
+2024-03-08 10:41:36.807  INFO 1 --- [           main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:2.0.0, server version:2.0.0,channel:[id: 0x573ec462, L:/172.19.0.3:60658 - R:/223.82.75.76:8092]
+2024-03-08 10:41:36.807  INFO 1 --- [           main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 8 ms, version:2.0.0,role:RMROLE,channel:[id: 0x573ec462, L:/172.19.0.3:60658 - R:/223.82.75.76:8092]
+2024-03-08 10:41:36.813  INFO 1 --- [           main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy data source 'dataSource' by 'AT' mode.
  _ _   |_  _ _|_. ___ _ |    _ 
 | | |\/|_)(_| | |_\  |_)||_|_\ 
      /               |         
                         3.4.2 
-2024-03-05 15:45:43.422  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Bean [com.mingink.system.service.impl.RoleService] with name [roleService] would use interceptor [io.seata.integration.tx.api.interceptor.handler.GlobalTransactionalInterceptorHandler]
-2024-03-05 15:45:43.769  INFO 1 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-article' URL not provided. Will try picking an instance via load-balancing.
-2024-03-05 15:45:44.329  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Bean [com.mingink.system.service.impl.UserService] with name [userService] would use interceptor [io.seata.integration.tx.api.interceptor.handler.GlobalTransactionalInterceptorHandler]
-2024-03-05 15:45:47.461  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2024-03-05 15:45:47.467  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2024-03-05 15:45:47.467  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2024-03-05 15:45:47.736  INFO 1 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP mingink-system 172.19.0.4:8082 register finished
-2024-03-05 15:45:48.574  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : Started MingInkSystemApplication in 21.556 seconds (JVM running for 23.169)
-2024-03-05 15:45:48.584  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system.yml, group=DEFAULT_GROUP
-2024-03-05 15:45:48.585  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-redis.yml, group=DEFAULT_GROUP
-2024-03-05 15:45:48.586  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-mysql.yml, group=DEFAULT_GROUP
-2024-03-05 15:45:48.587  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system, group=DEFAULT_GROUP
-2024-03-05 15:45:48.587  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system-dev.yml, group=DEFAULT_GROUP
+2024-03-08 10:41:38.137  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Bean [com.mingink.system.service.impl.RoleService] with name [roleService] would use interceptor [io.seata.integration.tx.api.interceptor.handler.GlobalTransactionalInterceptorHandler]
+2024-03-08 10:41:38.393  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Bean [com.mingink.system.service.impl.UserOauthService$$EnhancerBySpringCGLIB$$a8970e0e] with name [userOauthService] would use interceptor [io.seata.integration.tx.api.interceptor.handler.GlobalTransactionalInterceptorHandler]
+2024-03-08 10:41:38.394  WARN 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : The AdapterSpringSeataInterceptor's order '2147483647' is lower or equals than TransactionInterceptor's order '2147483647' , reset AdapterSpringSeataInterceptor's order to higher order '2147483646'.
+2024-03-08 10:41:38.831  INFO 1 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-article' URL not provided. Will try picking an instance via load-balancing.
+2024-03-08 10:41:39.625  INFO 1 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-article' URL not provided. Will try picking an instance via load-balancing.
+2024-03-08 10:41:39.713  INFO 1 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-article' URL not provided. Will try picking an instance via load-balancing.
+2024-03-08 10:41:39.731  INFO 1 --- [           main] i.s.s.a.GlobalTransactionScanner         : Bean [com.mingink.system.service.impl.UserService] with name [userService] would use interceptor [io.seata.integration.tx.api.interceptor.handler.GlobalTransactionalInterceptorHandler]
+2024-03-08 10:41:43.121  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2024-03-08 10:41:43.130  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-03-08 10:41:43.131  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-03-08 10:41:43.390  INFO 1 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP mingink-system 172.19.0.3:8082 register finished
+2024-03-08 10:41:44.254  INFO 1 --- [           main] c.m.system.MingInkSystemApplication      : Started MingInkSystemApplication in 23.989 seconds (JVM running for 25.669)
+2024-03-08 10:41:44.265  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system.yml, group=DEFAULT_GROUP
+2024-03-08 10:41:44.266  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-redis.yml, group=DEFAULT_GROUP
+2024-03-08 10:41:44.267  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-mysql.yml, group=DEFAULT_GROUP
+2024-03-08 10:41:44.268  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system, group=DEFAULT_GROUP
+2024-03-08 10:41:44.268  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-system-dev.yml, group=DEFAULT_GROUP
 (♥◠‿◠)ﾉﾞ  MingInk-System系统模块启动成功   ლ(´ڡ`ლ)ﾞ  
   __  __   _                   ___           _    
  |  \/  | (_)  _ __     __ _  |_ _|  _ __   | | __
@@ -96,22 +100,3 @@ ip=172.19.0.4
  | |  | | | | | | | | | (_| |  | |  | | | | |   < 
  |_|  |_| |_| |_| |_|  \__, | |___| |_| |_| |_|\_\
                        |___/                      
-2024-03-05 15:45:53.877  INFO 1 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-05 15:45:53.877  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-05 15:45:53.879  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-03-05 15:46:03.115  INFO 1 --- [nio-8082-exec-5] c.m.system.service.impl.UserService      : token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTAyMjk1NTQsInJvbGVLZXlzIjoiW1wiYWRtaW5cIixcImNvbW1vblwiLFwidmlwXCJdIiwidXNlcm5hbWUiOiJhZG1pbiJ9.75vRG-P2Lof1g15Mao0wvof4asVgjIzRIx5H8NLlxOg
-2024-03-05 16:43:34.395  INFO 1 --- [nio-8082-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
-
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x030x106G0xf2cU0xd90x010x80k0x8b}i0x9d`o0x100x050xd5I0xee.0x0d0x1b0xe1M0x850xd170x080x8d0x80 ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar!/:na]
-	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
-

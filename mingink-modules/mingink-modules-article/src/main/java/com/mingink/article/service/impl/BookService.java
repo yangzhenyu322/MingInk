@@ -14,11 +14,13 @@ import com.mingink.article.mapper.BookMapper;
 import com.mingink.article.service.*;
 import com.mingink.common.core.exception.BusinessException;
 import com.mingink.common.core.exception.ErrorCode;
+import com.mingink.system.api.RemoteOSSService;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -52,6 +54,9 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
     @Autowired
     private IBookCommentService bookCommentService;
 
+    @Autowired
+    private RemoteOSSService remoteOSSService;
+
 
     @Override
     @GlobalTransactional
@@ -60,6 +65,11 @@ public class BookService extends ServiceImpl<BookMapper, Book> implements IBookS
         queryWrapper.like("name", name);
 
         return bookMapper.selectList(queryWrapper);
+    }
+
+    @Override
+    public String uploadPic(MultipartFile file, String userId) {
+        return remoteOSSService.uploadFile(file, userId + "/book/surface/");
     }
 
     @Override

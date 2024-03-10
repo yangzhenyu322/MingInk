@@ -1,4 +1,4 @@
-package com.mingink.common.core.annotaion;
+package com.mingink.common.core.annotation;
 
 import org.springframework.cloud.openfeign.EnableFeignClients;
 

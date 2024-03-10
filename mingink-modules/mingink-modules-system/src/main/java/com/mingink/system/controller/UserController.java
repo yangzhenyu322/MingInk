@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -89,6 +90,12 @@ public class UserController {
     @ApiOperation("个人中心获取当前登录用户信息")
     public R<UserSafeInfo> getCurrentUser(HttpServletRequest request) {
         return R.ok(userService.getCurrentUser(request));
+    }
+
+    @PutMapping("/avatar/userId/{userId}")
+    @ApiOperation("上传和更换用户头像")
+    public R<Boolean> updateUserAvatar(MultipartFile file, @PathVariable("userId") String userId) {
+        return R.ok(userService.updateUserAvatar(file, userId));
     }
 
     @PutMapping("/updateInfo")

@@ -1,6 +1,6 @@
-2024-03-05 15:45:27.008  INFO 1 --- [           main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
-2024-03-05 15:45:28.561  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2024-03-05 15:45:28.561  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-03-08 10:41:20.295  INFO 1 --- [           main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2024-03-08 10:41:22.021  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-03-08 10:41:22.021  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -10,46 +10,46 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.13)
 
-2024-03-05 15:45:30.905  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[application-dev.yml] & group[DEFAULT_GROUP]
-2024-03-05 15:45:30.973  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway] & group[DEFAULT_GROUP]
-2024-03-05 15:45:30.983  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway.yml] & group[DEFAULT_GROUP]
-2024-03-05 15:45:30.991  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway-dev.yml] & group[DEFAULT_GROUP]
-2024-03-05 15:45:30.992  INFO 1 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-mingink-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-gateway,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-application-dev.yml,DEFAULT_GROUP'}]
-2024-03-05 15:45:31.082  INFO 1 --- [           main] c.m.gateway.MingInkGatewayApplication    : The following 1 profile is active: "dev"
-2024-03-05 15:45:33.369  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-03-05 15:45:33.377  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-03-05 15:45:33.445  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2024-03-05 15:45:34.145  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9076e821-f9f4-35fc-b345-da52d9b7609c
-2024-03-05 15:45:34.515  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:34.519  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:34.522  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-03-05 15:45:38.408  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2024-03-05 15:45:38.408  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2024-03-05 15:45:38.408  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2024-03-05 15:45:38.408  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2024-03-05 15:45:38.408  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2024-03-05 15:45:38.408  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2024-03-05 15:45:38.409  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2024-03-05 15:45:38.409  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2024-03-05 15:45:38.409  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2024-03-05 15:45:38.409  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2024-03-05 15:45:38.409  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2024-03-05 15:45:38.409  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2024-03-05 15:45:38.409  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2024-03-05 15:45:38.410  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2024-03-05 15:45:38.938  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2024-03-05 15:45:39.455  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-03-05 15:45:40.334  INFO 1 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
-2024-03-05 15:45:40.405  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2024-03-05 15:45:40.406  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2024-03-05 15:45:40.684  INFO 1 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP mingink-gateway 172.19.0.2:8081 register finished
-2024-03-05 15:45:41.146  INFO 1 --- [           main] a.c.n.d.GatewayLocatorHeartBeatPublisher : Start nacos gateway locator heartBeat task scheduler.
-2024-03-05 15:45:41.262  INFO 1 --- [           main] c.m.gateway.MingInkGatewayApplication    : Started MingInkGatewayApplication in 15.489 seconds (JVM running for 16.507)
-2024-03-05 15:45:41.292  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-redis.yml, group=DEFAULT_GROUP
-2024-03-05 15:45:41.295  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-mysql.yml, group=DEFAULT_GROUP
-2024-03-05 15:45:41.296  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway, group=DEFAULT_GROUP
-2024-03-05 15:45:41.298  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway.yml, group=DEFAULT_GROUP
-2024-03-05 15:45:41.298  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway-dev.yml, group=DEFAULT_GROUP
+2024-03-08 10:41:24.438  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[application-dev.yml] & group[DEFAULT_GROUP]
+2024-03-08 10:41:24.487  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway] & group[DEFAULT_GROUP]
+2024-03-08 10:41:24.499  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway.yml] & group[DEFAULT_GROUP]
+2024-03-08 10:41:24.507  WARN 1 --- [           main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[mingink-gateway-dev.yml] & group[DEFAULT_GROUP]
+2024-03-08 10:41:24.509  INFO 1 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-mingink-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-gateway,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mingink-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-application-dev.yml,DEFAULT_GROUP'}]
+2024-03-08 10:41:24.590  INFO 1 --- [           main] c.m.gateway.MingInkGatewayApplication    : The following 1 profile is active: "dev"
+2024-03-08 10:41:27.918  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-08 10:41:27.925  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-08 10:41:27.977  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2024-03-08 10:41:28.941  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=37c72b1a-60d3-33fa-b59c-77a679e9bb00
+2024-03-08 10:41:29.513  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:29.517  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:29.523  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 10:41:33.342  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-03-08 10:41:35.224  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2024-03-08 10:41:35.224  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2024-03-08 10:41:35.224  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2024-03-08 10:41:35.224  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2024-03-08 10:41:35.225  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2024-03-08 10:41:35.225  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2024-03-08 10:41:35.225  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2024-03-08 10:41:35.225  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2024-03-08 10:41:35.225  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2024-03-08 10:41:35.227  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2024-03-08 10:41:35.227  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2024-03-08 10:41:35.227  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-03-08 10:41:35.228  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2024-03-08 10:41:35.231  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-03-08 10:41:36.109  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-03-08 10:41:36.925  INFO 1 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2024-03-08 10:41:36.951  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2024-03-08 10:41:36.951  INFO 1 --- [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2024-03-08 10:41:37.213  INFO 1 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP mingink-gateway 172.19.0.2:8081 register finished
+2024-03-08 10:41:39.237  INFO 1 --- [           main] a.c.n.d.GatewayLocatorHeartBeatPublisher : Start nacos gateway locator heartBeat task scheduler.
+2024-03-08 10:41:39.332  INFO 1 --- [           main] c.m.gateway.MingInkGatewayApplication    : Started MingInkGatewayApplication in 20.139 seconds (JVM running for 21.211)
+2024-03-08 10:41:39.368  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-redis.yml, group=DEFAULT_GROUP
+2024-03-08 10:41:39.370  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-mysql.yml, group=DEFAULT_GROUP
+2024-03-08 10:41:39.374  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway, group=DEFAULT_GROUP
+2024-03-08 10:41:39.382  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway.yml, group=DEFAULT_GROUP
+2024-03-08 10:41:39.383  INFO 1 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=mingink-gateway-dev.yml, group=DEFAULT_GROUP
 (♥◠‿◠)ﾉﾞ  Gateway网关模块启动成功   ლ(´ڡ`ლ)ﾞ  
   __  __   _                   ___           _    
  |  \/  | (_)  _ __     __ _  |_ _|  _ __   | | __
@@ -57,253 +57,3 @@
  | |  | | | | | | | | | (_| |  | |  | | | | |   < 
  |_|  |_| |_| |_| |_|  \__, | |___| |_| |_| |_|\_\
                        |___/                      
-2024-03-05 15:45:52.773  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 15:45:52.776  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : set request header
-2024-03-05 15:45:52.782  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 15:45:52.783  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTAyMDkwMTYsInJvbGVLZXlzIjoiW1wiYWRtaW5cIixcImNvbW1vblwiLFwidmlwXCJdIiwidXNlcm5hbWUiOiJhZG1pbiJ9.VwfIgkFxD0hjkFNvlMFDWQw0gpYbRCrN6tcN75nF8QI
-2024-03-05 15:45:52.812  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : username:admin
-2024-03-05 15:45:53.409  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : role = null
-2024-03-05 15:45:53.425  INFO 1 --- [or-http-epoll-2] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 15:45:53.426  INFO 1 --- [or-http-epoll-2] c.m.g.security.ScAuthenticationManager   : username:admin
-2024-03-05 15:45:53.426  INFO 1 --- [or-http-epoll-2] c.m.g.security.ScAuthenticationManager   : password:admin
-2024-03-05 15:45:53.555  INFO 1 --- [         task-1] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-system' URL not provided. Will try picking an instance via load-balancing.
-2024-03-05 15:45:53.605 DEBUG 1 --- [         task-1] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/admin HTTP/1.1
-2024-03-05 15:45:54.156 DEBUG 1 --- [         task-1] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (550ms)
-2024-03-05 15:45:54.203  INFO 1 --- [         task-2] o.s.c.openfeign.FeignClientFactoryBean   : For 'mingink-system' URL not provided. Will try picking an instance via load-balancing.
-2024-03-05 15:45:54.211 DEBUG 1 --- [         task-2] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734272 HTTP/1.1
-2024-03-05 15:45:54.234 DEBUG 1 --- [         task-2] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (22ms)
-2024-03-05 15:45:54.372  INFO 1 --- [or-http-epoll-2] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[admin, common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[admin, common, vip]]
-2024-03-05 15:45:54.372  INFO 1 --- [or-http-epoll-2] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:true
-2024-03-05 15:45:54.397  INFO 1 --- [or-http-epoll-2] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTAyMjk1NTQsInJvbGVLZXlzIjoiW1wiYWRtaW5cIixcImNvbW1vblwiLFwidmlwXCJdIiwidXNlcm5hbWUiOiJhZG1pbiJ9.75vRG-P2Lof1g15Mao0wvof4asVgjIzRIx5H8NLlxOg
-2024-03-05 15:45:54.397  INFO 1 --- [or-http-epoll-2] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 15:46:03.012  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 15:46:03.013  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : set request header
-2024-03-05 15:46:03.013  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/current
-2024-03-05 15:46:03.013  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTAyMjk1NTQsInJvbGVLZXlzIjoiW1wiYWRtaW5cIixcImNvbW1vblwiLFwidmlwXCJdIiwidXNlcm5hbWUiOiJhZG1pbiJ9.75vRG-P2Lof1g15Mao0wvof4asVgjIzRIx5H8NLlxOg
-2024-03-05 15:46:03.014  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : username:admin
-2024-03-05 15:46:03.016  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : role = null
-2024-03-05 15:46:03.028  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 15:46:03.029  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : Authority url:/api/v1/user/current
-2024-03-05 15:46:03.029  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : roleKeys:[admin, common, vip]
-2024-03-05 15:46:03.029  INFO 1 --- [     parallel-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 15:46:03.029  INFO 1 --- [     parallel-2] c.m.g.s.filter.CookieToHeadersFilter     : set request header
-2024-03-05 16:09:55.358  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:09:55.359  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:09:55.359  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:09:55.360  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:09:55.360  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:09:55.360  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:09:55.361 DEBUG 1 --- [         task-3] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:09:55.368 DEBUG 1 --- [         task-3] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:09:55.369 DEBUG 1 --- [         task-4] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:09:55.375 DEBUG 1 --- [         task-4] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (5ms)
-2024-03-05 16:09:55.459  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:09:55.459  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:09:55.462  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTI1OTUsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.xHFm6zcth2jdP6J4lkLTp3cYhNyNaRk9RXJarNVxXt4
-2024-03-05 16:09:55.462  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:09:55.524  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:09:55.525  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:09:55.525  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:09:55.525  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:09:55.525  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:09:55.525  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:09:55.526 DEBUG 1 --- [         task-5] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:09:55.531 DEBUG 1 --- [         task-5] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
-2024-03-05 16:09:55.532 DEBUG 1 --- [         task-6] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:09:55.538 DEBUG 1 --- [         task-6] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (5ms)
-2024-03-05 16:09:55.554  INFO 1 --- [or-http-epoll-6] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:09:55.554  INFO 1 --- [or-http-epoll-6] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:09:55.555  INFO 1 --- [or-http-epoll-6] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:09:55.556  INFO 1 --- [     parallel-6] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:09:55.563 ERROR 1 --- [     parallel-6] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:09:55.626  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:09:55.626  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:09:55.629  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTI1OTUsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.xHFm6zcth2jdP6J4lkLTp3cYhNyNaRk9RXJarNVxXt4
-2024-03-05 16:09:55.629  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:10:01.521  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:10:01.522  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/current
-2024-03-05 16:10:01.522  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:10:01.523  INFO 1 --- [     parallel-7] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:10:01.523 ERROR 1 --- [     parallel-7] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/current
-2024-03-05 16:10:49.838  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:10:49.839  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:10:49.839  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:10:49.839  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:10:49.839  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:10:49.839  INFO 1 --- [or-http-epoll-5] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:10:49.840 DEBUG 1 --- [         task-7] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:10:49.847 DEBUG 1 --- [         task-7] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:10:49.848 DEBUG 1 --- [         task-8] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:10:49.855 DEBUG 1 --- [         task-8] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:10:49.874  INFO 1 --- [or-http-epoll-6] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:10:49.874  INFO 1 --- [or-http-epoll-6] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:10:49.874  INFO 1 --- [or-http-epoll-6] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:10:49.875  INFO 1 --- [     parallel-1] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:10:49.875 ERROR 1 --- [     parallel-1] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:10:49.941  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:10:49.941  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:10:49.943  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTI2NDksInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.kRTanDoL4ciUDe1r-Y9Hx00zBsql0gB9qmjMsdtmfEI
-2024-03-05 16:10:49.943  INFO 1 --- [or-http-epoll-5] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:10:55.531  INFO 1 --- [or-http-epoll-5] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:10:55.532  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/current
-2024-03-05 16:10:55.532  INFO 1 --- [or-http-epoll-5] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:10:55.533  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:10:55.533 ERROR 1 --- [     parallel-2] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/current
-2024-03-05 16:29:20.741  INFO 1 --- [or-http-epoll-7] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:29:20.741  INFO 1 --- [or-http-epoll-7] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:29:20.741  INFO 1 --- [or-http-epoll-7] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:29:20.742  INFO 1 --- [or-http-epoll-7] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:29:20.742  INFO 1 --- [or-http-epoll-7] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:29:20.742  INFO 1 --- [or-http-epoll-7] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:29:20.742 DEBUG 1 --- [         task-9] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:29:20.749 DEBUG 1 --- [         task-9] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:29:20.751 DEBUG 1 --- [        task-10] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:29:20.758 DEBUG 1 --- [        task-10] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (7ms)
-2024-03-05 16:29:20.821  INFO 1 --- [or-http-epoll-8] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:29:20.821  INFO 1 --- [or-http-epoll-8] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:29:20.821  INFO 1 --- [or-http-epoll-8] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:29:20.822  INFO 1 --- [     parallel-4] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:29:20.823 ERROR 1 --- [     parallel-4] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:29:20.851  INFO 1 --- [or-http-epoll-7] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:29:20.851  INFO 1 --- [or-http-epoll-7] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:29:20.853  INFO 1 --- [or-http-epoll-7] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTM3NjAsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.yhg1zag6O-LoYNDREd9ZCha8mG2KPZpKoPwW9svU-7o
-2024-03-05 16:29:20.853  INFO 1 --- [or-http-epoll-7] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:29:27.118  INFO 1 --- [or-http-epoll-7] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:29:27.118  INFO 1 --- [or-http-epoll-7] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/current
-2024-03-05 16:29:27.118  INFO 1 --- [or-http-epoll-7] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:29:27.119  INFO 1 --- [     parallel-5] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:29:27.120 ERROR 1 --- [     parallel-5] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/current
-2024-03-05 16:37:12.192  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:12.192  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:37:12.193  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:12.193  INFO 1 --- [     parallel-6] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:37:12.194 ERROR 1 --- [     parallel-6] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:37:12.203  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:12.204  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:37:12.204  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:12.204  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:37:12.204  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:37:12.204  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:37:12.205 DEBUG 1 --- [        task-11] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:37:12.211 DEBUG 1 --- [        task-11] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:37:12.212 DEBUG 1 --- [        task-12] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:37:12.219 DEBUG 1 --- [        task-12] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:37:12.305  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:37:12.305  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:37:12.308  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTQyMzIsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.R0TP75fTMijUQD9gcvq8f4nIFoYZpYi27RhUOE945ZQ
-2024-03-05 16:37:12.308  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:37:16.121  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:16.121  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:37:16.121  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:16.122  INFO 1 --- [     parallel-8] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:37:16.123 ERROR 1 --- [     parallel-8] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:37:16.136  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:16.136  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:37:16.136  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:16.136  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:37:16.136  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:37:16.136  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:37:16.137 DEBUG 1 --- [        task-13] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:37:16.143 DEBUG 1 --- [        task-13] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
-2024-03-05 16:37:16.144 DEBUG 1 --- [        task-14] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:37:16.150 DEBUG 1 --- [        task-14] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:37:16.236  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:37:16.236  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:37:16.238  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTQyMzYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.0mFpvfLUxP3GCjtDtxkGyyll7xigNy9HC4trUWCUEXk
-2024-03-05 16:37:16.238  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:37:19.121  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:19.121  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/current
-2024-03-05 16:37:19.121  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:19.122  INFO 1 --- [     parallel-1] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:37:19.122 ERROR 1 --- [     parallel-1] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/current
-2024-03-05 16:37:23.128  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:23.128  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/current
-2024-03-05 16:37:23.128  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:23.129  INFO 1 --- [     parallel-2] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:37:23.129 ERROR 1 --- [     parallel-2] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/current
-2024-03-05 16:37:25.904  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:25.904  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:37:25.904  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:25.905  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:37:25.905  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:37:25.905  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:37:25.906 DEBUG 1 --- [        task-15] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:37:25.908  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:25.908  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:37:25.908  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:25.909  INFO 1 --- [     parallel-3] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:37:25.909 ERROR 1 --- [     parallel-3] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:37:25.912 DEBUG 1 --- [        task-15] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:37:25.913 DEBUG 1 --- [        task-16] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:37:25.921 DEBUG 1 --- [        task-16] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (7ms)
-2024-03-05 16:37:26.008  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:37:26.008  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:37:26.010  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTQyNDYsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.TEQPzIeQcJ5f5N-IVI3eYtdOCYG1InNiZ4OxsN9Pfcw
-2024-03-05 16:37:26.011  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:37:31.747  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:37:31.747  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/current
-2024-03-05 16:37:31.747  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:37:31.748  INFO 1 --- [     parallel-4] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:37:31.749 ERROR 1 --- [     parallel-4] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/current
-2024-03-05 16:38:47.114  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:38:47.114  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:38:47.114  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:38:47.115  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:38:47.115  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:38:47.115  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:38:47.116 DEBUG 1 --- [        task-17] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:38:47.117  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:38:47.118  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:38:47.118  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:38:47.119  INFO 1 --- [     parallel-6] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:38:47.119 ERROR 1 --- [     parallel-6] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:38:47.121 DEBUG 1 --- [        task-17] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (5ms)
-2024-03-05 16:38:47.122 DEBUG 1 --- [        task-18] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:38:47.127 DEBUG 1 --- [        task-18] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (5ms)
-2024-03-05 16:38:47.212  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:38:47.213  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:38:47.215  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTQzMjcsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.jo7ByYyMTcj49bwOl3lwwABZmHhuh6UwL9fotCBTAys
-2024-03-05 16:38:47.215  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:38:48.115  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:38:48.115  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:38:48.115  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:38:48.116  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:38:48.116  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:38:48.116  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:38:48.116 DEBUG 1 --- [        task-19] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:38:48.121 DEBUG 1 --- [        task-19] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (4ms)
-2024-03-05 16:38:48.122 DEBUG 1 --- [        task-20] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:38:48.127 DEBUG 1 --- [        task-20] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (4ms)
-2024-03-05 16:38:48.156  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:38:48.156  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:38:48.156  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:38:48.157  INFO 1 --- [     parallel-7] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:38:48.157 ERROR 1 --- [     parallel-7] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:38:48.213  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:38:48.213  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:38:48.215  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTQzMjgsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.sUVyZr_XS7VSn3YvGCcJlwxywW7319Jbu0TdaIZtMqA
-2024-03-05 16:38:48.215  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:38:50.991  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:38:50.991  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/login
-2024-03-05 16:38:50.991  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:38:50.991  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : ScAuthenticationManager.authenticate()
-2024-03-05 16:38:50.991  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : username:vip
-2024-03-05 16:38:50.992  INFO 1 --- [or-http-epoll-1] c.m.g.security.ScAuthenticationManager   : password:vip
-2024-03-05 16:38:50.992 DEBUG 1 --- [        task-21] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] ---> GET http://mingink-system/user/username/vip HTTP/1.1
-2024-03-05 16:38:50.998 DEBUG 1 --- [        task-21] c.mingink.system.api.RemoteUserService   : [RemoteUserService#getUserByUserName] <--- HTTP/1.1 200  (6ms)
-2024-03-05 16:38:51.000 DEBUG 1 --- [        task-22] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] ---> GET http://mingink-system/role/userId/2318265015734273 HTTP/1.1
-2024-03-05 16:38:51.005 DEBUG 1 --- [        task-22] c.mingink.system.api.RemoteRoleService   : [RemoteRoleService#getRolesByUserId] <--- HTTP/1.1 200  (5ms)
-2024-03-05 16:38:51.019  INFO 1 --- [or-http-epoll-2] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:38:51.020  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/all
-2024-03-05 16:38:51.020  INFO 1 --- [or-http-epoll-2] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:38:51.021  INFO 1 --- [     parallel-8] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:38:51.021 ERROR 1 --- [     parallel-8] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/all
-2024-03-05 16:38:51.093  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : UsernamePasswordAuthenticationToken [Principal=com.mingink.gateway.security.domain.SecurityUserDetails [Username=vip, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[common, vip]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[common, vip]]
-2024-03-05 16:38:51.093  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : isRememberMe:false
-2024-03-05 16:38:51.095  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : new token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MTQzMzEsInJvbGVLZXlzIjoiW1wiY29tbW9uXCIsXCJ2aXBcIl0iLCJ1c2VybmFtZSI6InZpcCJ9.ichqu83xEjf9z56IuTuNCo8j6OT0DwSU2L96W9vuSbE
-2024-03-05 16:38:51.095  INFO 1 --- [or-http-epoll-1] c.m.g.s.h.AuthenticationSuccessHandler   : sign in success!
-2024-03-05 16:38:56.604  INFO 1 --- [or-http-epoll-1] c.m.g.s.filter.CookieToHeadersFilter     : CookieToHeadersFilter.filter()
-2024-03-05 16:38:56.604  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : new access request path=/api/v1/user/current
-2024-03-05 16:38:56.604  INFO 1 --- [or-http-epoll-1] c.m.g.s.ScSecurityContextRepository      : authorization = null
-2024-03-05 16:38:56.605  INFO 1 --- [     parallel-1] c.m.g.security.ScAuthorizationManager    : ScAuthorizationManager.check()
-2024-03-05 16:38:56.605 ERROR 1 --- [     parallel-1] c.m.g.s.h.ScAuthenticationEntryPoint     : authentication access forbidden path=/api/v1/user/current

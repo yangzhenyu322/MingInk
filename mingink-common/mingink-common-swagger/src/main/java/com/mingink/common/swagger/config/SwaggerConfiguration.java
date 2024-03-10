@@ -27,7 +27,6 @@ import java.util.function.Predicate;
  */
 @Configuration
 @EnableOpenApi
-//@EnableSwagger2
 @EnableConfigurationProperties(SwaggerProperties.class)
 @ConditionalOnProperty(name = "swagger.enabled", matchIfMissing = true)
 @Import({ SwaggerBeanPostProcessor.class, SwaggerWebConfiguration.class })
