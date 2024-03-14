@@ -13,20 +13,33 @@ import java.util.Set;
  */
 @Component
 public class ScPermitUrlConfig {
+    // 默认前缀
     public static final String CONTEXT_PATH = "/api/v1";
 
     /**
-     * 需要访问的url
+     * 带默认前缀无需认证授权的urls
      */
-    private String[] permitUrl = {
+    private String[] permitUrlWithPrefix = {
             "/user/register/**",
             "/user/password/**",
             "/oauth/**",
             "/sms/**"
     };
 
-    private String[] heartbeatUrl = {
-//            "/heartbeat/**"
+    /**
+     * 不带前缀无需认证授权的urls
+     */
+    private String[] permitUrl = {
+            // swagger
+            "/doc.html",
+            "/v3/api-docs/**",
+            "/webjars/**",
+            "/swagger/**",
+            "/favicon.ico",
+            "/swagger-ui.html",
+            "/mingink-system/**",
+            "/mingink-article/"
+            //  "/heartbeat/**"
     };
 
     /**
@@ -41,8 +54,8 @@ public class ScPermitUrlConfig {
         }
 
         // 放开权限的地址
-        Collections.addAll(set, addContextPath(permitUrl));
-        Collections.addAll(set, heartbeatUrl);
+        Collections.addAll(set, addContextPath(permitUrlWithPrefix));
+        Collections.addAll(set, permitUrl);
 
         return set.toArray(new String[set.size()]);
     }

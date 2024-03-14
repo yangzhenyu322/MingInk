@@ -3,13 +3,15 @@ package com.mingink.system.controller;
 import com.mingink.common.core.domain.R;
 import com.mingink.common.oss.utils.MinioUtil;
 import com.mingink.system.service.IOSSService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Map;
 
@@ -20,6 +22,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/oss")
+@Tag(name = "文件上传接口")
 public class OSSController {
     @Autowired
     private MinioUtil minioUtil;
@@ -34,8 +37,11 @@ public class OSSController {
      * @return Boolean
      */
     @PostMapping("/createBucket")
+    @Operation(hidden = true)
     public R<Boolean> createBucket(@RequestParam String bucketName) {
-        if (minioUtil.existBucket(bucketName)) return R.fail("已存在");
+        if (minioUtil.existBucket(bucketName)) {
+            return R.fail("已存在");
+        }
         return minioUtil.makeBucket(bucketName) ? R.ok(true) : R.fail("创建失败");
     }
 
@@ -46,8 +52,11 @@ public class OSSController {
      * @return Boolean
      */
     @DeleteMapping("/removeBucketByName")
+    @Operation(hidden = true)
     public R<Boolean> removeBucketByName(@RequestParam String bucketName) {
-        if (!minioUtil.existBucket(bucketName)) return R.fail("未查到该桶");
+        if (!minioUtil.existBucket(bucketName)) {
+            return R.fail("未查到该桶");
+        }
         return minioUtil.removeBucket(bucketName) ? R.ok(true) : R.fail("删除失败");
     }
 
@@ -59,6 +68,7 @@ public class OSSController {
      * @return String 文件路径
      */
     @PostMapping("/uploadSingleFileByFileOrBucketName")
+    @Operation(hidden = true)
     public R<String> uploadSingleFileByFileOrBucketName(MultipartFile file,  String bucketName) {
         return (bucketName.equals("") || minioUtil.existBucket(bucketName)) ? R.ok(minioUtil.upload(file, bucketName)) : R.fail("该桶不存在");
     }
@@ -71,6 +81,7 @@ public class OSSController {
      * @return Map 文件文件路径集合
      */
     @PostMapping("/uploadClusterFileByFileOrBucketName")
+    @Operation(hidden = true)
     public R<Map<String, String>> uploadClusterFileByFileOrBucketName(MultipartFile[] files, @RequestParam String bucketName) {
         return (bucketName.equals("") || minioUtil.existBucket(bucketName)) ? R.ok(minioUtil.upload(files, bucketName)) : R.fail("该桶不存在");
     }
@@ -84,6 +95,7 @@ public class OSSController {
      * @return Boolean
      */
     @PostMapping("/downloadSingleFileByFilePath")
+    @Operation(hidden = true)
     public void downloadSingleFileByFilePath(@RequestParam String filePath, HttpServletResponse response, HttpServletRequest request) {
         minioUtil.download(response, request, filePath);
     }
@@ -97,6 +109,7 @@ public class OSSController {
      * @param request
      */
     @PostMapping("/downloadClusterFileByFilePaths")
+    @Operation(hidden = true)
     public void downloadClusterFileByFilePaths(@RequestParam List<String> filePaths, @RequestParam String zipName, HttpServletResponse response, HttpServletRequest request) {
         minioUtil.download(response, request, filePaths, zipName);
     }
@@ -108,6 +121,7 @@ public class OSSController {
      * @return Boolean
      */
     @DeleteMapping("/removeSingleFileByFilePath")
+    @Operation(hidden = true)
     public R<Boolean> removeSingleFileByFilePath(@RequestParam String filePath) {
         return minioUtil.removeFile(filePath) ? R.ok(true) : R.fail("删除失败");
     }
@@ -119,6 +133,7 @@ public class OSSController {
      * @return Map
      */
     @DeleteMapping("/removeClusterFileByFilePaths")
+    @Operation(hidden = true)
     public R<Map<String, String>> removeClusterFileByFilePaths(@RequestParam List<String> filePaths) {
         return R.ok(minioUtil.removeFile(filePaths));
     }
@@ -130,6 +145,7 @@ public class OSSController {
      * @return 文件url, 如 http://223.82.75.76:9100/mingink/zensheep/avatar/2024/03/09/9d3f7e46-001f-4fba-8f74-d76bfdaf0f5b.jfif
      */
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @Operation(hidden = true)
     public String uploadFile(@RequestPart(value = "file") MultipartFile file, @RequestParam("customFilePath") String customFilePath) {
         return oSSService.uploadFile(file, customFilePath);
     }
@@ -140,6 +156,7 @@ public class OSSController {
      * @return
      */
     @DeleteMapping("/filePath/{filePath}")
+    @Operation(hidden = true)
     public Boolean removeFile(@PathVariable("filePath") String filePath) {
         return oSSService.removeFile(filePath);
     }

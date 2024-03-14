@@ -18,15 +18,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
-        <spring-boot.version>2.7.13</spring-boot.version>
-        <spring-cloud.version>2021.0.8</spring-cloud.version>
-        <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
+        <spring-boot.version>3.2.2</spring-boot.version>
+        <spring-cloud.version>2023.0.0</spring-cloud.version>
+        <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
         <java-jwt.version>3.4.0</java-jwt.version>
         <mysql-connector.version>8.0.28</mysql-connector.version>
-        <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
         <fastjson2.version>2.0.34</fastjson2.version>
         <seata.version>2.0.0</seata.version>
-        <swagger.fox.version>3.0.0</swagger.fox.version>
+        <!-- 接口文档工具 -->
+        <knife4j.version>4.5.0</knife4j.version>
         <hutool.version>5.7.17</hutool.version>
         <commons.lang3.version>3.12.0</commons.lang3.version>
         <spring-cloud-starter-bootstrap.version>3.1.1</spring-cloud-starter-bootstrap.version>
@@ -85,11 +86,11 @@
                 <version>${fastjson2.version}</version>
             </dependency>
 
-            <!-- swagger 依赖配置 -->
+            <!-- Swagger 接口文档 -->
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>${swagger.fox.version}</version>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
 
             <!-- 系统接口 -->

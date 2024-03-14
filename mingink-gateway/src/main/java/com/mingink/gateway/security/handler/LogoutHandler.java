@@ -2,6 +2,7 @@ package com.mingink.gateway.security.handler;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.mingink.common.core.utils.jwt.JWTUtils;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpCookie;
@@ -11,7 +12,6 @@ import org.springframework.security.web.server.authentication.logout.ServerLogou
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
-import javax.annotation.Resource;
 import java.util.Map;
 
 /**

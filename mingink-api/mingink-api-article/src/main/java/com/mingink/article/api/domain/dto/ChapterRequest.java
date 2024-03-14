@@ -1,7 +1,6 @@
 package com.mingink.article.api.domain.dto;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -13,22 +12,22 @@ import java.io.Serializable;
  * @description 发布小说章节内容请求实体类
  */
 @Data
-@ApiModel(value="PublishChapter Request对象", description="PublishChapter Request实体对象")
+@Schema(description = "发布小说章节内容请求实体类")
 public class ChapterRequest implements Serializable {
     private static final long serialVersionUID = 4381327608707544303L;
 
-    @ApiModelProperty(value = "小说id")
+    @Schema(description = "小说id")
     private Long bookId;
 
-    @ApiModelProperty(value = "标题")
+    @Schema(description = "标题")
     private String title;
 
-    @ApiModelProperty(value = "内容")
+    @Schema(description = "内容")
     private String content;
 
-    @ApiModelProperty(value = "章节状态：0-创建（草稿）、1-发布、2-下架")
+    @Schema(description = "章节状态：0-创建（草稿）、1-发布、2-下架")
     private int status;
 
-    @ApiModelProperty(value = "是否VIP专属阅读：0-否、1-是")
+    @Schema(description = "是否VIP专属阅读：0-否、1-是")
     private int isVip;
 }

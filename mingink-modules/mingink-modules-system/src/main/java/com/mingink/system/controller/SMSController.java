@@ -2,8 +2,8 @@ package com.mingink.system.controller;
 
 import com.mingink.common.core.domain.R;
 import com.mingink.system.service.ISMSService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sms")
-@Api(value = "短信接口功能", tags = "SMSController", description = "短信接口相关介绍")
+@Tag(name = "短信接口")
 public class SMSController {
     @Autowired
     private ISMSService smsService;
@@ -30,7 +30,7 @@ public class SMSController {
      * @return
      */
     @GetMapping("/code/{phoneNumber}/{codeLength}/{validTime}")
-    @ApiOperation("获取手机验证码")
+    @Operation(summary = "获取手机验证码")
     public R<?> getPhoneCode(@PathVariable("phoneNumber") String phoneNumber,
                              @PathVariable("codeLength") int codeLength,
                              @PathVariable("validTime") Long validTime) {
@@ -44,7 +44,7 @@ public class SMSController {
      * @return
      */
     @GetMapping("/code/verification/{requestId}/{inputCode}")
-    @ApiOperation("验证用户输入的验证码是否正确")
+    @Operation(summary = "验证用户输入的验证码是否正确")
     public R<?> verifyCode(@PathVariable("requestId") String requestId,
                            @PathVariable("inputCode") String inputCode) {
         return smsService.verifyCode(requestId, inputCode);

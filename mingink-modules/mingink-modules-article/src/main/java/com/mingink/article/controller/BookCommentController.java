@@ -1,9 +1,8 @@
 package com.mingink.article.controller;
 
 
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/book_comment")
-@Api(value = "小说评论接口功能", tags = "CommentController", description = "小说评论接口相关介绍")
+@Tag(name = "小说评论接口")
 public class BookCommentController {
 
 }
