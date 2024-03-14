@@ -4,8 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -18,29 +17,29 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("gorse_feedback")
-@ApiModel(value="GorseFeedback对象", description="GorseFeedback实体对象")
+@Schema(description = "Gorse反馈")
 public class GorseFeedback implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "反馈类型，包含like、star、read等")
     @TableId(value = "feedback_type", type = IdType.NONE)
+    @Schema(description = "反馈类型，包含like、star、read等")
     private String feedbackType;
 
-    @ApiModelProperty(value = "用户ID")
     @TableField("user_id")
+    @Schema(description = "用户ID")
     private String userId;
 
-    @ApiModelProperty(value = "物品(小说)ID")
     @TableField("item_id")
+    @Schema(description = "物品(小说)ID")
     private String itemId;
 
-    @ApiModelProperty(value = "时间戳")
     @TableField("time_stamp")
+    @Schema(description = "时间戳")
     private LocalDateTime timeStamp;
 
-    @ApiModelProperty(value = "反馈的注释信息")
     @TableField("comment")
+    @Schema(description = "反馈的注释信息")
     private String comment;
 
     public final static String[] FEEDBACK_TYPES = new String[]{"read", "like", "star"};

@@ -1,7 +1,6 @@
 package com.mingink.article.api.domain.dto;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -11,14 +10,14 @@ import java.io.Serializable;
  * @Date: 2024/3/4 17:02
  */
 @Data
-@ApiModel(value="Author Request对象", description="Author Request实体类")
+@Schema(description = "作者请求对象")
 public class AuthorRequest implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "用户id")
+    @Schema(description = "用户id")
     private String userId;
 
-    @ApiModelProperty(value = "笔名")
+    @Schema(description = "笔名")
     private String penName;
 }

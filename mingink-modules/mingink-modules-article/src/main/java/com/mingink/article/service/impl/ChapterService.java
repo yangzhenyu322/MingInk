@@ -96,7 +96,7 @@ public class ChapterService extends ServiceImpl<ChapterMapper, Chapter> implemen
         chapter.setBookId(chapterRequest.getBookId());
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("book_id", chapterRequest.getBookId());
-        chapter.setSerialNumber(chapterMapper.selectCount(queryWrapper) + 1);
+        chapter.setSerialNumber(chapterMapper.selectCount(queryWrapper).intValue() + 1);
         chapter.setTitle(chapterRequest.getTitle());
         chapter.setContent(chapterRequest.getContent());
         chapter.setWordCount(chapterRequest.getContent().length());

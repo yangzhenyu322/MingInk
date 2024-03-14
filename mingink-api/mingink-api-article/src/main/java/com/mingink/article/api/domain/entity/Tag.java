@@ -1,14 +1,14 @@
 package com.mingink.article.api.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * Tag 实体类
@@ -17,28 +17,28 @@ import lombok.Data;
  */
 @Data
 @TableName("tag")
-@ApiModel(value="Tag对象", description="Tag实体对象")
+@Schema(description = "标签")
 public class Tag implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "标签ID")
     @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "标签ID")
     private Long id;
 
-    @ApiModelProperty(value = "标签名字")
     @TableField("name")
+    @Schema(description = "标签名字")
     private String name;
 
-    @ApiModelProperty(value = "标签描述")
     @TableField("description")
+    @Schema(description = "标签描述")
     private String description;
 
-    @ApiModelProperty(value = "创建时间")
     @TableField("create_time")
+    @Schema(description = "创建时间")
     private LocalDateTime createTime;
 
-    @ApiModelProperty(value = "更新时间")
     @TableField("update_time")
+    @Schema(description = "更新时间")
     private LocalDateTime updateTime;
 }

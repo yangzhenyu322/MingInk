@@ -2,6 +2,7 @@ package com.mingink.gateway.security;
 
 import com.alibaba.fastjson2.JSON;
 import com.mingink.common.core.utils.jwt.JWTUtils;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpHeaders;
@@ -15,7 +16,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

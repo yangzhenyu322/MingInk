@@ -3,7 +3,9 @@ package com.mingink.system.controller;
 import com.mingink.system.api.domain.entiry.User;
 import com.mingink.system.service.IOauthService;
 import com.mingink.system.service.IUserService;
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletResponse;
 import me.zhyd.oauth.config.AuthConfig;
 import me.zhyd.oauth.model.AuthCallback;
 import me.zhyd.oauth.model.AuthResponse;
@@ -14,14 +16,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/oAuth")
-@Api(value = "第三方登录功能", tags = "oAuthController", description = "第三方登录相关介绍")
+@Tag(name = "第三方登录接口")
 public class OAuthController {
 
     @Autowired
@@ -52,6 +53,7 @@ public class OAuthController {
      * @param response 页面跳转
      */
     @RequestMapping("/qqlogin")
+    @Operation(hidden = true)
     public void qqlogin(HttpServletResponse response) throws IOException {
         //获取qq实例
         AuthQqRequest authRequest = getQQAuthRequest();
@@ -67,6 +69,7 @@ public class OAuthController {
      * @return
      */
     @RequestMapping("/qqlogin/callback")
+    @Operation(hidden = true)
     public Object qqloginCallback(AuthCallback callback) {
         //获取实例
         AuthQqRequest authRequest = getQQAuthRequest();
@@ -114,7 +117,6 @@ public class OAuthController {
  * @Author: ZXY
  * @Date: 2024/2/25 15:03
  */
-
 
 }
 

@@ -4,8 +4,7 @@ import com.mingink.article.api.domain.entity.Tag;
 import com.mingink.article.api.domain.entity.UserTag;
 import com.mingink.article.service.IUserTagService;
 import com.mingink.common.core.domain.R;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +17,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/user-tag")
-@Api(value = "用户标签接口功能", tags = "BookTagController", description = "用户标签接口相关介绍")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "用户标签接口")
 public class UserTagController {
     @Autowired
     private IUserTagService userTagService;
@@ -29,7 +28,7 @@ public class UserTagController {
      * @return
      */
     @GetMapping("/userId/{userId}")
-    @ApiOperation("通过用户ID查询标签信息")
+    @Operation(summary = "通过用户ID查询标签信息")
     public R<List<Tag>> getUserTagsById(@PathVariable("userId") String userId) {
         return R.ok(userTagService.getUserTagsById(userId));
     }
@@ -39,7 +38,7 @@ public class UserTagController {
      * @return
      */
     @PostMapping("/new")
-    @ApiOperation("给用户添加新的单个标签")
+    @Operation(summary = "给用户添加新的单个标签")
     public R<String> addNewBookTag(@RequestBody UserTag userTag) {
         if (!userTagService.addNewUserTag(userTag)) {
             return R.fail("添加新的用户标签失败");
@@ -49,7 +48,7 @@ public class UserTagController {
     }
 
     @DeleteMapping("/remove")
-    @ApiOperation("移除用户的单个标签")
+    @Operation(summary = "移除用户的单个标签")
     public R<String> removeUserTag(@RequestBody UserTag userTag) {
         if (!userTagService.removeUserTag(userTag)) {
             return R.fail("删除UserTag失败");
@@ -62,6 +61,7 @@ public class UserTagController {
      * 通过用户ID移除其所有Tag
      */
     @DeleteMapping("/userId/{userId}")
+    @Operation(hidden = true)
     public Boolean removeUserTagByUserId(@PathVariable("userId") String userId) {
         return userTagService.removeUserTagByUserId(userId);
     }

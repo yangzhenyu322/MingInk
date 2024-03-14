@@ -1,6 +1,8 @@
 package com.mingink.common.core.annotation;
 
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.openfeign.FeignAutoConfiguration;
 
 import java.lang.annotation.*;
 
@@ -13,6 +15,7 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
+@ImportAutoConfiguration({FeignAutoConfiguration.class})
 @EnableFeignClients
 public @interface EnableMIFeignClients {
     String[] value() default {};

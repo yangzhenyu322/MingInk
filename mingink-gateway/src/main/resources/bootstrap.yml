@@ -1,18 +1,9 @@
 server:
   port: 8081 # 网关端口
-  # 配置SSL 证书
-#  ssl:
-#    enabled: true
-#    # 证书位置
-#    key-store: classpath:scg-keystore.p12
-#    # 证书别名
-#    key-alias: mingink
-#    # 密钥库类型
-#    key-store-type: PKCS12
-#    # 密钥库口令（密码）
-#    key-store-password: lovelumine364
 
 spring:
+  main:
+    web-application-type: reactive
   application:
     name: mingink-gateway # 服务名称
   profiles:
@@ -46,20 +37,24 @@ spring:
       discovery:
         locator:
           enabled: true # 是否与服务注册于发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为 false
-          lowerCaseServiceId: true # 是将请求路径上的服务名配置为小写（因为服务注册的时候，向注册中心注册时将服务名转成大写的了）
+          lower-case-service-id: true
       routes: # 网关路由配置
         - id: mingink-system # 路由id
           uri: lb://mingink-system # 路由的目标地址 lb就是负载均衡，后面跟服务名称
           predicates:
+#            - Path=/system/**
             - Path=/api/v1/user/**, /api/v1/oauth/**, /api/v1/role/**, /api/v1/file/**, /api/v1/oss/**, /api/v1/sms/** # 按照路径匹配
           filters:
             - StripPrefix=2 # 去除前 n 个请求路径前缀
+#            - StripPrefix=1 # 去除前 n 个请求路径前缀
         - id: mingink-article
           uri: lb://mingink-article
           predicates:
+#            - Path=/article/**
             - Path=/api/v1/gorse/**, /api/v1/author/**, /api/v1/book/**, /api/v1/tag/**, /api/v1/book-tag/**, /api/v1/user-tag/**, /api/v1/chapter/**, /api/v1/comment/**
           filters:
             - StripPrefix=2 # 去除前 n 个请求路径前缀
+#            - StripPrefix=1 # 去除前 n 个请求路径前缀
       globalcors: # 全局的跨域请求
         add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
         cors-configurations:
@@ -96,6 +91,14 @@ logging:
       mingink:
         system:
           api: debug
+        article:
+          api: debug
+#logging:
+#  level:
+#    org.springframework.cloud.gateway: DEBUG
+#    org.springframework.cloud.loadbalancer: trace
+#    org.springframework.web.reactive: trace
+
 # Feign
 feign:
   client:
@@ -106,3 +109,14 @@ feign:
     enabled: true # 开启feign对HttpClient的支持
     max-connections: 200 # 最大的连接数
     max-connections-per-route: 50 # 每个路径的最大连接数
+
+# knife4j 网关聚合
+knife4j:
+  gateway:
+    enable: true # 开启网关聚合
+      # 指定服务发现的模式聚合微服务文档，并且是默认 default 分组
+    strategy: discover # 网关聚合策略
+    discover:
+      enabled: true
+      # OpenAPI 3.0 规范
+      version: swagger2

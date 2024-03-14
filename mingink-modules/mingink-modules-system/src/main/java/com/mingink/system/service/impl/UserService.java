@@ -17,6 +17,7 @@ import com.mingink.system.service.IOSSService;
 import com.mingink.system.service.IUserOauthService;
 import com.mingink.system.service.IUserService;
 import io.seata.spring.annotation.GlobalTransactional;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
