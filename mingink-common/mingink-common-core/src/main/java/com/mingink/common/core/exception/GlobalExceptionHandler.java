@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @date 2024/3/2 23:36
  * @description 全局异常处理器
  */
-@RestControllerAdvice
 @Slf4j
+@RestControllerAdvice
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(BusinessException.class)

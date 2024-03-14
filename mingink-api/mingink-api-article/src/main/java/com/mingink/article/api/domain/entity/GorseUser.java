@@ -4,8 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -17,24 +16,24 @@ import java.io.Serializable;
  */
 @Data
 @TableName("gorse_users")
-@ApiModel(value="GorseUsers对象", description="GorseUsers实体对象")
+@Schema(description = "Gorse用户对象")
 public class GorseUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "用户ID")
     @TableId(value = "user_id", type = IdType.NONE)
+    @Schema(description = "用户ID")
     private String userId;
 
-    @ApiModelProperty(value = "标签Key集合，例[\"玄幻\", \"现代\"]")
     @TableField("labels")
+    @Schema(description = "标签Key集合，例[\"玄幻\", \"现代\"]")
     private String labels;
 
-    @ApiModelProperty(value = "个人简介")
     @TableField("comment")
+    @Schema(description = "个人简介")
     private String comment;
 
-    @ApiModelProperty(value = "订阅")
     @TableField("subscribe")
+    @Schema(description = "订阅")
     private String subscribe;
 }

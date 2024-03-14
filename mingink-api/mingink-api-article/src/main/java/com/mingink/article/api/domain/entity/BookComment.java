@@ -4,11 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -19,51 +16,49 @@ import java.time.LocalDateTime;
  * @since 2024-02-27
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
 @TableName("book_comment")
-@ApiModel(value="Book Comment对象", description="Book Comment实体对象")
+@Schema(description = "小说评论")
 public class BookComment implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "小说评论id")
     @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "小说评论id")
     private Long id;
 
-    @ApiModelProperty(value = "小说id")
     @TableField("book_id")
+    @Schema(description = "小说id")
     private Long bookId;
 
-    @ApiModelProperty(value = "用户id（读者）")
     @TableField("user_id")
+    @Schema(description = "用户id（读者）")
     private String userId;
 
-    @ApiModelProperty(value = "上一级评论id")
     @TableField("upper_level_id")
+    @Schema(description = "上一级评论id")
     private Long upperLevelId;
 
-    @ApiModelProperty(value = "评论内容")
     @TableField("content")
+    @Schema(description = "评论内容")
     private String content;
 
-    @ApiModelProperty(value = "点赞数")
     @TableField("like_count")
+    @Schema(description = "点赞数")
     private Integer likeCount;
 
-    @ApiModelProperty(value = "点踩数")
     @TableField("tread_count")
+    @Schema(description = "点踩数")
     private Integer treadCount;
 
-    @ApiModelProperty(value = "是否置顶：0-否、1-是")
     @TableField("is_top")
+    @Schema(description = "是否置顶：0-否、1-是")
     private int isTop;
 
-    @ApiModelProperty(value = "是否精华：0-否、1-是")
     @TableField("is_essence")
+    @Schema(description = "是否精华：0-否、1-是")
     private int isEssence;
 
-    @ApiModelProperty(value = "评论时间")
     @TableField("create_time")
+    @Schema(description = "评论时间")
     private LocalDateTime createTime;
 }

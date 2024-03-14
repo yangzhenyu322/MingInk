@@ -5,8 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.mingink.common.core.handler.MyBatisTypeHandler;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -19,52 +18,52 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("chapter")
-@ApiModel(value="Chapter对象", description="Chapter实体对象")
+@Schema(description = "小说章节")
 public class Chapter implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "小说章节id")
     @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "小说章节id")
     private Long id;
 
-    @ApiModelProperty(value = "小说id")
     @TableField("book_id")
+    @Schema(description = "小说id")
     private Long bookId;
 
-    @ApiModelProperty(value = "序号(序号越小说明创建时间越早，不一定是连续的)")
     @TableField("serial_number")
+    @Schema(description = "序号(序号越小说明创建时间越早，不一定是连续的)")
     private Integer serialNumber;
 
-    @ApiModelProperty(value = "标题")
     @TableField("title")
+    @Schema(description = "标题")
     private String title;
 
-    @ApiModelProperty(value = "内容")
     @TableField(value = "content", typeHandler = MyBatisTypeHandler.class)
+    @Schema(description = "内容")
     private String content;
 
-    @ApiModelProperty(value = "总字数")
     @TableField("word_count")
+    @Schema(description = "总字数")
     private Integer wordCount;
 
-    @ApiModelProperty(value = "章节状态：0-创建（草稿）、1-发布、2-下架")
     @TableField("status")
+    @Schema(description = "章节状态：0-创建（草稿）、1-发布、2-下架")
     private int status;
 
-    @ApiModelProperty(value = "是否VIP专属：0-否、1-是")
     @TableField("is_vip")
+    @Schema(description = "是否VIP专属：0-否、1-是")
     private int isVip;
 
-    @ApiModelProperty(value = "创建时间")
     @TableField("create_time")
+    @Schema(description = "创建时间")
     private LocalDateTime createTime;
 
-    @ApiModelProperty(value = "更新时间")
     @TableField("update_time")
+    @Schema(description = "更新时间")
     private LocalDateTime updateTime;
 
-    @ApiModelProperty(value = "发布时间")
     @TableField("publish_time")
+    @Schema(description = "发布时间")
     private LocalDateTime publishTime;
 }

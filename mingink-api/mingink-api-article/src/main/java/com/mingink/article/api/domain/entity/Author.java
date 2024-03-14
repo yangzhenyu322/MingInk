@@ -3,8 +3,7 @@ package com.mingink.article.api.domain.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -17,32 +16,32 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("author")
-@ApiModel(value="Author对象", description="Author实体类")
+@Schema(description = "作者")
 public class Author implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "作家id")
     @TableId
+    @Schema(description = "作家id")
     private String id;
 
-    @ApiModelProperty(value = "用户id")
     @TableField("user_id")
+    @Schema(description = "用户id")
     private String userId;
 
-    @ApiModelProperty(value = "笔名")
     @TableField("pen_name")
+    @Schema(description = "笔名")
     private String penName;
 
-    @ApiModelProperty(value = "作家状态：0-正常、1-禁用")
     @TableField("status")
+    @Schema(description = "作家状态：0-正常、1-禁用")
     private int status;
 
-    @ApiModelProperty(value = "注册时间")
     @TableField("create_time")
+    @Schema(description = "注册时间")
     private LocalDateTime createTime;
 
-    @ApiModelProperty(value = "个人信息更新时间")
     @TableField("update_time")
+    @Schema(description = "个人信息更新时间")
     private LocalDateTime updateTime;
 }

@@ -4,8 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -18,64 +17,64 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("book")
-@ApiModel(value="Book对象", description="Book 小说实体对象")
+@Schema(description = "小说")
 public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "小说id")
     @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "小说id")
     private Long id;
 
-    @ApiModelProperty(value = "作家id")
     @TableField("author_id")
+    @Schema(description = "作家id")
     private String authorId;
 
-    @ApiModelProperty(value = "名称")
     @TableField("name")
+    @Schema(description = "名称")
     private String name;
 
-    @ApiModelProperty(value = "描述")
     @TableField("description")
+    @Schema(description = "描述")
     private String description;
 
-    @ApiModelProperty(value = "封面图片url")
     @TableField("pic_url")
+    @Schema(description = "封面图片url")
     private String picUrl;
 
-    @ApiModelProperty(value = "状态：0-连载(默认)、1-已完结、2-下架")
     @TableField("status")
+    @Schema(description = "状态：0-连载(默认)、1-已完结、2-下架")
     private int status;
 
-    @ApiModelProperty(value = "阅读量")
     @TableField("read_count")
+    @Schema(description = "阅读量")
     private Long readCount;
 
-    @ApiModelProperty(value = "喜欢量")
     @TableField("like_count")
+    @Schema(description = "喜欢量")
     private Long likeCount;
 
-    @ApiModelProperty(value = "收藏量")
     @TableField("star_count")
+    @Schema(description = "收藏量")
     private Long starCount;
 
-    @ApiModelProperty(value = "总字数(已发布)")
     @TableField("word_count")
+    @Schema(description = "总字数(已发布)")
     private Integer wordCount;
 
-    @ApiModelProperty(value = "评论数")
     @TableField("comment_count")
+    @Schema(description = "评论数")
     private Integer commentCount;
 
-    @ApiModelProperty(value = "评分：总分10")
     @TableField("score")
+    @Schema(description = "评分：总分10")
     private Float score;
 
-    @ApiModelProperty(value = "创建时间")
     @TableField("create_time")
+    @Schema(description = "创建时间")
     private LocalDateTime createTime;
 
-    @ApiModelProperty(value = "更新时间")
     @TableField("update_time")
+    @Schema(description = "更新时间")
     private LocalDateTime updateTime;
 }

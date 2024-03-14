@@ -9,8 +9,8 @@ import com.mingink.article.api.domain.entity.GorseItem;
 import com.mingink.article.api.domain.entity.GorseUser;
 import com.mingink.article.service.IGorseService;
 import com.mingink.common.core.domain.R;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +23,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/gorse")
-@Api(value = "Gorse推荐接口功能", tags = "GorseController", description = "Gorse推荐接口相关介绍")
+@Tag(name = "Gorse 推荐接口")
 public class GorseController {
     @Autowired
     private IGorseService gorseService;
@@ -33,7 +33,7 @@ public class GorseController {
      * @return
      */
     @GetMapping("/recommend/latest")
-    @ApiOperation("获取全站最新的小说推荐")
+    @Operation(summary = "获取全站最新的小说推荐")
     public R<List<JSONObject>> getLatestRecommendBooks() {
         return R.ok(gorseService.getLatestRecommendBooks());
     }
@@ -44,7 +44,7 @@ public class GorseController {
      * @return
      */
     @GetMapping("/recommend/latest/category/{category}")
-    @ApiOperation("获取指定品类(Tag)下的最新小说推荐")
+    @Operation(summary = "获取指定品类(Tag)下的最新小说推荐")
     public R<List<JSONObject>> getLatestRecommendBooksByCategory(@PathVariable("category") String category) {
         return R.ok(gorseService.getLatestRecommendBooksByCategory(category));
     }
@@ -54,7 +54,7 @@ public class GorseController {
      * @return
      */
     @GetMapping("/recommend/popular")
-    @ApiOperation("获取全站热门推荐")
+    @Operation(summary = "获取全站热门推荐")
     public R<List<JSONObject>> getPopularRecommendBooks() {
         return R.ok(gorseService.getPopularRecommendBooks());
     }
@@ -64,7 +64,7 @@ public class GorseController {
      * @return
      */
     @GetMapping("/recommend/popular/category/{category}")
-    @ApiOperation("获取全站指定品类(Tag)的热门推荐")
+    @Operation(summary = "获取全站指定品类(Tag)的热门推荐")
     public R<List<JSONObject>> getPopularRecommendBooksByCategory(@PathVariable("category") String category) {
         return R.ok(gorseService.getPopularRecommendBooksByCategory(category));
     }
@@ -75,7 +75,7 @@ public class GorseController {
      * @return
      */
     @GetMapping("/recommend/userId/{userId}")
-    @ApiOperation("通过用户ID获取个性化推荐小说")
+    @Operation(summary = "通过用户ID获取个性化推荐小说")
     public R<List<String>> getRecommendBooksByUserId(@PathVariable("userId") String userId) {
         return R.ok(gorseService.getRecommendBooksByUserId(userId));
     }
@@ -87,7 +87,7 @@ public class GorseController {
      * @return
      */
     @GetMapping("/recommend/userId/{userId}/category/{category}")
-    @ApiOperation("通过用户ID和种类(Tag)名获取指定品类(Tag)下的个性化推荐")
+    @Operation(summary = "通过用户ID和种类(Tag)名获取指定品类(Tag)下的个性化推荐")
     public R<List<String>> getRecommendBooksByUsersIdAndCategory(@PathVariable("userId") String userId,
                                                                  @PathVariable("category") String category) {
         return R.ok(gorseService.getRecommendBooksByUsersIdAndCategory(userId, category));
@@ -99,7 +99,7 @@ public class GorseController {
      * @return
      */
     @GetMapping("/recommend/similar/bookId/{bookId}")
-    @ApiOperation("通过BookId获取与该小说相似的推荐")
+    @Operation(summary = "通过BookId获取与该小说相似的推荐")
     public R<List<JSONObject>> getSimilarRecommendBookByBookId(@PathVariable("bookId") String bookId) {
         return R.ok(gorseService.getSimilarRecommendBookByBookId(bookId));
     }
@@ -110,7 +110,7 @@ public class GorseController {
      * @return
      */
     @GetMapping("/recommend/similar/bookId/{bookId}/category/{category}")
-    @ApiOperation("通过Book Id获取指定品类(Tag)下与该小说相似的推荐")
+    @Operation(summary = "通过Book Id获取指定品类(Tag)下与该小说相似的推荐")
     public R<List<JSONObject>> getSimilarRecommendBookByBookIdAndCategory(@PathVariable("bookId") String bookId,
                                                                           @PathVariable("category") String category) {
         return R.ok(gorseService.getSimilarRecommendBookByBookIdAndCategory(bookId, category));
@@ -122,6 +122,7 @@ public class GorseController {
      * @return
      */
     @PostMapping("/user")
+    @Operation(hidden = true)
     public Boolean addNewGorseUser(@RequestBody GorseUserRequest gorseUserRequest) {
         return gorseService.addNewGorseUser(gorseUserRequest);
     }
@@ -132,6 +133,7 @@ public class GorseController {
      * @return
      */
     @DeleteMapping("/user/userId/{userId}")
+    @Operation(hidden = true)
     public Boolean removeGorseUser(@PathVariable("userId") String userId) {
         return gorseService.removeGorseUser(userId);
     }
@@ -142,6 +144,7 @@ public class GorseController {
      * @return
      */
     @PutMapping("/user")
+    @Operation(hidden = true)
     public Boolean updateGorseUser(@RequestBody GorseUser gorseUser) {
         return gorseService.updateGorseUser(gorseUser);
     }
@@ -152,6 +155,7 @@ public class GorseController {
      * @return
      */
     @PostMapping("/item")
+    @Operation(hidden = true)
     public Boolean addNewItem(@RequestBody GorseItemRequest gorseItemRequest) {
         return gorseService.addNewItem(gorseItemRequest);
     }
@@ -162,11 +166,13 @@ public class GorseController {
      * @return
      */
     @DeleteMapping("/item/bookId/{bookId}")
+    @Operation(hidden = true)
     public Boolean removeItem(@PathVariable("bookId") String bookId) {
         return gorseService.removeItem(bookId);
     }
 
     @PutMapping("/item")
+    @Operation(hidden = true)
     public Boolean updateItem(@RequestBody GorseItem gorseItem) {
         return gorseService.updateGorseItem(gorseItem);
     }
@@ -177,6 +183,7 @@ public class GorseController {
      * @return
      */
     @PostMapping("/feedback")
+    @Operation(hidden = true)
     public R<String> addNewFeedBack(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
         if (!gorseService.addNewFeedBack(gorseFeedbackRequest)) {
             return R.fail("新增反馈失败");
@@ -191,6 +198,7 @@ public class GorseController {
      * @return
      */
     @DeleteMapping("/feedback")
+    @Operation(hidden = true)
     public R<String> removeFeedBack(@RequestBody GorseFeedbackRequest gorseFeedbackRequest) {
         if (!gorseService.removeFeedBack(gorseFeedbackRequest)) {
             return R.fail("删除反馈失败");
@@ -200,6 +208,7 @@ public class GorseController {
     }
 
     @DeleteMapping("/feedback/userId/{userId}")
+    @Operation(hidden = true)
     public Boolean removeFeedBackByUserId(@PathVariable("userId") String userId) {
         return gorseService.removeFeedBackByUserId(userId);
     }
