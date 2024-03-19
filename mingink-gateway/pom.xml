@@ -15,6 +15,10 @@
         mingink-gateway网关模块
     </description>
 
+    <properties>
+        <springdoc.webflux.version>2.4.0</springdoc.webflux.version>
+    </properties>
+
     <dependencies>
         <!-- SpringCloud Alibaba Nacos  -->
         <dependency>
@@ -78,10 +82,22 @@
             </exclusions>
         </dependency>
 
+        <!-- knife4j-gateway -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
+            <version>${springdoc.webflux.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
             <version>${knife4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-swagger</artifactId>
         </dependency>
     </dependencies>
 

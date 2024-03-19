@@ -1,6 +1,7 @@
 package com.mingink.gateway;
 
 import com.mingink.common.core.annotation.EnableMIFeignClients;
+import com.mingink.common.swagger.annotation.EnableSwagger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -10,6 +11,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * @Date: 2024/2/1 0:22
  */
 @EnableAsync
+@EnableSwagger
 @EnableMIFeignClients
 @SpringBootApplication
 public class MingInkGatewayApplication {

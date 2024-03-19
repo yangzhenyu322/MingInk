@@ -17,6 +17,8 @@
 
     <properties>
         <bce-java-dsk.version>0.10.294</bce-java-dsk.version>
+        <!-- 支付宝工具 -->
+        <apipay.sdk.version>4.34.0.ALL</apipay.sdk.version>
     </properties>
 
     <dependencies>
@@ -86,6 +88,13 @@
                     <groupId>jdk.tools</groupId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- 支付宝sdk -->
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>${apipay.sdk.version}</version>
         </dependency>
 
         <!-- 系统接口 -->
