@@ -18,7 +18,7 @@ import java.util.List;
  * @Date: 2024/2/1 19:14
  */
 @RestController
-@RequestMapping("role")
+@RequestMapping("/role")
 @Tag(name = "角色接口")
 public class RoleController {
     @Autowired

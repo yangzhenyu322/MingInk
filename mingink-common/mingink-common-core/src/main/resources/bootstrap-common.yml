@@ -1,0 +1,24 @@
+# Spring
+spring:
+  cloud:
+    nacos:
+      config:
+        # 配置中心地址
+        server-addr: 223.82.75.76:8848
+        username: lovelumine
+        password: lovelumine47
+        namespace: fba13bcb-89a6-40d0-8492-40e3eadc9a0e
+        # 配置文件格式
+        file-extension: yml
+        extension-configs[0]:
+          data-id: mingink-mysql.yml
+          refresh: true
+        extension-configs[1]:
+          data-id: mingink-redis.yml
+          refresh: true
+        extension-configs[2]:
+          data‐id: mingink-minio.yml
+          refresh: true
+        extension-configs[3]:
+          data‐id: mingink-seata.yml
+          refresh: true
