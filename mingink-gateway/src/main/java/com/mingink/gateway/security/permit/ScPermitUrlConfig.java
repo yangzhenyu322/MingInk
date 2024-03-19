@@ -23,7 +23,8 @@ public class ScPermitUrlConfig {
             "/user/register/**",
             "/user/password/**",
             "/oauth/**",
-            "/sms/**"
+            "/sms/**",
+            "/pay/**"
     };
 
     /**
@@ -32,13 +33,9 @@ public class ScPermitUrlConfig {
     private String[] permitUrl = {
             // swagger
             "/doc.html",
-            "/v3/api-docs/**",
             "/webjars/**",
-            "/swagger/**",
-            "/favicon.ico",
-            "/swagger-ui.html",
-            "/mingink-system/**",
-            "/mingink-article/"
+            "/v3/api-docs/**",
+            "/favicon.ico"
             //  "/heartbeat/**"
     };
 
