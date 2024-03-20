@@ -1,9 +1,7 @@
 package com.mingink.common.core.annotation;
 
-import com.mingink.common.core.exception.GlobalExceptionHandler;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.lang.annotation.*;
@@ -24,9 +22,6 @@ import java.lang.annotation.*;
 @MapperScan("com.mingink.**.mapper")
 // 开启线程异步执行
 @EnableAsync
-// 自动加载类
-@Import(GlobalExceptionHandler.class)
-//@Import({ ApplicationConfig.class, FeignAutoConfiguration.class })
 public @interface EnableCustomConfig {
 
 }
