@@ -17,8 +17,11 @@ spring:
           data-id: mingink-redis.yml
           refresh: true
         extension-configs[2]:
-          data‐id: mingink-minio.yml
+          data‐id: mingink-mq.yml
           refresh: true
         extension-configs[3]:
           data‐id: mingink-seata.yml
+          refresh: true
+        extension-configs[4]:
+          data‐id: mingink-minio.yml
           refresh: true

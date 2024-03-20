@@ -56,12 +56,6 @@
             <version>${gorse.version}</version>
         </dependency>
 
-        <!-- Swagger模块 -->
-        <dependency>
-            <groupId>com.mingink</groupId>
-            <artifactId>mingink-common-swagger</artifactId>
-        </dependency>
-
         <!-- 系统接口 -->
         <dependency>
             <groupId>com.mingink</groupId>
@@ -74,9 +68,16 @@
             <artifactId>mingink-api-article</artifactId>
         </dependency>
 
+        <!-- mq模块 -->
         <dependency>
             <groupId>com.mingink</groupId>
-            <artifactId>mingink-common-core</artifactId>
+            <artifactId>mingink-common-mq</artifactId>
+        </dependency>
+
+        <!-- Swagger模块 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-swagger</artifactId>
         </dependency>
     </dependencies>
 
