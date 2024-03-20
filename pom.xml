@@ -114,6 +114,13 @@
                 <version>${mingink.version}</version>
             </dependency>
 
+            <!-- mq模块 -->
+            <dependency>
+                <groupId>com.mingink</groupId>
+                <artifactId>mingink-common-mq</artifactId>
+                <version>${mingink.version}</version>
+            </dependency>
+
             <!-- minio模块 -->
             <dependency>
                 <groupId>com.mingink</groupId>
