@@ -18,13 +18,19 @@ spring:
         - id: mingink-system # 路由id
           uri: lb://mingink-system # 路由的目标地址 lb就是负载均衡，后面跟服务名称
           predicates:
-            - Path=/api/v1/user/**, /api/v1/oauth/**, /api/v1/role/**, /api/v1/file/**, /api/v1/oss/**, /api/v1/sms/**, /api/v1/pay/** # 按照路径匹配
+            - Path=/api/v1/user/**, /api/v1/oauth/**, /api/v1/role/**, /api/v1/file/**, /api/v1/oss/**, /api/v1/sms/** # 按照路径匹配
           filters:
             - StripPrefix=2 # 去除前 n 个请求路径前缀
         - id: mingink-article
           uri: lb://mingink-article
           predicates:
             - Path=/api/v1/gorse/**, /api/v1/author/**, /api/v1/book/**, /api/v1/tag/**, /api/v1/book-tag/**, /api/v1/user-tag/**, /api/v1/chapter/**, /api/v1/comment/**
+          filters:
+            - StripPrefix=2 # 去除前 n 个请求路径前缀
+        - id: mingink-order
+          uri: lb://mingink-order
+          predicates:
+            - Path=/api/v1/pay/**, /api/v1/goods/**, /api/v1/order/**
           filters:
             - StripPrefix=2 # 去除前 n 个请求路径前缀
       globalcors: # 全局的跨域请求

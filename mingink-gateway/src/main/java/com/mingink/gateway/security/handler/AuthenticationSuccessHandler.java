@@ -2,11 +2,11 @@ package com.mingink.gateway.security.handler;
 
 import com.alibaba.fastjson2.JSON;
 import com.mingink.common.core.utils.jwt.JWTUtils;
-import jakarta.annotation.Resource;
+import com.mingink.common.redis.service.RedisService;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.buffer.DataBuffer;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.server.reactive.ServerHttpResponse;
@@ -36,8 +36,8 @@ import java.util.stream.Collectors;
 public class AuthenticationSuccessHandler extends WebFilterChainServerAuthenticationSuccessHandler {
     private int timeout = 60 * 60 * 24; // 默认24h
 
-    @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    private RedisService redisService;
 
     /**
      * 登录成功处理
@@ -73,12 +73,12 @@ public class AuthenticationSuccessHandler extends WebFilterChainServerAuthentica
             if (isRememberMe) {
                 token = JWTUtils.creatToken(payload, 60 * 60 * 24 * JWTUtils.REMEMBER_ME); // 创建token，用户勾选"请记住我时"，token的过期时间设置为7天
                 response.addCookie(ResponseCookie.from("token", token).maxAge(Duration.ofDays(JWTUtils.REMEMBER_ME)).path("/").build());
-                redisTemplate.opsForValue().set(authentication.getName(), token, JWTUtils.REMEMBER_ME, TimeUnit.DAYS); // 保存7天
+                redisService.setCacheObject(authentication.getName(), token, JWTUtils.REMEMBER_ME, TimeUnit.DAYS); // 保存7天
             } else {
                 token = JWTUtils.creatToken(payload, 60 * 60 * 24 * 1); // 创建token，过期时间设置为24h
                 response.addCookie(ResponseCookie.from("token", token).maxAge(Duration.ofDays(1)).path("/").build());
                 // maxAge默认-1 浏览器关闭cookie失效
-                redisTemplate.opsForValue().set(authentication.getName(), token, 1, TimeUnit.DAYS);
+                redisService.setCacheObject(authentication.getName(), token, 1, TimeUnit.DAYS);
             }
 
             map.put("code", HttpStatus.OK.value());

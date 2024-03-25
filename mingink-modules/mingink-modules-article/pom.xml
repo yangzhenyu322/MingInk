@@ -10,7 +10,6 @@
     </parent>
 
     <artifactId>mingink-modules-article</artifactId>
-
     <description>
         mingink-modules-article小说模块
     </description>

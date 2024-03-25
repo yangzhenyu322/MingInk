@@ -1,0 +1,2 @@
+com.mingink.common.redis.config.RedisConfig
+com.mingink.common.redis.service.RedisService

@@ -15,6 +15,7 @@
         <module>mingink-common-mq</module>
         <module>mingink-common-swagger</module>
         <module>mingink-common-oss</module>
+        <module>mingink-common-redis</module>
     </modules>
 
     <artifactId>mingink-common</artifactId>
