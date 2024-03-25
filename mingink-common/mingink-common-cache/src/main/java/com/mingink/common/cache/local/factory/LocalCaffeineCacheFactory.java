@@ -47,5 +47,4 @@ public class LocalCaffeineCacheFactory {
                 .recordStats() //记录命中
                 .build();
     }
-
 }

@@ -4,15 +4,14 @@ import com.baidubce.services.sms.SmsClient;
 import com.baidubce.services.sms.model.SendMessageV3Request;
 import com.baidubce.services.sms.model.SendMessageV3Response;
 import com.mingink.common.core.domain.R;
+import com.mingink.common.redis.service.RedisService;
 import com.mingink.system.config.BaiDuSMSConfiguration;
 import com.mingink.system.service.ISMSService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -29,8 +28,8 @@ public class SMSService implements ISMSService {
     @Autowired
     private SmsClient smsClient;
 
-    @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    private RedisService redisService;
 
     /**
      * 异步发送手机验证码
@@ -66,7 +65,7 @@ public class SMSService implements ISMSService {
             //  submit success
             String requestId = response.getRequestId();
             // 缓存<requestId, randomCode>以验证用户输入的inputCode, 并设置有效时间（单位：秒）
-            redisTemplate.opsForValue().set(requestId, randomCode, validTime, TimeUnit.SECONDS);
+            redisService.setCacheObject(requestId, randomCode, validTime, TimeUnit.SECONDS);
 
             // 输出响应结果到日志
             log.info("RequestId:{}", requestId);
@@ -87,7 +86,8 @@ public class SMSService implements ISMSService {
      */
     @Override
     public R<?> verifyCode(String requestId, String inputCode) {
-        String redisCode = (String) redisTemplate.opsForValue().get(requestId);
+//        String redisCode = (String) redisTemplate.opsForValue().get(requestId);
+        String redisCode = redisService.getCacheObject(requestId);
         if (redisCode == null) {
             // 验证码过期
             log.error("[{}]验证失败:{}", requestId, "验证码已过期");

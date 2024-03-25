@@ -1,4 +1,4 @@
-package com.mingink.system.config;
+package com.mingink.order.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

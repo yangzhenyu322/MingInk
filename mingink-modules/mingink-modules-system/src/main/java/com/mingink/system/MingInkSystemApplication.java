@@ -2,7 +2,6 @@ package com.mingink.system;
 
 import com.mingink.common.core.annotation.EnableCustomConfig;
 import com.mingink.common.core.annotation.EnableMIFeignClients;
-import com.mingink.common.oss.annotation.EnableCustomMinIO;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Author: ZenSheep
  * @Date: 2024/1/30 21:09
  */
+
 @EnableCustomConfig
-@EnableCustomMinIO
 @EnableMIFeignClients
 @SpringBootApplication
 public class MingInkSystemApplication {

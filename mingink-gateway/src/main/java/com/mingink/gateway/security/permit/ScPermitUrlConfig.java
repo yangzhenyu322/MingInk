@@ -24,7 +24,7 @@ public class ScPermitUrlConfig {
             "/user/password/**",
             "/oauth/**",
             "/sms/**",
-            "/pay/**"
+            "/order/**"
     };
 
     /**

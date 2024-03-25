@@ -2,9 +2,9 @@ package com.mingink.gateway.security.handler;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.mingink.common.core.utils.jwt.JWTUtils;
-import jakarta.annotation.Resource;
+import com.mingink.common.redis.service.RedisService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpCookie;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.server.WebFilterExchange;
@@ -22,8 +22,10 @@ import java.util.Map;
 @Slf4j
 @Component
 public class LogoutHandler implements ServerLogoutHandler {
-    @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+//    @Resource
+//    private RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    private RedisService redisService;
 
     @Override
     public Mono<Void> logout(WebFilterExchange webFilterExchange, Authentication authentication) {
@@ -32,7 +34,8 @@ public class LogoutHandler implements ServerLogoutHandler {
         try {
             if (cookie != null) {
                 Map<String, Object> userMap = JWTUtils.getTokenInfo(cookie.getValue());
-                redisTemplate.delete((String) userMap.get("username"));
+//                redisTemplate.delete((String) userMap.get("username"));
+                redisService.deleteObject((String) userMap.get("username"));
                 log.info("remove token");
             }
         } catch (JWTDecodeException e) {

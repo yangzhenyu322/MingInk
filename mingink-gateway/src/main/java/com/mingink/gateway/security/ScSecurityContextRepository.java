@@ -2,9 +2,9 @@ package com.mingink.gateway.security;
 
 import com.alibaba.fastjson2.JSON;
 import com.mingink.common.core.utils.jwt.JWTUtils;
-import jakarta.annotation.Resource;
+import com.mingink.common.redis.service.RedisService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -31,8 +31,8 @@ import java.util.Map;
 @Slf4j
 @Component
 public class ScSecurityContextRepository implements ServerSecurityContextRepository {
-    @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    private RedisService redisService;
 
     @Override
     public Mono<Void> save(ServerWebExchange exchange, SecurityContext context) {
@@ -53,7 +53,7 @@ public class ScSecurityContextRepository implements ServerSecurityContextReposit
                 Map<String, Object> userMap = JWTUtils.getTokenInfo(token);
                 log.info("username:{}", userMap.get("username"));
                 // 通过用户名从redis缓存获取对应token
-                String redisToken = (String) redisTemplate.opsForValue().get(userMap.get("username"));
+                String redisToken = redisService.getCacheObject((String) userMap.get("username"));
                 if (redisToken == null || !redisToken.equals(token)) {
                     // token过期或token不正确
                     return Mono.empty();

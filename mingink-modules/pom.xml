@@ -12,6 +12,7 @@
     <modules>
         <module>mingink-modules-system</module>
         <module>mingink-modules-article</module>
+        <module>mingink-modules-order</module>
     </modules>
 
     <artifactId>mingink-modules</artifactId>
