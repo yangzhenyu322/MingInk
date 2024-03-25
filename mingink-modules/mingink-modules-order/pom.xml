@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mingink</groupId>
+        <artifactId>mingink-modules</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>mingink-modules-order</artifactId>
+    <description>
+        mingink-modules-order订单模块
+    </description>
+
+    <properties>
+        <!-- 支付宝工具 -->
+        <apipay.sdk.version>4.34.0.ALL</apipay.sdk.version>
+    </properties>
+
+    <dependencies>
+        <!-- SpringCloud Alibaba Nacos Discovery -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!-- SpringCloud Alibaba Nacos Config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!-- seata模块 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.seata</groupId>
+                    <artifactId>seata-spring-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring-boot-starter</artifactId>
+            <version>${seata.version}</version>
+        </dependency>
+
+        <!-- 支付宝sdk -->
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>${apipay.sdk.version}</version>
+        </dependency>
+
+        <!-- 系统接口 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-api-system</artifactId>
+        </dependency>
+
+        <!-- 小说接口 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-api-article</artifactId>
+        </dependency>
+
+        <!-- mq模块 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-mq</artifactId>
+        </dependency>
+
+        <!-- redis模块 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-redis</artifactId>
+        </dependency>
+
+        <!-- Swagger模块 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-swagger</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

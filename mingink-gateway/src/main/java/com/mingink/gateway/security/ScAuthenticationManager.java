@@ -76,7 +76,6 @@ public class ScAuthenticationManager implements ReactiveAuthenticationManager {
         // 登录成功，进行授权
         List<Role> roles = reactiveRemoteRoleService.getRolesByUserId(user.getUserId()).get();
 
-//        String role = sysRole.getRoleKey();
         Collection<GrantedAuthority> authorities = new ArrayList<>();
         roles.stream().forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getRoleKey())));
 

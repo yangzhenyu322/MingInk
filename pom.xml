@@ -114,6 +114,13 @@
                 <version>${mingink.version}</version>
             </dependency>
 
+            <!-- redis模块 -->
+            <dependency>
+                <groupId>com.mingink</groupId>
+                <artifactId>mingink-common-redis</artifactId>
+                <version>${mingink.version}</version>
+            </dependency>
+
             <!-- mq模块 -->
             <dependency>
                 <groupId>com.mingink</groupId>
