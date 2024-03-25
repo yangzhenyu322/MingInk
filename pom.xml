@@ -135,6 +135,13 @@
                 <version>${mingink.version}</version>
             </dependency>
 
+            <!-- seata模块 -->
+            <dependency>
+                <groupId>com.mingink</groupId>
+                <artifactId>mingink-common-seata</artifactId>
+                <version>${mingink.version}</version>
+            </dependency>
+
             <!-- Swagger模块 -->
             <dependency>
                 <groupId>com.mingink</groupId>

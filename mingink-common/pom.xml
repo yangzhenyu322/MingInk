@@ -13,6 +13,7 @@
         <module>mingink-common-core</module>
         <module>mingink-common-cache</module>
         <module>mingink-common-mq</module>
+        <module>mingink-common-seata</module>
         <module>mingink-common-swagger</module>
         <module>mingink-common-oss</module>
         <module>mingink-common-redis</module>
