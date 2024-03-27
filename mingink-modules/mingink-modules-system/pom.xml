@@ -83,16 +83,16 @@
             <artifactId>mingink-api-article</artifactId>
         </dependency>
 
-        <!-- mq模块 -->
-        <dependency>
-            <groupId>com.mingink</groupId>
-            <artifactId>mingink-common-mq</artifactId>
-        </dependency>
-
         <!-- redis模块 -->
         <dependency>
             <groupId>com.mingink</groupId>
             <artifactId>mingink-common-redis</artifactId>
+        </dependency>
+
+        <!-- mq模块 -->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-mq</artifactId>
         </dependency>
 
         <!-- seata模块 -->

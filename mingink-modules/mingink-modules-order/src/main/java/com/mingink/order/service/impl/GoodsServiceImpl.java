@@ -31,6 +31,8 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
         goods.setSubject(goodsRequest.getSubject());
         goods.setAmount(goodsRequest.getAmount());
         goods.setInventory(goodsRequest.getInventory());
+        goods.setRoleId(goodsRequest.getRoleId());
+        goods.setEffectiveDuration(goodsRequest.getEffectiveDuration());
         goods.setStatus(0);
         goods.setCreateTime(LocalDateTime.now());
 
@@ -55,6 +57,8 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
         goods.setSubject(goodsRequest.getSubject());
         goods.setAmount(goodsRequest.getAmount());
         goods.setInventory(goodsRequest.getInventory());
+        goods.setRoleId(goodsRequest.getRoleId());
+        goods.setEffectiveDuration(goodsRequest.getEffectiveDuration());
         goods.setStatus(status);
         if (status == 0) {
             goods.setCreateTime(LocalDateTime.now());

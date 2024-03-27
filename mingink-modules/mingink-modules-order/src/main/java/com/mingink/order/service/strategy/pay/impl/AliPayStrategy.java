@@ -57,7 +57,7 @@ public class AliPayStrategy implements IPayStrategy {
         bizContent.put("product_code", "FAST_INSTANT_TRADE_PAY");
         bizContent.put("qr_pay_mode", 2); // PC扫码的支付方式, 2-跳转模式，0、1、3、4-前置模式
         // 订单绝对超时时间, 格式为yyyy-MM-dd HH:mm:ss。超时时间范围：1m~15d
-        bizContent.put("qrcode_width", "30m");
+        bizContent.put("time_expire", payParams.getExpireTime());
         request.setBizContent(bizContent.toString());
 
         // 3. 执行请求,调用SDK生成支付表单
@@ -155,7 +155,6 @@ public class AliPayStrategy implements IPayStrategy {
         return false;
     }
 
-
     // ************* 下面是原始方法 *************
     @Override
     public String getPayPage(AliPay aliPay) {
@@ -212,8 +211,6 @@ public class AliPayStrategy implements IPayStrategy {
         bizContent.put("product_code", "FAST_INSTANT_TRADE_PAY");
         bizContent.put("qr_pay_mode", 4); // PC扫码的支付方式, 2-跳转模式，0、1、3、4-前置模式
         bizContent.put("qrcode_width", aliPay.getQrcodeWidth());
-        // 订单绝对超时时间, 格式为yyyy-MM-dd HH:mm:ss。超时时间范围：1m~15d
-//        bizContent.put("qrcode_width", "30m");
         request.setBizContent(bizContent.toString());
 
         // 3. 执行请求

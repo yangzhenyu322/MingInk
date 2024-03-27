@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 /**
  * 用户角色关联实体
  * @Author: ZenSheep
@@ -29,4 +31,10 @@ public class UserRole {
     @TableField("role_id")
     @Schema(description = "角色ID")
     private Long roleId;
+
+    @Schema(description = "是否永久，0-永久，1-非永久")
+    private Integer isDurable;
+
+    @Schema(description = "权限过期时间")
+    private LocalDateTime expirationTime;
 }

@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * @Author: ZenSheep
@@ -25,6 +26,9 @@ public class PayParams {
 
     @Schema(description = "订单标题（必填），如Iphone6 16G")
     private String subject;
+
+    @Schema(description = "订单超时时间")
+    private LocalDateTime expireTime;
 
     @Schema(description = "返回路径，支付后前端跳转 url 链接，要求该前端页面能够被公网访问，开发过程可以使用netapp内网穿透，例如  http://zensheep.natapp1.cc/dashboard/workbench，zensheep.natapp1.cc表示访问域名，/dashboard/workbench表示前端页面路由")
     private String returnUrl;
