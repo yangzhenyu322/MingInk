@@ -27,8 +27,7 @@ public class OrderController {
     private IOrdersService ordersService;
 
     @GetMapping("/userId/{userId}")
-    @Operation(hidden = true)
-//    @Operation(summary = "查询某用户的所有订单信息")
+    @Operation(summary = "查询某用户的所有订单信息")
     public R<List<Orders>> getOrdersByUserId(@PathVariable("userId") String userId) {
         Map<String, Object> map = new HashMap<>();
         map.put("user_id", userId);

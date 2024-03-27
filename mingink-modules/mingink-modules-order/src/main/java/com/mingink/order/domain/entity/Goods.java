@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -18,6 +19,7 @@ import java.time.LocalDateTime;
 @TableName("goods")
 @Schema(description = "商品")
 public class Goods implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.NONE)
@@ -32,6 +34,12 @@ public class Goods implements Serializable {
 
     @Schema(description = "库存量, -1表示不限量")
     private Long inventory;
+
+    @Schema(description = "商品权限，购买后即授予响应role权限")
+    private Long roleId;
+
+    @Schema(description = "有效时长,即用户购买后持有商品的时长,单位分钟,-1表示购买即永久持有")
+    private Integer effectiveDuration;
 
     @Schema(description = "商品状态,0-上架/创建、1-告罄、2-下架")
     private Integer status;

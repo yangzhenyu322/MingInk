@@ -1,0 +1,2 @@
+com.mingink.common.mq.config.RabbitMQConfig
+com.mingink.common.mq.config.ErrorMessageConfig
