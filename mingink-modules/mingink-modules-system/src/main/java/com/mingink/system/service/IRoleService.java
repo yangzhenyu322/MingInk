@@ -1,6 +1,7 @@
 package com.mingink.system.service;
 
 import com.mingink.system.api.domain.entiry.Role;
+import com.mingink.system.api.domain.entiry.UserRole;
 
 import java.util.List;
 
@@ -11,7 +12,13 @@ import java.util.List;
 public interface IRoleService {
     List<Role> getRolesByUserId(String userId);
 
-    Boolean addUserRole(String userId, Long roleId);
+    UserRole getUserRoleByIds(String userId, Long roleId);
+
+    Boolean addUserRole(UserRole userRole);
+
+    Boolean updateUserRole(UserRole userRole);
 
     Boolean removeUserRoleByUserId(String userId);
+
+    Boolean removeUserRole(String userId, Long roleId);
 }

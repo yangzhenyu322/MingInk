@@ -11,6 +11,7 @@ import com.mingink.common.core.utils.id.SnowFlakeFactory;
 import com.mingink.common.core.utils.jwt.JWTUtils;
 import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.api.domain.entiry.User;
+import com.mingink.system.api.domain.entiry.UserRole;
 import com.mingink.system.api.domain.vo.UserSafeInfo;
 import com.mingink.system.mapper.UserMapper;
 import com.mingink.system.service.IOSSService;
@@ -173,7 +174,11 @@ public class UserService implements IUserService {
         }
 
         // 设置默认权限
-        roleService.addUserRole(user.getUserId(), 3L);
+        UserRole userRole = new UserRole();
+        userRole.setUserId(user.getUserId());
+        userRole.setRoleId(3L);
+        userRole.setIsDurable(0); // 0表示永久权限
+        roleService.addUserRole(userRole);
 
         // 注册Gorse User
         GorseUserRequest gorseUserRequest = new GorseUserRequest();

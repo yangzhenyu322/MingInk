@@ -18,6 +18,7 @@ public interface IPayService {
     PayNotifyResult orderPayNotify(HttpServletRequest request, Integer payMode) throws AlipayApiException;
 
     Boolean orderRefundPay(PayRefundParams payRefundParams) throws AlipayApiException;
+    // 下面是原始方法
 
     String getPayPage(AliPay aliPay, String payType);
 

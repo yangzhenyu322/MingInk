@@ -2,9 +2,9 @@ package com.mingink.system.api;
 
 import com.mingink.system.api.config.DefaultFeignConfiguration;
 import com.mingink.system.api.domain.entiry.Role;
+import com.mingink.system.api.domain.entiry.UserRole;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,4 +17,16 @@ import java.util.List;
 public interface RemoteRoleService {
     @GetMapping("/role/userId/{userId}")
     public List<Role> getRolesByUserId(@PathVariable("userId") String userId);
+
+    @GetMapping("/role/userId/{userId}/roleId/{roleId}")
+    public UserRole getUserRoleByIds(@PathVariable("userId") String userId, @PathVariable("roleId") Long roleId);
+
+    @PostMapping("/role/new")
+    public Boolean addUserRole(@RequestBody UserRole userRole);
+
+    @PutMapping("/role/update")
+    public Boolean updateUserRole(@RequestBody UserRole userRole);
+
+    @DeleteMapping("/role/userId/{userId}/roleId/{roleId}")
+    public Boolean removeUserRole(@PathVariable("userId") String userId, @PathVariable("roleId") Long roleId);
 }
