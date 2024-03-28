@@ -40,6 +40,20 @@ services:
     volumes:
       - ./logs/mingink-modules-article:/app/log
 
+  mingink-modules-order:
+    container_name: mingink-modules-order
+    build:
+      context: ./mingink-modules/mingink-modules-order
+      dockerfile: Dockerfile
+    ports:
+      - "8084:8084"
+    networks:
+      - mynetwork
+    depends_on: # 本服务依赖的服务，控制启动先后顺序
+      - mingink-gateway
+    volumes:
+      - ./logs/mingink-modules-order:/app/log
+
 # 网络，不定义的话就是默认网络
 networks:
   mynetwork:
