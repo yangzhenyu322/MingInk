@@ -12,5 +12,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "mingink-article", contextId = "remote-book", configuration = DefaultFeignConfiguration.class)
 public interface RemoteAuthorService {
     @DeleteMapping("/author/userId/{userId}")
-    public Boolean removeAuthorByUserId(@PathVariable("userId") String userId);
+    Boolean removeAuthorByUserId(@PathVariable("userId") String userId);
 }

@@ -12,7 +12,7 @@ MingInk是一个同人小说平台，为创作者提供了分享、创作和阅�
 
 注册中心：Nacos
 
-远程调用: OpenFeign  
+远程调用: OpenFeign
 
 缓存：Redis分布式缓存 + 本地缓存  
 
@@ -20,7 +20,7 @@ MingInk是一个同人小说平台，为创作者提供了分享、创作和阅�
 
 数据库：MySQL 、MyBatis-Plus
 
-网关：Gateway  
+网关：Gateway
 
 安全认证: Spring Security、JWT、Oauth2 
 
