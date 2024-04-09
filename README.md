@@ -5,9 +5,12 @@
 MingInk是一个同人小说平台，为创作者提供了分享、创作和阅读同人小说的平台。在这里，作者可以创作属于自己的故事，重新构想和发展已有的角色和情节，与读者互动并分享独特的创意世界。读者则能够在平台上找到各种各样风格的同人小说，探索作者的独特视角和故事发展，形成一个充满创意和热情的文学社区。
 
 ## 总体架构图
-<img src="/assets/1.png" alt="架构图" title="架构图" style="zoom: 25%;" />
+![系统架构通用模板](./assets/系统架构通用模板.png)
+
+
 
 ## 技术选型
+
 开发框架：SpringBoot、SpringCloud
 
 注册中心：Nacos
@@ -54,9 +57,10 @@ com.mingink
 |           └──mingink-common-swagger	        // 在线开发文档模块
 |--mingink-gateway        // 网关模块【8081】
 |--mingink-modules        // 业务模块
-|           └──mingink-system                   // 系统服务模块【8082】
-|           └──mingink-article                  // 小说服务模块【8083】
-|           └──mingink-order                    // 订单服务模块【8084】
+|           └──mingink-modules-system                   // 系统服务模块【8082】
+|           └──mingink-modules-article                  // 小说服务模块【8083】
+|           └──mingink-modules-order                    // 订单服务模块【8084】
+|           └──mingink-modules-job                      // 定时任务模块【8085】
 |--docker-compose.env.yml                       // docker-compose环境部署文件
 |--docker-compose.service.yml					// docker-compose服务部署文件
 |--pom.xml                                      // 公共依赖
