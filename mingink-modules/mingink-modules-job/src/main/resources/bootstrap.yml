@@ -1,0 +1,60 @@
+# Tomcat
+server:
+  port: 8085
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: mingink-job
+  profiles:
+    # 公共配置文件：bootstrap-common.yml、application-common.yml
+    include: common
+  quartz:
+    # 存储方式，可选值：memory（内存方式，不推荐）、jdbc（持久化存储，推荐）
+    job-store-type: jdbc
+    # 是否等待任务执行完毕后，容器才会关闭
+    wait-for-jobs-to-complete-on-shutdown: false
+    # 配置的job是否覆盖已经存在的JOB信息, 若为true-则会更新job信息以及datamap，若为false-则重启后job信息和datamap则与重启前一致
+    # 平时用false，更新job后才用true更新job信息
+    overwrite-existing-jobs: false
+    properties:
+      org:
+        quartz:
+          # 调度器属性配置
+          scheduler:
+            # 调度标识名 急群众每一个实例都必须使用相同的名称
+            instanceName: SC_Scheduler
+            # 实例节点 ID 自动生成，每一个必须不同
+            instanceId: AUTO
+          jobStore:
+            # 存储内容使用的类，class: org.quartz.impl.jdbcjobstore.JobStoreTX 改为 LocalDataSourceJobStore
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            # 数据库代理类，可选值：PostgreSQLDelegate、StdJDBCDelegate，一般用 StdJDBCDelegate 可以满足大部分数据库
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            isClustered: true #打开群集功能
+            clusterCheckinInterval: 15000 # 集群配置：检查集群下的其它调度器实体的时间间隔
+            maxMisfiresToHandleAtATime: 1 # 设置一个频度（毫秒），用于实例报告给集群中的其他实例
+            misfireThreshold: 60000 # 触发器触发失败后再次触发的时间间隔
+            dataSource: quartz_jobs
+          dataSource:
+            quartz_jobs:
+              driver: com.mysql.cj.jdbc.Driver
+              URL: jdbc:mysql://223.82.75.76:3306/quartz_jobs?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+              user: root
+              password: lovelumine
+          # 线程池配置
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+
+# springdoc-openapi 项目配置
+springdoc:
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan:
+        # 配置接口文档扫描包路径，每个服务的路径不同
+        - com.mingink.job.controller

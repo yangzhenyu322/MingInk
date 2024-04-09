@@ -13,6 +13,7 @@
         <module>mingink-modules-system</module>
         <module>mingink-modules-article</module>
         <module>mingink-modules-order</module>
+        <module>mingink-modules-job</module>
     </modules>
 
     <artifactId>mingink-modules</artifactId>

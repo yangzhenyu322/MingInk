@@ -56,6 +56,56 @@ public class WebSecurityConfig {
     @Autowired
     private LogoutSuccessHandler logoutSuccessHandler;
 
+//    /**
+//     *
+//     * 处理链路：
+//     *      login : CookieToHeadersFilter -> ScSecurityContextRepository -> ScAuthenticationManager（优先级高于  SecurityUserDetailsService）  -> AuthenticationSuccessHandler/AuthenticationFailHandler
+//     *      logout: CookieToHeadersFilter -> ScSecurityContextRepository -> LogoutHandler -> LogoutSuccessHandler
+//     *      未登录进行 url request: CookieToHeadersFilter -> ScSecurityContextRepository -> ScAuthorizationManager -> ScAuthenticationEntryPoint
+//     *      登录后进行url request: CookieToHeadersFilter -> ScSecurityContextRepository -> ScAuthorizationManager -> CookieToHeadersFilter（子线程, 可以在前面ScSecurityContextRepository更新token并重新设置请求头）-> 服务接口
+//     *      鉴权失败: CookieToHeadersFilter -> ScSecurityContextRepository -> ScAuthorizationManager -> ScAuthenticationEntryPoint -> ScAccessDeniedHandler
+//     * @param http
+//     * @return
+//     */
+//    @Bean
+//    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+//        // 将Cookie写入Http请求头中，SecurityWebFiltersOrder枚举类定义了执行次序
+//        http.addFilterBefore(cookieToHeadersFilter, SecurityWebFiltersOrder.HTTP_HEADERS_WRITER);
+//
+//        http
+//            // 存储认证信息
+//            .securityContextRepository(scSecurityContextRepository)
+//            //请求拦截处理
+//            .authorizeExchange(exchange -> exchange // 请求拦截处理
+//                    .pathMatchers(scPermitUrlConfig.permit()).permitAll() // 默认放开的地址
+//                    .pathMatchers(HttpMethod.OPTIONS).permitAll() // 放开的请求方法
+//                    .anyExchange().access(scAuthorizationManager) // 其它的地址走后续验证
+//            )
+//            // 登录接口
+//            .httpBasic()
+//            .and()
+//            .formLogin().loginPage("/api/v1/login") // 在ScAuthorizationManager的authenticate处理登录请求
+//            .authenticationSuccessHandler(authenticationSuccessHandler) //认证成功
+//            .authenticationFailureHandler(authenticationFailHandler) // 认证失败
+//            .and()
+//            .exceptionHandling().authenticationEntryPoint(scAuthenticationEntryPoint) // 未认证访问服务接口处理
+//            .and()
+//            .exceptionHandling().accessDeniedHandler(scAccessDeniedHandler) // 授权失败
+//            .and()
+//            // 登出接口
+//            .logout().logoutUrl("/api/v1/logout")
+//            .logoutHandler(logoutHandler) // 登出处理
+//            .logoutSuccessHandler(logoutSuccessHandler)  // 登出成功处理
+//            .and()
+//            // 跨域配置
+//            .cors()
+//            .configurationSource(corsConfigurationSource())
+//            // 关闭csrf防护，防止用户无法被认证
+//            .and().csrf().disable();
+//
+//        return http.build();
+//    }
+
     /**
      *
      * 处理链路：
@@ -73,39 +123,39 @@ public class WebSecurityConfig {
         http.addFilterBefore(cookieToHeadersFilter, SecurityWebFiltersOrder.HTTP_HEADERS_WRITER);
 
         http
-            // 存储认证信息
-            .securityContextRepository(scSecurityContextRepository)
-            //请求拦截处理
-            .authorizeExchange(exchange -> exchange // 请求拦截处理
-                    .pathMatchers(scPermitUrlConfig.permit()).permitAll() // 默认放开的地址
-                    .pathMatchers(HttpMethod.OPTIONS).permitAll() // 放开的请求方法
-                    .anyExchange().access(scAuthorizationManager) // 其它的地址走后续验证
-            )
-            // 登录接口
-            .httpBasic()
-            .and()
-            .formLogin().loginPage("/api/v1/login") // 在ScAuthorizationManager的authenticate处理登录请求
-            .authenticationSuccessHandler(authenticationSuccessHandler) //认证成功
-            .authenticationFailureHandler(authenticationFailHandler) // 认证失败
-            .and()
-            .exceptionHandling().authenticationEntryPoint(scAuthenticationEntryPoint) // 未认证访问服务接口处理
-            .and()
-            .exceptionHandling().accessDeniedHandler(scAccessDeniedHandler) // 授权失败
-            .and()
-            // 登出接口
-            .logout().logoutUrl("/api/v1/logout")
-            .logoutHandler(logoutHandler) // 登出处理
-            .logoutSuccessHandler(logoutSuccessHandler)  // 登出成功处理
-            .and()
-            // 跨域配置
-            .cors()
-            .configurationSource(corsConfigurationSource())
-            // 关闭csrf防护，防止用户无法被认证
-            .and().csrf().disable();
+                // 存储认证信息
+                .securityContextRepository(scSecurityContextRepository)
+                //请求拦截处理
+                .authorizeExchange(exchange -> exchange // 请求拦截处理
+                        .pathMatchers(scPermitUrlConfig.permit()).permitAll() // 默认放开的地址
+                        .pathMatchers(HttpMethod.OPTIONS).permitAll() // 放开的请求方法
+                        .anyExchange().access(scAuthorizationManager) // 其它的地址走后续验证
+                )
+                // 登录接口
+                .formLogin(form -> form
+                        .loginPage("/api/v1/login") // 登录请求路径，在 ScAuthorizationManager 的 authenticate 处理登录请求
+                        .authenticationSuccessHandler(authenticationSuccessHandler) // 认证成功处理
+                        .authenticationFailureHandler(authenticationFailHandler) // 认证失败处理
+                )
+                // 处理认证/授权异常
+                .exceptionHandling(exceptionHandlingSpec -> exceptionHandlingSpec
+                        .authenticationEntryPoint(scAuthenticationEntryPoint) // 未认证访问服务接口处理
+                        .accessDeniedHandler(scAccessDeniedHandler) // 授权失败处理
+                )
+                .logout(logoutSpec -> logoutSpec
+                        .logoutUrl("/api/v1/logout") // 登出路径
+                        .logoutHandler(logoutHandler) // 处理登出请求
+                        .logoutSuccessHandler(logoutSuccessHandler) // 登出成功处理
+                )
+                // 关闭csrf防护，防止用户无法被认证
+                .csrf(csrf -> csrf.disable())
+                // 跨域配置
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()));
 
         return http.build();
     }
 
+    @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource(new PathPatternParser());
         CorsConfiguration corsConfiguration = new CorsConfiguration();

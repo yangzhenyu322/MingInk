@@ -20,4 +20,4 @@ EXPOSE 8081
 
 # 启动命令
 # CMD允许运行时覆盖，而ENTRYPOINT不可以
- CMD ["sh", "-c", "java -jar mingink-gateway.jar >./log/log.out 2>&1"]
+CMD ["sh", "-c", "java -jar mingink-gateway.jar >./log/log.out 2>&1"]

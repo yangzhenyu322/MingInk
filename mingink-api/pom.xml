@@ -12,6 +12,7 @@
     <modules>
         <module>mingink-api-system</module>
         <module>mingink-api-article</module>
+        <module>mingink-api-job</module>
     </modules>
 
     <artifactId>mingink-api</artifactId>

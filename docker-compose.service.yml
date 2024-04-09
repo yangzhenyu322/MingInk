@@ -2,6 +2,7 @@ version: '3'
 services:
   mingink-gateway:
     container_name: mingink-gateway
+    restart: always
     build: # 服务的 Docker 构建文件位置
       context: ./mingink-gateway
       dockerfile: Dockerfile
@@ -14,6 +15,7 @@ services:
 
   mingink-modules-system:
     container_name: mingink-modules-system
+    restart: always
     build:
       context: ./mingink-modules/mingink-modules-system
       dockerfile: Dockerfile
@@ -28,6 +30,7 @@ services:
 
   mingink-modules-article:
     container_name: mingink-modules-article
+    restart: always
     build:
       context: ./mingink-modules/mingink-modules-article
       dockerfile: Dockerfile
@@ -42,6 +45,7 @@ services:
 
   mingink-modules-order:
     container_name: mingink-modules-order
+    restart: always
     build:
       context: ./mingink-modules/mingink-modules-order
       dockerfile: Dockerfile
