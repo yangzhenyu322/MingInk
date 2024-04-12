@@ -20,12 +20,6 @@
     </properties>
 
     <dependencies>
-        <!-- SpringCloud Alibaba Nacos  -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
         <!-- SpringCloud Alibaba Nacos Config -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -62,6 +56,18 @@
             <artifactId>java-jwt</artifactId>
         </dependency>
 
+        <!-- sentinel模块-->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-sentinel</artifactId>
+        </dependency>
+
+        <!-- sentinel-gateway -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
+        </dependency>
+
         <!-- 系统接口 -->
         <dependency>
             <groupId>com.mingink</groupId>
@@ -82,6 +88,16 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-swagger</artifactId>
+        </dependency>
+
         <!-- knife4j-gateway -->
         <dependency>
             <groupId>org.springdoc</groupId>
@@ -93,16 +109,6 @@
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
             <version>${knife4j.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.mingink</groupId>
-            <artifactId>mingink-common-redis</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.mingink</groupId>
-            <artifactId>mingink-common-swagger</artifactId>
         </dependency>
     </dependencies>
 

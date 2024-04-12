@@ -1,5 +1,6 @@
 package com.mingink.order.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.mingink.common.core.domain.R;
 import com.mingink.order.domain.dto.GoodsRequest;
 import com.mingink.order.domain.entity.Goods;
@@ -29,6 +30,7 @@ public class GoodsController {
     }
 
     @GetMapping("/goodsId/{goodsId}")
+    @SentinelResource("hot")
     @Operation(summary = "通过商品ID查询单个商品信息")
     public R<Goods> getGoodsById(@PathVariable("goodsId") String goodsId) {
         return R.ok(goodsService.getById(goodsId));
