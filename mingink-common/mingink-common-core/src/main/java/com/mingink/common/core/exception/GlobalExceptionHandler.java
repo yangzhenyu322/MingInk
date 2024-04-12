@@ -19,7 +19,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(BusinessException.class)
     public R<?> businessExceptionHandler(BusinessException e) {
         log.error("businessException: " + e.getMessage(), e);
-        if(StringUtils.isNotEmpty(e.getDescription())) return R.fail(e.getCode(), e.getDescription());
+        if(StringUtils.isNotEmpty(e.getDescription())) {
+            return R.fail(e.getCode(), e.getDescription());
+        }
         return R.fail(e.getCode(), e.getMessage());
     }
 

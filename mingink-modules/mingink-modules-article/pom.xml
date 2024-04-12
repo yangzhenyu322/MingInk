@@ -62,6 +62,12 @@
             <artifactId>mingink-common-mq</artifactId>
         </dependency>
 
+        <!-- sentinel模块-->
+        <dependency>
+            <groupId>com.mingink</groupId>
+            <artifactId>mingink-common-sentinel</artifactId>
+        </dependency>
+
         <!-- seata模块 -->
         <dependency>
             <groupId>com.mingink</groupId>

@@ -128,6 +128,13 @@
                 <version>${mingink.version}</version>
             </dependency>
 
+            <!-- sentinel模块-->
+            <dependency>
+                <groupId>com.mingink</groupId>
+                <artifactId>mingink-common-sentinel</artifactId>
+                <version>${mingink.version}</version>
+            </dependency>
+
             <!-- minio模块 -->
             <dependency>
                 <groupId>com.mingink</groupId>
