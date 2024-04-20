@@ -1,0 +1,21 @@
+# Tomcat
+server:
+  port: 8084
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: mingink-order
+  profiles:
+    # 公共配置文件：bootstrap-common.yml、application-common.yml
+    include: common
+
+# springdoc-openapi 项目配置
+springdoc:
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan:
+        # 配置接口文档扫描包路径，每个服务的路径不同
+        - com.mingink.order.controller

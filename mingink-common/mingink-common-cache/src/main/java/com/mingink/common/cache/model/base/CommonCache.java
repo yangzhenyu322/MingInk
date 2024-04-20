@@ -51,6 +51,4 @@ public class CommonCache implements Serializable {
     public void setRetryLater(boolean retryLater) {
         this.retryLater = retryLater;
     }
-
 }
-
