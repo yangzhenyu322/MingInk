@@ -26,5 +26,4 @@ public interface LocalCache<K, V> {
      * @param key 缓存的key
      */
     void remove(K key);
-
 }
