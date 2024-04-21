@@ -12,4 +12,4 @@ sh startup.sh
 # 4、清除 <none> 的镜像：当 docker build 或者 docker pull 新镜像的时候，如果之前已经存在了，涉及到镜像版本更新的话，那么之前的镜像就变成了临时镜像，也就是 <none>:<none> 镜像
 # 删除所有未使用的镜像, -f 表示不需要确认
 docker image prune -f
-# 自动构建触发测试2
+# 自动构建触发测试 - pull request
