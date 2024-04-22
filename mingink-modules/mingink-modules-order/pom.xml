@@ -17,6 +17,7 @@
     <properties>
         <!-- 支付宝工具 -->
         <apipay.sdk.version>4.34.0.ALL</apipay.sdk.version>
+        <wxpay.sdk.version>0.0.3</wxpay.sdk.version>
     </properties>
 
     <dependencies>
@@ -37,6 +38,33 @@
             <groupId>com.alipay.sdk</groupId>
             <artifactId>alipay-sdk-java</artifactId>
             <version>${apipay.sdk.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.wxpay</groupId>
+            <artifactId>wxpay-sdk</artifactId>
+            <version>${wxpay.sdk.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- hutool -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.2</version>
+        </dependency>
+
+        <!-- wechatpay httpclient -->
+        <dependency>
+            <groupId>com.github.wechatpay-apiv3</groupId>
+            <artifactId>wechatpay-apache-httpclient</artifactId>
+            <version>0.4.8</version>
         </dependency>
 
         <!-- 系统接口 -->
