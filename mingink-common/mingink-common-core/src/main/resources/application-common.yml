@@ -31,6 +31,24 @@ alipay:
   # 返回路径，支付后前端跳转 url 链接
   returnUrl: http://zensheep.natapp1.cc/dashboard/workbench
 
+# 微信支付
+wx:
+  pay:
+    # APP ID
+    appId:
+    # APP密钥
+    appSecret:
+    # 微信支付商户号
+    mchId:
+    # 商户号密钥
+    mchKey:
+    # API密钥
+    apiV3Key:
+    # 商户号退款证书地址
+    apiClientCert:
+    # 商户API证书的证书序列号
+    merchantSerialNumber:
+
 # Gorse
 gorse:
   endpoint: http://223.82.75.76:8088
