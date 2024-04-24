@@ -9,6 +9,7 @@ import com.mingink.order.domain.entity.Goods;
  * @since 2024-03-21
  */
 public interface IGoodsService extends IService<Goods> {
+    Goods getOrderById(String goodsId);
 
     Boolean addNewGoods(GoodsRequest goodsRequest);
 

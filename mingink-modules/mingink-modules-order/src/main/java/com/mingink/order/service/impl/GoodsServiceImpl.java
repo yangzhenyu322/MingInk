@@ -10,6 +10,7 @@ import com.mingink.order.mapper.GoodsMapper;
 import com.mingink.order.service.IGoodsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -23,6 +24,26 @@ import java.time.LocalDateTime;
 public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements IGoodsService {
     @Autowired
     private GoodsMapper goodsMapper;
+
+    /**
+     * @Cacheable注解是 通过 Spring AOP机制进行的，因此类内的调用将无法触发缓存操作，必须由外部进行调用，之前也算是踩了一遍坑，特别提醒一下
+     */
+
+    /**
+     * cacheNames/value：缓存组件的名字，即cacheManager中缓存的名称。
+     * key：缓存数据时使用的key。默认使用方法参数值，也可以使用SpEL表达式进行编写。
+     * keyGenerator：和key二选一使用。
+     * cacheManager：指定使用的缓存管理器。
+     * condition：在方法执行开始前检查，在符合condition的情况下，进行缓存
+     * unless：在方法执行完成后检查，在符合unless的情况下，不进行缓存
+     * sync：是否使用同步模式。若使用同步模式，在多个线程同时对一个key进行load时，其他线程将被阻塞。
+     */
+    @Override
+    @Cacheable(value = "goodsCache", key = "#p0")
+    public Goods getOrderById(String goodsId) {
+        log.info("从 DB 中获取ID为[{}]的商品", goodsId);
+        return goodsMapper.selectById(goodsId);
+    }
 
     @Override
     public Boolean addNewGoods(GoodsRequest goodsRequest) {
@@ -78,4 +99,5 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
 
         return isSuccess;
     }
+
 }

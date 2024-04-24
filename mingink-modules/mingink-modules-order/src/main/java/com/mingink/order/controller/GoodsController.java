@@ -33,7 +33,7 @@ public class GoodsController {
     @SentinelResource("hot")
     @Operation(summary = "通过商品ID查询单个商品信息")
     public R<Goods> getGoodsById(@PathVariable("goodsId") String goodsId) {
-        return R.ok(goodsService.getById(goodsId));
+        return R.ok(goodsService.getOrderById(goodsId));
     }
 
     @PostMapping("/add")
