@@ -1,2 +1,3 @@
 com.mingink.common.redis.config.RedisConfig
 com.mingink.common.redis.service.RedisService
+com.mingink.common.redis.config.CaffeineConfig
