@@ -54,35 +54,6 @@ public class PayService implements IPayService {
         return targetPayStrategy.orderRefundPay(payRefundParams);
     }
 
-    // ************* 下面是原始方法 *************
-
-    @Override
-    public String getPayPage(AliPay aliPay, String payType) {
-        IPayStrategy targetPayStrategy = Optional.ofNullable(payStrategyMap.get(payType))
-                .orElseThrow(() -> new IllegalArgumentException("非法支付类型：" + payType));
-        return targetPayStrategy.getPayPage(aliPay);
-    }
-
-    @Override
-    public String getPayFront(AliPay aliPay, String payType) {
-        IPayStrategy targetPayStrategy = Optional.ofNullable(payStrategyMap.get(payType))
-                .orElseThrow(() -> new IllegalArgumentException("非法支付类型：" + payType));
-        return targetPayStrategy.getPayFront(aliPay);
-    }
-
-    @Override
-    public String payNotify(HttpServletRequest request, String payType) throws AlipayApiException {
-        IPayStrategy targetPayStrategy = Optional.ofNullable(payStrategyMap.get(payType))
-                .orElseThrow(() -> new IllegalArgumentException("非法支付类型：" + payType));
-        return targetPayStrategy.payNotify(request);
-    }
-
-    @Override
-    public Boolean refundPay(AliRefund aliRefund, String payType) throws AlipayApiException {
-        IPayStrategy targetPayStrategy = Optional.ofNullable(payStrategyMap.get(payType))
-                .orElseThrow(() -> new IllegalArgumentException("非法支付类型：" + payType));
-        return targetPayStrategy.refundPay(aliRefund);
-    }
 
     public static String getPayTypeByMode(Integer payMode) {
         if (payMode == 0) {
