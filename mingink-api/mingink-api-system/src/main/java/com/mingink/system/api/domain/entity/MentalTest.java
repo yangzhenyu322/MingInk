@@ -25,24 +25,28 @@ public class MentalTest implements Serializable {
     /**
      * 用户ID
      */
-    @Schema(description = "用户ID")
-    private String userId;
+    @TableField("user_name")
+    @Schema(description = "用户名")
+    private String username;
 
     /**
      * 测试表单编号
      */
+    @TableField("test_id")
     @Schema(description = "测试表单编号")
     private Integer testId;
 
     /**
      * 测试结果编号ID
      */
+    @TableField("result_id")
     @Schema(description = "测试结果编号")
     private Integer resultId;
 
     /**
      * 测试时间
      */
+    @TableField("create_time")
     @Schema(description = "测试时间")
     private Date createTime;
 
