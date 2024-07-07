@@ -2,7 +2,7 @@ package com.mingink.system.service;
 
 import com.mingink.common.core.domain.R;
 import com.mingink.system.api.domain.dto.UserInfoUptReq;
-import com.mingink.system.api.domain.entiry.User;
+import com.mingink.system.api.domain.entity.User;
 import com.mingink.system.api.domain.vo.UserSafeInfo;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.multipart.MultipartFile;

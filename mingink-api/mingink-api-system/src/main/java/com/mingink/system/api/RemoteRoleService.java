@@ -1,8 +1,8 @@
 package com.mingink.system.api;
 
 import com.mingink.system.api.config.DefaultFeignConfiguration;
-import com.mingink.system.api.domain.entiry.Role;
-import com.mingink.system.api.domain.entiry.UserRole;
+import com.mingink.system.api.domain.entity.Role;
+import com.mingink.system.api.domain.entity.UserRole;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

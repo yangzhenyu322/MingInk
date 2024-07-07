@@ -1,4 +1,4 @@
-package com.mingink.system.api.domain.entiry;
+package com.mingink.system.api.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

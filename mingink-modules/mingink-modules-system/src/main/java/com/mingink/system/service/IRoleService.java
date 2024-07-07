@@ -1,7 +1,7 @@
 package com.mingink.system.service;
 
-import com.mingink.system.api.domain.entiry.Role;
-import com.mingink.system.api.domain.entiry.UserRole;
+import com.mingink.system.api.domain.entity.Role;
+import com.mingink.system.api.domain.entity.UserRole;
 
 import java.util.List;
 

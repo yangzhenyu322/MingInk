@@ -2,7 +2,7 @@ package com.mingink.system.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mingink.system.api.domain.entiry.UserOauth;
+import com.mingink.system.api.domain.entity.UserOauth;
 import com.mingink.system.mapper.UserOauthMapper;
 import com.mingink.system.service.IUserOauthService;
 import io.seata.spring.annotation.GlobalTransactional;
