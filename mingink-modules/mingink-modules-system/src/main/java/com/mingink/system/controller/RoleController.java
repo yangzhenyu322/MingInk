@@ -1,7 +1,7 @@
 package com.mingink.system.controller;
 
-import com.mingink.system.api.domain.entiry.Role;
-import com.mingink.system.api.domain.entiry.UserRole;
+import com.mingink.system.api.domain.entity.Role;
+import com.mingink.system.api.domain.entity.UserRole;
 import com.mingink.system.service.IRoleService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

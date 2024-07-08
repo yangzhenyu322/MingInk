@@ -2,8 +2,8 @@ package com.mingink.system.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.mingink.system.api.domain.entiry.Role;
-import com.mingink.system.api.domain.entiry.UserRole;
+import com.mingink.system.api.domain.entity.Role;
+import com.mingink.system.api.domain.entity.UserRole;
 import com.mingink.system.mapper.RoleMapper;
 import com.mingink.system.mapper.UserRoleMapper;
 import com.mingink.system.service.IRoleService;

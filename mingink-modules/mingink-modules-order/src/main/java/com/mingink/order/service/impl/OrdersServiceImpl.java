@@ -19,7 +19,7 @@ import com.mingink.order.service.IOrdersService;
 import com.mingink.order.service.IPayService;
 import com.mingink.system.api.RemoteRoleService;
 import com.mingink.system.api.RemoteUserService;
-import com.mingink.system.api.domain.entiry.UserRole;
+import com.mingink.system.api.domain.entity.UserRole;
 import io.seata.spring.annotation.GlobalTransactional;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.SneakyThrows;

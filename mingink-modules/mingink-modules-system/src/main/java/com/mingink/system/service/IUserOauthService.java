@@ -1,7 +1,7 @@
 package com.mingink.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mingink.system.api.domain.entiry.UserOauth;
+import com.mingink.system.api.domain.entity.UserOauth;
 
 /**
  * @Author: ZenSheep

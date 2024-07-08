@@ -1,7 +1,7 @@
 package com.mingink.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mingink.system.api.domain.entiry.User;
+import com.mingink.system.api.domain.entity.User;
 
 /**
  * @Author: ZenSheep

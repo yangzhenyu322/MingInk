@@ -1,6 +1,6 @@
 package com.mingink.system.controller;
 
-import com.mingink.system.api.domain.entiry.User;
+import com.mingink.system.api.domain.entity.User;
 import com.mingink.system.service.IOauthService;
 import com.mingink.system.service.IUserService;
 import io.swagger.v3.oas.annotations.Operation;
