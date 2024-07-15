@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 * @createDate 2024-07-09 15:04:54
 */
 @Service
-public class SignRecordServiceImpl extends ServiceImpl<SignRecordMapper, SignRecord>
+public class SignRecordService extends ServiceImpl<SignRecordMapper, SignRecord>
     implements ISignRecordService {
 
 }

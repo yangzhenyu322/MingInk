@@ -18,7 +18,7 @@ spring:
         - id: mingink-system # 路由id
           uri: lb://mingink-system # 路由的目标地址 lb就是负载均衡，后面跟服务名称
           predicates:
-            - Path=/api/v1/user/**, /api/v1/oauth/**, /api/v1/role/**, /api/v1/file/**, /api/v1/oss/**, /api/v1/sms/** # 按照路径匹配
+            - Path=/api/v1/user/**, /api/v1/oauth/**, /api/v1/role/**, /api/v1/file/**, /api/v1/oss/**, /api/v1/sms/** ,/api/v1/mentalTest/** # 按照路径匹配
           filters:
             - StripPrefix=2 # 去除前 n 个请求路径前缀
         - id: mingink-article
