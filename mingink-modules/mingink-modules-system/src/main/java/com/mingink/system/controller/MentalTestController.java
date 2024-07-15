@@ -20,7 +20,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("mentalTest")
+@RequestMapping("/mentalTest")
 @Tag(name = "心理测评接口")
 public class MentalTestController {
 
