@@ -2,6 +2,7 @@ package com.mingink.system.mapper;
 
 import com.mingink.system.api.domain.entity.SignMessage;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
 * @author huangliangxing
@@ -10,7 +11,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.mingink.system.api.domain.entity.SignMessage
 */
 public interface SignMessageMapper extends BaseMapper<SignMessage> {
-
+    @Select("SELECT MAX(id) FROM sign_message")
+    Long selectMaxId();
 }
 
 
