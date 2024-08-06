@@ -1,6 +1,7 @@
 package com.mingink.system.controller;
 
 import com.mingink.common.core.domain.R;
+import com.mingink.system.api.domain.dto.SmsLoginReq;
 import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.api.domain.entity.User;
 import com.mingink.system.api.domain.vo.UserSafeInfo;
@@ -86,6 +87,12 @@ public class UserController {
     @Operation(summary = "用户注册")
     public R<?> register(@RequestBody User user) {
         return userService.registerUser(user);
+    }
+
+    @PostMapping("/smsLogin")
+    @Operation(summary = "短信注册登录")
+    public R<String> smsLogin(@RequestBody SmsLoginReq smsLoginReq) {
+        return userService.verifyCodeToLogin(smsLoginReq);
     }
 
     @GetMapping("/current")

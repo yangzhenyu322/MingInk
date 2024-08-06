@@ -1,6 +1,7 @@
 package com.mingink.system.service;
 
 import com.mingink.common.core.domain.R;
+import com.mingink.system.api.domain.dto.SmsLoginReq;
 import com.mingink.system.api.domain.dto.UserInfoUptReq;
 import com.mingink.system.api.domain.entity.User;
 import com.mingink.system.api.domain.vo.UserSafeInfo;
@@ -51,4 +52,6 @@ public interface IUserService {
     Boolean removeUser(String userId);
 
     User getUserByUserId(String userId);
+
+    R<String> verifyCodeToLogin(SmsLoginReq smsLoginReq);
 }

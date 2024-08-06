@@ -1,5 +1,6 @@
 package com.mingink.system.service.impl;
 
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson2.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mingink.article.api.RemoteAuthorService;
@@ -9,7 +10,10 @@ import com.mingink.article.api.domain.dto.GorseUserRequest;
 import com.mingink.common.core.domain.R;
 import com.mingink.common.core.utils.id.SnowFlakeFactory;
 import com.mingink.common.core.utils.jwt.JWTUtils;
+import com.mingink.common.redis.service.RedisService;
+import com.mingink.system.api.domain.dto.SmsLoginReq;
 import com.mingink.system.api.domain.dto.UserInfoUptReq;
+import com.mingink.system.api.domain.entity.Role;
 import com.mingink.system.api.domain.entity.User;
 import com.mingink.system.api.domain.entity.UserRole;
 import com.mingink.system.api.domain.vo.UserSafeInfo;
@@ -26,14 +30,12 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * 用户服务业务
+ *
  * @Author: ZenSheep
  * @Date: 2024/2/1 12:02
  */
@@ -60,6 +62,9 @@ public class UserService implements IUserService {
 
     @Autowired
     private RemoteAuthorService remoteAuthorService;
+
+    @Autowired
+    private RedisService redisService;
 
     @Override
     public R<List<UserSafeInfo>> getUserList() {
@@ -100,7 +105,7 @@ public class UserService implements IUserService {
         user.setUserId(userMapper.selectByMap(map).get(0).getUserId());
         boolean isUpdatedSuccess = userMapper.updateById(user) > 0;
 
-        if(isUpdatedSuccess) {
+        if (isUpdatedSuccess) {
             log.info("更新用户【{}】密码成功", user.getUserName());
             return R.ok("更新密码成功");
         }
@@ -195,6 +200,86 @@ public class UserService implements IUserService {
     }
 
     @Override
+    @GlobalTransactional
+    public R<String> verifyCodeToLogin(SmsLoginReq smsLoginReq) {
+        String phoneNumber = smsLoginReq.getPhoneNumber();
+        String requestId = smsLoginReq.getRequestId();
+        String inputCode = smsLoginReq.getInputCode();
+        String redisCode = redisService.getCacheObject(requestId);
+        if (redisCode == null) {
+            // 验证码过期
+            log.error("[{}]验证失败:{}", requestId, "验证码已过期");
+            return R.fail("验证码已过期");
+        }
+        if (!redisCode.equals(inputCode)) {
+            // 验证码不正确
+            log.error("[{}]验证失败:{}", requestId, "验证码有误");
+            return R.fail("验证码有误");
+        }
+
+        log.info("[{}]验证成功", requestId);
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("phone_number", phoneNumber);
+        User user = userMapper.selectOne(queryWrapper);
+        if (user != null) {
+            String userName = user.getUserName();
+            List<String> roleKeys = roleService.getRolesByUserId(user.getUserId()).stream().map(Role::getRoleKey).collect(Collectors.toList());
+            String roleKeysStr = JSON.toJSONString(roleKeys);
+            Map<String, String> payload = new HashMap<>();
+            payload.put("username", userName);
+            payload.put("roleKeys", roleKeysStr);
+            String token = JWTUtils.creatToken(payload, 60 * 60 * 24 * 1);
+            return R.ok(token);
+        }
+        User newUser = new User();
+        String userId = SnowFlakeFactory.getSnowFlakeFromCache().nextId();
+        newUser.setUserId(userId); // 雪花算法设置用户Id
+        String uid = String.valueOf(userMapper.selectList(null).size() + 100001);
+        newUser.setUid(uid); // 设置用户Uid
+        StringBuilder username = new StringBuilder("yingying" + generateRandomString(9));
+        Map<String, Object> usernameMap = new HashMap<>();
+        usernameMap.put("user_name", username.toString());
+        while (userMapper.selectByMap(usernameMap).size() > 0) {
+            username = new StringBuilder("yingying" + generateRandomString(9));
+            usernameMap.put("user_name", username.toString());
+        }
+        newUser.setUserName(username.toString());
+        newUser.setPhoneNumber(phoneNumber);
+        newUser.setLoginDate(new Date());
+        newUser.setNickName(username.toString());
+        newUser.setAvatar("http://223.82.75.76:9100/mingink/2024/03/09/7db9007b-2257-44e0-bb7e-6d9e307558f2.jpg"); // 设置用户默认头像
+        newUser.setStatus(0); // 默认用户状态为正常——0
+        boolean isInsertSuccess = userMapper.insert(newUser) > 0;  // 返回值int代表插入成功条数，大于0表示插入成功条数，等于0则代表插入失败
+
+        if (!isInsertSuccess) {
+            log.info("用户[{}]注册失败：", uid);
+            return R.fail("用户注册失败");
+        }
+        // 设置默认权限
+        UserRole userRole = new UserRole();
+        userRole.setUserId(userId);
+        userRole.setRoleId(3L);
+        userRole.setIsDurable(0); // 0表示永久权限
+        roleService.addUserRole(userRole);
+
+        // 注册Gorse User
+        GorseUserRequest gorseUserRequest = new GorseUserRequest();
+        gorseUserRequest.setUserId(userId);
+        gorseUserRequest.setLabels("[]");
+        if (!remoteGorseService.addNewGorseUser(gorseUserRequest)) {
+            // 注册Gorse User失败
+            log.info("用户[{}]注册Gorse User失败：", uid);
+            return R.fail("用户注册失败");
+        }
+
+        Map<String, String> payload = new HashMap<>();
+        payload.put("username", username.toString());
+        payload.put("roleKeys", "common");
+        String token = JWTUtils.creatToken(payload, 60 * 60 * 24 * 1);
+        return R.ok(token);
+    }
+
+    @Override
     public R<Boolean> updateUserInfo(UserInfoUptReq userInfo, UserSafeInfo loginUser) {
         String userId = userInfo.getUserId();
         if (StringUtils.isBlank(userId)) {
@@ -217,10 +302,10 @@ public class UserService implements IUserService {
         oldUser.setAddress(userInfo.getAddress());
         oldUser.setRegion(userInfo.getRegion());
         int result = userMapper.updateById(oldUser);
-        if(result != 0) {
+        if (result != 0) {
             return R.ok(true, "用户信息更新成功");
         }
-        return R.fail(false,"系统内部异常");
+        return R.fail(false, "系统内部异常");
     }
 
     @Override
@@ -228,7 +313,7 @@ public class UserService implements IUserService {
         //获取token
         String token = request.getHeader(HttpHeaders.AUTHORIZATION);
         log.info("token: {}", token);
-        if(StringUtils.isBlank(token)) {
+        if (StringUtils.isBlank(token)) {
             return null;
         }
         //解析token
@@ -248,7 +333,7 @@ public class UserService implements IUserService {
         //获取token
         String token = request.getHeader(HttpHeaders.AUTHORIZATION);
         log.info("token: {}", token);
-        if(StringUtils.isBlank(token)) {
+        if (StringUtils.isBlank(token)) {
             return false;
         }
         //解析token
@@ -280,7 +365,7 @@ public class UserService implements IUserService {
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.like("user_name", username);
         List<User> users = userMapper.selectList(queryWrapper);
-        if(users.size() == 0) {
+        if (users.size() == 0) {
             return R.fail("用户查询失败");
         }
         List<UserSafeInfo> results = users.stream().map(this::getSafeUser).collect(Collectors.toList());
@@ -289,7 +374,7 @@ public class UserService implements IUserService {
 
     @Override
     public User getUserByName(String username) {
-        if(StringUtils.isBlank(username)) {
+        if (StringUtils.isBlank(username)) {
             return null;
         }
 
@@ -331,6 +416,7 @@ public class UserService implements IUserService {
 
     /**
      * 获取脱敏信息
+     *
      * @param originUser
      * @return
      */
@@ -353,5 +439,16 @@ public class UserService implements IUserService {
         safeInfo.setCountry(originUser.getCountry());
         safeInfo.setRegion(originUser.getRegion());
         return safeInfo;
+    }
+
+    String generateRandomString(int length) {
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuilder stringBuilder = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            int randomIndex = random.nextInt(chars.length());
+            stringBuilder.append(chars.charAt(randomIndex));
+        }
+        return stringBuilder.toString();
     }
 }

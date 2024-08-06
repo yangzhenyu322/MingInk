@@ -43,8 +43,5 @@ public class WxPayStrategy implements IPayStrategy {
         return wxPayV3Util.refund();
     }
 
-    public static void main(String[] args) {
-
-    }
 
 }
