@@ -245,6 +245,7 @@ public class UserService implements IUserService {
         }
         newUser.setUserName(username.toString());
         newUser.setPhoneNumber(phoneNumber);
+        newUser.setLoginDate(new Date());
         newUser.setNickName(username.toString());
         newUser.setAvatar("http://223.82.75.76:9100/mingink/2024/03/09/7db9007b-2257-44e0-bb7e-6d9e307558f2.jpg"); // 设置用户默认头像
         newUser.setStatus(0); // 默认用户状态为正常——0
