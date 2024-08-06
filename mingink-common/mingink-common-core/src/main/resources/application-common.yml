@@ -6,7 +6,8 @@ spring:
         server-addr: 223.82.75.76:8848
         username: lovelumine
         password: lovelumine47
-        namespace: fba13bcb-89a6-40d0-8492-40e3eadc9a0e
+        namespace: 4850addc-6018-4aea-b1aa-f5cb3f6e695d # prod
+#        namespace: fba13bcb-89a6-40d0-8492-40e3eadc9a0e # dev
 
 # BaiDuYun
 baidu:
