@@ -31,6 +31,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -229,6 +230,7 @@ public class UserService implements IUserService {
             payload.put("username", userName);
             payload.put("roleKeys", roleKeysStr);
             String token = JWTUtils.creatToken(payload, 60 * 60 * 24 * 1);
+            redisService.setCacheObject(userName, token, 1, TimeUnit.DAYS);
             return R.ok(token);
         }
         User newUser = new User();
@@ -276,6 +278,7 @@ public class UserService implements IUserService {
         payload.put("username", username.toString());
         payload.put("roleKeys", "common");
         String token = JWTUtils.creatToken(payload, 60 * 60 * 24 * 1);
+        redisService.setCacheObject(username.toString(), token, 1, TimeUnit.DAYS);
         return R.ok(token);
     }
 
@@ -288,7 +291,7 @@ public class UserService implements IUserService {
         //仅管理员和自己可以修改
         //管理员 允许更新任意用户
         //非管理员 只允许更新当前(自己的)信息
-        if (!isAdmin(loginUser) && userId.equals(loginUser.getUserId())) {
+        if (!isAdmin(loginUser) && !userId.equals(loginUser.getUserId())) {
             return R.fail("用户无权限");
         }
         User oldUser = userMapper.selectById(userInfo.getUserId());

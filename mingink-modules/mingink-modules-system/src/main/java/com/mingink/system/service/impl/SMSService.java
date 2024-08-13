@@ -41,6 +41,7 @@ public class SMSService implements ISMSService {
      * @param validTime 验证码有效时间（单位：秒）
      * @return R.(requestId)，客服端可通过requestId查询redis来验证inputCode是否正确
      */
+    //TODO 增加发送频率限制
     @Override
     public R<?> sendPhoneCode(String phoneNumber, int codeLength, Long validTime) {
         // 长度为11的数字字符串
