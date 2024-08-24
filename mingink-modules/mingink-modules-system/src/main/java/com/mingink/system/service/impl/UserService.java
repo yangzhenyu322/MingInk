@@ -166,7 +166,7 @@ public class UserService implements IUserService {
         user.setUserId(SnowFlakeFactory.getSnowFlakeFromCache().nextId()); // 雪花算法设置用户Id
         user.setUid((String.valueOf(userMapper.selectList(null).size() + 100001))); // 设置用户Uid
         user.setNickName(user.getUserName()); // 默认新用户昵称为用户（账户）名
-        user.setAvatar("http://223.82.75.76:9100/mingink/2024/03/09/7db9007b-2257-44e0-bb7e-6d9e307558f2.jpg"); // 设置用户默认头像
+        user.setAvatar("https://minio.lumoxuan.cn/mingink/public/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.jpg"); // 设置用户默认头像
         user.setBirthday(new Date());
         user.setStatus(0); // 默认用户状态为正常——0
         user.setLoginDate(new Date()); // 最近登录时间
@@ -249,7 +249,7 @@ public class UserService implements IUserService {
         newUser.setPhoneNumber(phoneNumber);
         newUser.setLoginDate(new Date());
         newUser.setNickName(username.toString());
-        newUser.setAvatar("http://223.82.75.76:9100/mingink/2024/03/09/7db9007b-2257-44e0-bb7e-6d9e307558f2.jpg"); // 设置用户默认头像
+        newUser.setAvatar("https://minio.lumoxuan.cn/mingink/public/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.jpg"); // 设置用户默认头像
         newUser.setStatus(0); // 默认用户状态为正常——0
         boolean isInsertSuccess = userMapper.insert(newUser) > 0;  // 返回值int代表插入成功条数，大于0表示插入成功条数，等于0则代表插入失败
 
